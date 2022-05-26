@@ -32,16 +32,16 @@ public class GameManager : MonoBehaviour
         for (int enemyCounter = 0; enemyCounter < numberOfWeakEnemies; enemyCounter++)
         {
             Debug.Log("spawning weak enemy " + enemyCounter);
-            GameObject newWeakEnemy = Instantiate(weakEnemy, new Vector2(5, -3), Quaternion.identity);
-            WeakEnemy newWeakEnemyScript = newWeakEnemy.GetComponent<WeakEnemy>();
-            newWeakEnemyScript.InstantiateEnemy(2.0f, 1.0f, this);
-            enemies.Add(newWeakEnemy);
+            CreateEnemy(weakEnemy, "WeakEnemy");
         }
     }
 
-    void createEnemy()
+    private void CreateEnemy(GameObject enemy, string enemyScript)
     {
-
+        GameObject newEnemy = Instantiate(enemy, new Vector2(5, -3), Quaternion.identity);
+        Enemy newEnemyScript = newEnemy.GetComponent(enemyScript) as Enemy;
+        newEnemyScript.InstantiateEnemy(2.0f, 1.0f, this);
+        enemies.Add(newEnemy);
     }
 
     public void EarlyShot()
