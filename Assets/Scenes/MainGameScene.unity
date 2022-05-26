@@ -417,7 +417,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0, g: 0.6886792, b: 0.33145598, a: 1}
   m_FlipX: 0
@@ -602,6 +602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weakEnemy: {fileID: 1375424769945564106, guid: cf5fc3a7ed34572459162a8b771d2452, type: 3}
+  fastEnemy: {fileID: 8924443831876896418, guid: b76f0684d30eef041afd0020428fd0ff, type: 3}
   player: {fileID: 1202480548}
   levelText: {fileID: 1109268722}
 --- !u!4 &2002831728

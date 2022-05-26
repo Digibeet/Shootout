@@ -4,31 +4,16 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
-    protected float drawWindow;
     protected float drawTime;
     protected float shootTime = 2.5f;
     protected float lives = 1;
     [SerializeField] protected bool drawn;
     protected GameManager gameManager;
 
-    protected IEnumerator CountdownToDraw()
+    public virtual void InstantiateEnemy(GameManager new_gameManager)
     {
-        float drawCount = 0f;
-        while (drawCount <= drawTime)
-        {
-            drawCount += Time.deltaTime;
-            Debug.Log("Counting down to draw" + drawCount);
-            yield return null;
-        }
-        Draw();
-    }
-    public virtual void InstantiateEnemy(float new_drawWindow, float new_drawTime, GameManager new_gameManager)
-    {
-        drawTime = new_drawTime;
-        drawWindow = new_drawWindow;
         gameManager = new_gameManager;
         drawn = false;
-        StartCoroutine(CountdownToDraw());
     }
 
     protected void Draw()
