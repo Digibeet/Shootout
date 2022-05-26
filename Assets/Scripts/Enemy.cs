@@ -16,7 +16,7 @@ public abstract class Enemy : MonoBehaviour
         drawn = false;
     }
 
-    protected void Draw()
+    public void Draw()
     {
         Debug.Log("Draw!");
         drawn = true;
@@ -28,7 +28,7 @@ public abstract class Enemy : MonoBehaviour
         while (shootCount <= shootTime)
         {
             shootCount += Time.deltaTime;
-            Debug.Log("Counting down shoot" + shootCount / shootTime);
+            //Debug.Log("Counting down shoot" + shootCount / shootTime);
             GetComponent<SpriteRenderer>().color = Color.Lerp(Color.yellow, Color.red, shootCount / shootTime);
             yield return null;
         }

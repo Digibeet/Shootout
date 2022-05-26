@@ -9,19 +9,21 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject fastEnemy;
     [SerializeField] private GameObject player;
     [SerializeField] private Text levelText;
+    private float drawTime;
+    private float randomTimeNoise = 1.0f;
     private int level;
-    private List<GameObject> enemies = new List<GameObject>();
+    private List<Enemy> enemies = new List<Enemy>();
 
     void Start()
     {
         level = DifficultyManager.Instance.getLevel();
+        drawTime = 3.0f - level / 5;
         IntroduceLevel();
         PlanEnemies();
     }
 
     private void IntroduceLevel()
     {
-        
         string new_levelText = "ROUND " + level;
         levelText.text = new_levelText;
     }
@@ -41,6 +43,27 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("spawning fast enemy " + fastEnemyCounter + 1);
             CreateEnemy(fastEnemy, "FastEnemy", assignRandomPosition(availablePositions));
+        }
+        StartCoroutine(CountdownToDraw());
+    }
+
+    private IEnumerator CountdownToDraw()
+    {
+        Enemy drawingEnemy = getRandomEnemy();
+        float drawCount = 0f;
+        float randomizedDrawTime = drawTime + Random.Range(0,randomTimeNoise);
+        while (drawCount <= randomizedDrawTime)
+        {
+            drawCount += Time.deltaTime;
+            //Debug.Log("Counting down draw " + drawCount);
+            yield return null;
+        }
+        drawingEnemy.Draw();
+        Debug.Log("Enemies left " + enemies.Count);
+        if (enemies.Count > 0)
+        {
+            Debug.Log("Drawing new enemy");
+            StartCoroutine(CountdownToDraw());
         }
     }
     private List<Vector2> CreatePositions(int numberOfPositions)
@@ -62,12 +85,20 @@ public class GameManager : MonoBehaviour
         return selectedPosition;
     }
 
+    private Enemy getRandomEnemy()
+    {
+        int indexOfPosition = Random.Range(0, enemies.Count);
+        Enemy selectedEnemy = enemies[indexOfPosition];
+        enemies.RemoveAt(indexOfPosition);
+        return selectedEnemy;
+    }
+
     private void CreateEnemy(GameObject enemy, string enemyScript, Vector2 enemyPosition)
     {
         GameObject newEnemy = Instantiate(enemy, enemyPosition, Quaternion.identity);
         Enemy newEnemyScript = newEnemy.GetComponent(enemyScript) as Enemy;
         newEnemyScript.InstantiateEnemy(this);
-        enemies.Add(newEnemy);
+        enemies.Add(newEnemyScript);
     }
 
     public void EarlyShot()
