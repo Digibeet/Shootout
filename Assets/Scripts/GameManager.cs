@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
         while (startCount <= startTime)
         {
             startCount += Time.deltaTime;
-            Debug.Log("Counting down draw " + startCount);
+            //Debug.Log("Counting down draw " + startCount);
             yield return null;
         }
         float drawTime = 3.0f - level / 5;
@@ -79,6 +79,26 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Drawing new enemy");
         }
+    }
+
+    public void CheckVictory()
+    {
+        Debug.Log("Checking for victory");
+        if(enemies.Count <= 0)
+        {
+            Victory();
+        }
+        else
+        {
+            StartDuel();
+        }
+    }
+
+    private void Victory()
+    {
+        Debug.Log("Level won");
+        DifficultyManager.Instance.NextLevel();
+        SceneManager.LoadScene("MainGameScene");
     }
 
     private void Lose()

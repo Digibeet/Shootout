@@ -42,8 +42,10 @@ public abstract class Enemy : MonoBehaviour
         gameManager.TooLate();
     }
 
-    protected void killEnemy()
+    protected void KillEnemy()
     {
+        Debug.Log("Enemy killed");
+        gameManager.CheckVictory();
         Destroy(gameObject);
     }
 
@@ -52,7 +54,7 @@ public abstract class Enemy : MonoBehaviour
         lives--;
         if (lives <= 0)
         {
-            killEnemy();
+            KillEnemy();
         }
     }
 
@@ -60,7 +62,7 @@ public abstract class Enemy : MonoBehaviour
     {
         if (drawn)
         {
-            Destroy(gameObject);
+            Hit();
         }
         else { gameManager.EarlyShot(); }
     }
