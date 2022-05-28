@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        level = DifficultyManager.Instance.getLevel();
+        level = DifficultyManager.Instance.GetLevel();
         drawTime = 3.0f - level / 5;
         IntroduceLevel();
         PlanEnemies();

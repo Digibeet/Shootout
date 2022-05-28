@@ -5,7 +5,7 @@ using UnityEngine;
 public class DifficultyManager : MonoBehaviour
 {
     public static DifficultyManager Instance;
-    [SerializeField] private static int level { get; set; } = 2;
+    [SerializeField] private static int level { get; set; } = 1;
     [SerializeField] private static int score { get; set; } = 0;
 
     void Awake()
@@ -21,19 +21,20 @@ public class DifficultyManager : MonoBehaviour
         }    
     }
 
-    void Start()
+    public void Restart()
     {
-        
+        level = 1;
+        score = 0;
     }
 
-    public int getLevel()
+    public int GetLevel()
     {
         return level;
     }
 
     public void NextLevel()
     {
-        level = level +1;
+        level++;
     }
 
     public void increaseScore(int scoreIncrease)
