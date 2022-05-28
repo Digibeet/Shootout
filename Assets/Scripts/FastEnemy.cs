@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FastEnemy : Enemy
 {
+    // POLYMORPHISM
     public override void InstantiateEnemy(GameManager new_gameManager)
     {
         shootTime = 1.0f;

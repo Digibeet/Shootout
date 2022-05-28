@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,17 +10,28 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject fastEnemy;
     [SerializeField] private GameObject player;
     [SerializeField] private Text levelText;
-    private float drawTime;
-    private float randomTimeNoise = 1.0f;
+ 
     private int level;
     private List<Enemy> enemies = new List<Enemy>();
+    private bool drawn;
 
     void Start()
     {
         level = DifficultyManager.Instance.GetLevel();
-        drawTime = 3.0f - level / 5;
         IntroduceLevel();
         PlanEnemies();
+        drawn = false;
+    }
+
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (!drawn)
+            {
+                EarlyShot();
+            }
+        }
     }
 
     private void IntroduceLevel()
@@ -37,35 +49,19 @@ public class GameManager : MonoBehaviour
         for (int weakEnemyCounter = 0; weakEnemyCounter < numberOfWeakEnemies; weakEnemyCounter++)
         {
             Debug.Log("spawning weak enemy " + weakEnemyCounter + 1);
-            CreateEnemy(weakEnemy, "WeakEnemy", assignRandomPosition(availablePositions));
+            CreateEnemy(weakEnemy, "WeakEnemy", AssignRandomPosition(availablePositions));
         }
         for (int fastEnemyCounter = 0; fastEnemyCounter < numberOfFastEnemies; fastEnemyCounter++)
         {
             Debug.Log("spawning fast enemy " + fastEnemyCounter + 1);
-            CreateEnemy(fastEnemy, "FastEnemy", assignRandomPosition(availablePositions));
+            CreateEnemy(fastEnemy, "FastEnemy", AssignRandomPosition(availablePositions));
         }
-        StartCoroutine(CountdownToDraw());
+
+        float drawTime = 3.0f - level / 5;
+        DuelManager dueler = new DuelManager(drawTime, 1.0f, enemies);
+        dueler.StartDuel();
     }
 
-    private IEnumerator CountdownToDraw()
-    {
-        Enemy drawingEnemy = getRandomEnemy();
-        float drawCount = 0f;
-        float randomizedDrawTime = drawTime + Random.Range(0,randomTimeNoise);
-        while (drawCount <= randomizedDrawTime)
-        {
-            drawCount += Time.deltaTime;
-            //Debug.Log("Counting down draw " + drawCount);
-            yield return null;
-        }
-        drawingEnemy.Draw();
-        Debug.Log("Enemies left " + enemies.Count);
-        if (enemies.Count > 0)
-        {
-            Debug.Log("Drawing new enemy");
-            StartCoroutine(CountdownToDraw());
-        }
-    }
     private List<Vector2> CreatePositions(int numberOfPositions)
     {
         List<Vector2> openPositions = new List<Vector2>();
@@ -77,20 +73,12 @@ public class GameManager : MonoBehaviour
         return openPositions;
     }
 
-    private Vector2 assignRandomPosition(List<Vector2> availablePositions)
+    private Vector2 AssignRandomPosition(List<Vector2> availablePositions)
     {
         int indexOfPosition = Random.Range(0, availablePositions.Count);
         Vector2 selectedPosition = availablePositions[indexOfPosition];
         availablePositions.RemoveAt(indexOfPosition);
         return selectedPosition;
-    }
-
-    private Enemy getRandomEnemy()
-    {
-        int indexOfPosition = Random.Range(0, enemies.Count);
-        Enemy selectedEnemy = enemies[indexOfPosition];
-        enemies.RemoveAt(indexOfPosition);
-        return selectedEnemy;
     }
 
     private void CreateEnemy(GameObject enemy, string enemyScript, Vector2 enemyPosition)
@@ -101,13 +89,31 @@ public class GameManager : MonoBehaviour
         enemies.Add(newEnemyScript);
     }
 
-    public void EarlyShot()
+    private void Lose()
     {
         Destroy(player);
+        StartCoroutine(EndGame());
+    }
+
+    public void EarlyShot()
+    {
+        Lose();
     }
 
     public void TooLate()
     {
-        Destroy(player);
+        Lose();
+    }
+
+    private IEnumerator EndGame()
+    {
+        float sadCount = 0f;
+        while (sadCount <= 4)
+        {
+            sadCount += Time.deltaTime;
+            //Debug.Log("Counting down draw " + drawCount);
+            yield return null;
+        }
+        SceneManager.LoadScene("TitleScene");
     }
 }

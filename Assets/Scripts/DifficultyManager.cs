@@ -5,6 +5,7 @@ using UnityEngine;
 public class DifficultyManager : MonoBehaviour
 {
     public static DifficultyManager Instance;
+    // ENCAPSULATION
     [SerializeField] private static int level { get; set; } = 1;
     [SerializeField] private static int score { get; set; } = 0;
 

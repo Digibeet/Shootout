@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public abstract class Enemy : MonoBehaviour
 {
     protected float drawTime;
@@ -33,6 +34,23 @@ public abstract class Enemy : MonoBehaviour
             yield return null;
         }
         Shoot();
+    }
+    public void StartDraw(float randomTimeNoise)
+    {
+        StartCoroutine(CountdownToDraw(randomTimeNoise));
+    }
+
+    private IEnumerator CountdownToDraw(float randomTimeNoise)
+    {
+        float drawCount = 0f;
+        float randomizedDrawTime = drawTime + Random.Range(0, randomTimeNoise);
+        while (drawCount <= randomizedDrawTime)
+        {
+            drawCount += Time.deltaTime;
+            //Debug.Log("Counting down draw " + drawCount);
+            yield return null;
+        }
+        Draw();
     }
 
     protected void Shoot()
