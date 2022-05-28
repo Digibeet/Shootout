@@ -35,23 +35,6 @@ public abstract class Enemy : MonoBehaviour
         }
         Shoot();
     }
-    public void StartDraw(float randomTimeNoise)
-    {
-        StartCoroutine(CountdownToDraw(randomTimeNoise));
-    }
-
-    private IEnumerator CountdownToDraw(float randomTimeNoise)
-    {
-        float drawCount = 0f;
-        float randomizedDrawTime = drawTime + Random.Range(0, randomTimeNoise);
-        while (drawCount <= randomizedDrawTime)
-        {
-            drawCount += Time.deltaTime;
-            //Debug.Log("Counting down draw " + drawCount);
-            yield return null;
-        }
-        Draw();
-    }
 
     protected void Shoot()
     {

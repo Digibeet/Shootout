@@ -7,7 +7,7 @@ public class TitleManager : MonoBehaviour
 {
     public void StartNewGame()
     {
-        Debug.Log("Starting new game");
+        //Debug.Log("Starting new game");
         DifficultyManager.Instance.Restart();
         SceneManager.LoadScene("MainGameScene");
     }

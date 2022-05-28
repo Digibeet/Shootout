@@ -6,28 +6,33 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private GameObject weakEnemy;
-    [SerializeField] private GameObject fastEnemy;
+    [SerializeField] public GameObject weakEnemy;
+    [SerializeField] public GameObject fastEnemy;
     [SerializeField] private GameObject player;
     [SerializeField] private Text levelText;
- 
+    [SerializeField] private bool drawStarted;
+    private EnemyManager enemyManager;
+
     private int level;
     private List<Enemy> enemies = new List<Enemy>();
-    private bool drawn;
+    
 
     void Start()
     {
+        drawStarted = false;
         level = DifficultyManager.Instance.GetLevel();
         IntroduceLevel();
-        PlanEnemies();
-        drawn = false;
+        enemyManager = new EnemyManager(level, this);
+        enemyManager.PlanEnemies();
+        Debug.Log("Enemies planned");
+        StartCoroutine(StartGame());
     }
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (!drawn)
+            if (!drawStarted)
             {
                 EarlyShot();
             }
@@ -39,54 +44,41 @@ public class GameManager : MonoBehaviour
         string new_levelText = "ROUND " + level;
         levelText.text = new_levelText;
     }
-
-    private void PlanEnemies()
-    {
-        int numberOfWeakEnemies = level;
-        int numberOfFastEnemies = level / 2;
-        int totalEnemies = numberOfFastEnemies + numberOfWeakEnemies;
-        List<Vector2> availablePositions = CreatePositions(totalEnemies);
-        for (int weakEnemyCounter = 0; weakEnemyCounter < numberOfWeakEnemies; weakEnemyCounter++)
-        {
-            Debug.Log("spawning weak enemy " + weakEnemyCounter + 1);
-            CreateEnemy(weakEnemy, "WeakEnemy", AssignRandomPosition(availablePositions));
-        }
-        for (int fastEnemyCounter = 0; fastEnemyCounter < numberOfFastEnemies; fastEnemyCounter++)
-        {
-            Debug.Log("spawning fast enemy " + fastEnemyCounter + 1);
-            CreateEnemy(fastEnemy, "FastEnemy", AssignRandomPosition(availablePositions));
-        }
-
-        float drawTime = 3.0f - level / 5;
-        DuelManager dueler = new DuelManager(drawTime, 1.0f, enemies);
-        dueler.StartDuel();
-    }
-
-    private List<Vector2> CreatePositions(int numberOfPositions)
-    {
-        List<Vector2> openPositions = new List<Vector2>();
-        for(int positionIndex = 0; positionIndex < numberOfPositions; positionIndex++)
-        {
-            Vector2 newPosition = new Vector2(3 * positionIndex, -3);
-            openPositions.Add(newPosition);
-        }
-        return openPositions;
-    }
-
-    private Vector2 AssignRandomPosition(List<Vector2> availablePositions)
-    {
-        int indexOfPosition = Random.Range(0, availablePositions.Count);
-        Vector2 selectedPosition = availablePositions[indexOfPosition];
-        availablePositions.RemoveAt(indexOfPosition);
-        return selectedPosition;
-    }
-
-    private void CreateEnemy(GameObject enemy, string enemyScript, Vector2 enemyPosition)
+    public void CreateEnemy(GameObject enemy, string enemyScript, Vector2 enemyPosition)
     {
         GameObject newEnemy = Instantiate(enemy, enemyPosition, Quaternion.identity);
         Enemy newEnemyScript = newEnemy.GetComponent(enemyScript) as Enemy;
         newEnemyScript.InstantiateEnemy(this);
         enemies.Add(newEnemyScript);
+    }
+
+    private IEnumerator StartGame()
+    {
+        Debug.Log("Starting game");
+        float startCount = 0.0f;
+        float startTime = 3.0f + Random.Range(0, 1);
+        while (startCount <= startTime)
+        {
+            startCount += Time.deltaTime;
+            Debug.Log("Counting down draw " + startCount);
+            yield return null;
+        }
+        float drawTime = 3.0f - level / 5;
+        drawStarted = true;
+        StartDuel();
+        Debug.Log(drawStarted);
+    }
+
+    private void StartDuel()
+    {
+        Debug.Log("Starting duel");
+        Enemy drawingEnemy = enemyManager.GetRandomEnemy(enemies);
+        drawingEnemy.Draw();
+        Debug.Log("Enemies left " + enemies.Count);
+        if (enemies.Count > 0)
+        {
+            Debug.Log("Drawing new enemy");
+        }
     }
 
     private void Lose()
