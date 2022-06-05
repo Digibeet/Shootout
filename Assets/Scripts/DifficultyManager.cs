@@ -8,10 +8,11 @@ public class DifficultyManager : MonoBehaviour
     // ENCAPSULATION
     [SerializeField] private static int level { get; set; } = 1;
     [SerializeField] private static int score { get; set; } = 0;
+    [SerializeField] private Texture2D crosshair;
 
     void Awake()
     {
-
+        Cursor.SetCursor(crosshair, new Vector2(10,10), CursorMode.Auto);
         if (Instance == null)
         {
             Instance = this;

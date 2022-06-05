@@ -5,10 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class TitleManager : MonoBehaviour
 {
+    [SerializeField] private AudioSource gameStart;
     public void StartNewGame()
     {
-        //Debug.Log("Starting new game");
         DifficultyManager.Instance.Restart();
+        StartCoroutine(StartGame());
+    }
+
+    IEnumerator StartGame()
+    {
+        Debug.Log("Starting new game");
+        gameStart.Play();
+        while (gameStart.isPlaying)
+        {
+            yield return null;
+        }
         SceneManager.LoadScene("MainGameScene");
     }
 
