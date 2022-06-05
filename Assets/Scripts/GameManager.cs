@@ -73,6 +73,8 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Starting duel");
         Enemy drawingEnemy = enemyManager.GetRandomEnemy(enemies);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         drawingEnemy.Draw();
         Debug.Log("Enemies left " + enemies.Count);
         if (enemies.Count > 0)
