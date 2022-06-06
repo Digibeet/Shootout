@@ -12,7 +12,7 @@ public class DifficultyManager : MonoBehaviour
 
     void Awake()
     {
-        Cursor.SetCursor(crosshair, new Vector2(10,10), CursorMode.Auto);
+        Cursor.SetCursor(crosshair, new Vector2(31,31), CursorMode.ForceSoftware);
         if (Instance == null)
         {
             Instance = this;
