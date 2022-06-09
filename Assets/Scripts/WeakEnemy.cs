@@ -10,4 +10,21 @@ public class WeakEnemy : Enemy
         shootTime = 3.0f;
         base.InstantiateEnemy(new_gameManager);
     }
+
+    public override void Draw()
+    {
+        Animator weakEnemyAnimator = this.GetComponent<Animator>();
+        weakEnemyAnimator.Play("WeakEnemy_Draw");
+        base.Draw();
+    }
+
+    protected override void Shoot()
+    {
+        Animator weakEnemyAnimator = this.GetComponent<Animator>();
+        weakEnemyAnimator.Play("WeakEnemy_Shoot");
+        base.Shoot();
+    }
+
 }
+
+

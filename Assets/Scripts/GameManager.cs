@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
 
     private int level;
     private List<Enemy> enemies = new List<Enemy>();
-    
 
     void Start()
     {
@@ -75,6 +74,8 @@ public class GameManager : MonoBehaviour
         Enemy drawingEnemy = enemyManager.GetRandomEnemy(enemies);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        Animator playerAnimator = player.GetComponent<Animator>();
+        playerAnimator.Play("Player_Draw");
         drawingEnemy.Draw();
         Debug.Log("Enemies left " + enemies.Count);
         if (enemies.Count > 0)
