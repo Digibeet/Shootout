@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WeakEnemy_Draw
+  m_Name: Player_Draw
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,9 +20,11 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 3830861907005771207, guid: b0449b0c59f6a99449ac996c70f71869, type: 3}
+      value: {fileID: -6294733789497007650, guid: 22aa29b129805a04489b97ea70a2a2be, type: 3}
+    - time: 0.16666667
+      value: {fileID: -5345384357845515582, guid: 22aa29b129805a04489b97ea70a2a2be, type: 3}
     - time: 0.33333334
-      value: {fileID: -5140517928629757518, guid: b0449b0c59f6a99449ac996c70f71869, type: 3}
+      value: {fileID: 8715561726441797021, guid: 22aa29b129805a04489b97ea70a2a2be, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -42,8 +44,9 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 3830861907005771207, guid: b0449b0c59f6a99449ac996c70f71869, type: 3}
-    - {fileID: -5140517928629757518, guid: b0449b0c59f6a99449ac996c70f71869, type: 3}
+    - {fileID: -6294733789497007650, guid: 22aa29b129805a04489b97ea70a2a2be, type: 3}
+    - {fileID: -5345384357845515582, guid: 22aa29b129805a04489b97ea70a2a2be, type: 3}
+    - {fileID: 8715561726441797021, guid: 22aa29b129805a04489b97ea70a2a2be, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
