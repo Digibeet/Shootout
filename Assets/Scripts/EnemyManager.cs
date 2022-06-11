@@ -39,7 +39,7 @@ public class EnemyManager
         List<Vector2> openPositions = new List<Vector2>();
         for (int positionIndex = 0; positionIndex < numberOfPositions; positionIndex++)
         {
-            Vector2 newPosition = new Vector2(3 * positionIndex, -3);
+            Vector2 newPosition = new Vector2(2 * positionIndex+1, -2);
             openPositions.Add(newPosition);
         }
         return openPositions;

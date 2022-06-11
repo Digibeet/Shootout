@@ -15,11 +15,15 @@ public class GameManager : MonoBehaviour
 
     private int level;
     private List<Enemy> enemies = new List<Enemy>();
-    
+
+    private Animator playerAnimator;
+
+    bool lost = false;
 
     void Start()
     {
         drawStarted = false;
+        playerAnimator = player.GetComponent<Animator>();
         level = DifficultyManager.Instance.GetLevel();
         IntroduceLevel();
         enemyManager = new EnemyManager(level, this);
@@ -30,11 +34,15 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (!lost)
         {
-            if (!drawStarted)
+            if (Input.GetMouseButtonDown(0))
             {
-                EarlyShot();
+                playerAnimator.Play("Shoot_Player");
+                if (!drawStarted)
+                {
+                    EarlyShot();
+                }
             }
         }
     }
@@ -76,6 +84,7 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         drawingEnemy.Draw();
+        playerAnimator.Play("Draw_Player");
         Debug.Log("Enemies left " + enemies.Count);
         if (enemies.Count > 0)
         {
@@ -100,12 +109,13 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Level won");
         DifficultyManager.Instance.NextLevel();
-        SceneManager.LoadScene("MainGameScene");
+        //SceneManager.LoadScene("MainGameScene");
     }
 
     private void Lose()
     {
-        Destroy(player);
+        //Destroy(player);
+        lost = true;
         StartCoroutine(EndGame());
     }
 
@@ -116,6 +126,7 @@ public class GameManager : MonoBehaviour
 
     public void TooLate()
     {
+        playerAnimator.Play("Player_Die");
         Lose();
     }
 
