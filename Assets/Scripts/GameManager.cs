@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private bool drawStarted;
     private EnemyManager enemyManager;
 
-    private int level;
+    public int level { get; private set; }
     private List<Enemy> enemies = new List<Enemy>();
 
     private Animator playerAnimator;
@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Checking for victory");
         if(enemies.Count <= 0)
         {
-            Victory();
+            StartCoroutine(Victory());
         }
         else
         {
@@ -105,11 +105,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Victory()
+    private IEnumerator Victory()
     {
         Debug.Log("Level won");
+        float startCount = 0.0f;
+        float startTime = 3.0f;
+        while (startCount <= startTime)
+        {
+            startCount += Time.deltaTime;
+            yield return null;
+        }
         DifficultyManager.Instance.NextLevel();
-        //SceneManager.LoadScene("MainGameScene");
+        SceneManager.LoadScene("MainGameScene");
     }
 
     private void Lose()

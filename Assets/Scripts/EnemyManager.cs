@@ -15,9 +15,9 @@ public class EnemyManager
 
     public void PlanEnemies()
     {
-        int numberOfWeakEnemies = level;
+        int numberOfWeakEnemies = 1 + level/5;
         //Debug.Log("Spawning " + numberOfWeakEnemies + " weak enemies");
-        int numberOfFastEnemies = level / 2;
+        int numberOfFastEnemies = 0;//level / 2;
         int totalEnemies = numberOfFastEnemies + numberOfWeakEnemies;
         List<Vector2> availablePositions = CreatePositions(totalEnemies);
         for (int weakEnemyCounter = 0; weakEnemyCounter < numberOfWeakEnemies; weakEnemyCounter++)
