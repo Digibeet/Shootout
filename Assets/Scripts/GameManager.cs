@@ -81,8 +81,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Starting duel");
         Enemy drawingEnemy = enemyManager.GetRandomEnemy(enemies);
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        DifficultyManager.Instance.UnlockCursor();
         drawingEnemy.Draw();
         playerAnimator.Play("Draw_Player");
         Debug.Log("Enemies left " + enemies.Count);
@@ -108,6 +107,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator Victory()
     {
         Debug.Log("Level won");
+        DifficultyManager.Instance.LockCursor();
         float startCount = 0.0f;
         float startTime = 3.0f;
         while (startCount <= startTime)

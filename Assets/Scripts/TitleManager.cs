@@ -16,8 +16,7 @@ public class TitleManager : MonoBehaviour
     {
         Debug.Log("Starting new game");
         gameStart.Play();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        DifficultyManager.Instance.LockCursor();
         while (gameStart.isPlaying)
         {
             yield return null;
