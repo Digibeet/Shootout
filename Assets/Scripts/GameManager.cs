@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] public GameObject weakEnemy;
-    [SerializeField] public GameObject fastEnemy;
+    [SerializeField] private SoundManager soundManager;
+    public GameObject weakEnemy;
+    public GameObject fastEnemy;
     [SerializeField] private GameObject player;
     [SerializeField] private Text levelText;
     [SerializeField] private bool drawStarted;
@@ -38,7 +39,8 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                playerAnimator.Play("Shoot_Player");
+                playerAnimator.Play("Shoot_Player",-1,0);
+                player.GetComponent<AudioSource>().Play();
                 if (!drawStarted)
                 {
                     EarlyShot();
@@ -63,6 +65,8 @@ public class GameManager : MonoBehaviour
     private IEnumerator StartGame()
     {
         Debug.Log("Starting game");
+        soundManager.PlayWind();
+        soundManager.PlayCrows();
         float startCount = 0.0f;
         float startTime = 3.0f + Random.Range(0, 1);
         while (startCount <= startTime)
@@ -71,7 +75,7 @@ public class GameManager : MonoBehaviour
             //Debug.Log("Counting down draw " + startCount);
             yield return null;
         }
-        float drawTime = 3.0f - level / 5;
+        float drawTime = 3.0f/level;
         drawStarted = true;
         StartDuel();
         Debug.Log(drawStarted);
@@ -84,6 +88,7 @@ public class GameManager : MonoBehaviour
         DifficultyManager.Instance.UnlockCursor();
         drawingEnemy.Draw();
         playerAnimator.Play("Draw_Player");
+        soundManager.PlayChurch();
         Debug.Log("Enemies left " + enemies.Count);
         if (enemies.Count > 0)
         {

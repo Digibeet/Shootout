@@ -5,6 +5,11 @@ using UnityEngine;
 // INHERITANCE
 public abstract class Enemy : MonoBehaviour
 {
+    [SerializeField] private AudioClip shot;
+    [SerializeField] private AudioClip hit;
+    [SerializeField] private AudioClip draw;
+    private AudioSource enemyPlayer;
+
     protected float drawTime;
     protected float shootTime = 2.5f;
     protected float lives = 1;
@@ -17,6 +22,7 @@ public abstract class Enemy : MonoBehaviour
     protected void Start()
     {
         enemyAnimator = this.GetComponent<Animator>();
+        enemyPlayer = this.GetComponent<AudioSource>();
     }
 
     public virtual void InstantiateEnemy(GameManager new_gameManager)
@@ -29,6 +35,8 @@ public abstract class Enemy : MonoBehaviour
     {
         Debug.Log("Draw!");   
         enemyAnimator.Play("draw");
+        enemyPlayer.clip = draw;
+        enemyPlayer.Play();
         drawn = true;
         StartCoroutine(CountdownToShoot());
     }
@@ -49,6 +57,8 @@ public abstract class Enemy : MonoBehaviour
     {
         Debug.Log("Shoot!");
         enemyAnimator.Play("shoot");
+        enemyPlayer.clip = shot;
+        enemyPlayer.Play();
         won = true;
         gameManager.TooLate();
     }
