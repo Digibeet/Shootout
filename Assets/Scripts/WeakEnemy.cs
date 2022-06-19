@@ -7,7 +7,7 @@ public class WeakEnemy : Enemy
     // POLYMORPHISM
     public override void InstantiateEnemy(GameManager new_gameManager)
     {
-        shootTime = 3.0f - 0.5f* new_gameManager.level;
+        shootTime = 3.0f/(new_gameManager.level%5);
         base.InstantiateEnemy(new_gameManager);
     }
 }

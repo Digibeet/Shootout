@@ -19,11 +19,14 @@ public class GameManager : MonoBehaviour
 
     private Animator playerAnimator;
 
+    [SerializeField] GameObject bulletUI;
+    int bullets_left = 6;
     bool lost = false;
 
     void Start()
     {
         drawStarted = false;
+        bulletUI.GetComponent<BulletManager>().SetBulletImage(bullets_left);
         playerAnimator = player.GetComponent<Animator>();
         level = DifficultyManager.Instance.GetLevel();
         IntroduceLevel();
@@ -39,14 +42,21 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                playerAnimator.Play("Shoot_Player",-1,0);
-                player.GetComponent<AudioSource>().Play();
+                Shoot();
                 if (!drawStarted)
                 {
                     EarlyShot();
                 }
             }
         }
+    }
+
+    private void Shoot()
+    {
+        playerAnimator.Play("Shoot_Player", -1, 0);
+        player.GetComponent<AudioSource>().Play();
+        bullets_left--;
+        bulletUI.GetComponent<BulletManager>().SetBulletImage(bullets_left);
     }
 
     private void IntroduceLevel()
@@ -66,16 +76,15 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Starting game");
         soundManager.PlayWind();
-        soundManager.PlayCrows();
+        soundManager.PlayMusic();
         float startCount = 0.0f;
-        float startTime = 3.0f + Random.Range(0, 1);
+        float startTime = 7.0f + Random.Range(0, 1);
         while (startCount <= startTime)
         {
             startCount += Time.deltaTime;
             //Debug.Log("Counting down draw " + startCount);
             yield return null;
         }
-        float drawTime = 3.0f/level;
         drawStarted = true;
         StartDuel();
         Debug.Log(drawStarted);
@@ -84,11 +93,12 @@ public class GameManager : MonoBehaviour
     private void StartDuel()
     {
         Debug.Log("Starting duel");
+        soundManager.PlayCrows();
         Enemy drawingEnemy = enemyManager.GetRandomEnemy(enemies);
         DifficultyManager.Instance.UnlockCursor();
         drawingEnemy.Draw();
         playerAnimator.Play("Draw_Player");
-        soundManager.PlayChurch();
+        //soundManager.PlayChurch();
         Debug.Log("Enemies left " + enemies.Count);
         if (enemies.Count > 0)
         {

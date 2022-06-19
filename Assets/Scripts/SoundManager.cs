@@ -7,6 +7,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private GameObject crows;
     [SerializeField] private GameObject church;
     [SerializeField] private GameObject wind;
+    [SerializeField] private GameObject music;
     public void PlayCrows()
     {
         AudioSource crowsSource = crows.GetComponent<AudioSource>();
@@ -23,5 +24,10 @@ public class SoundManager : MonoBehaviour
     public void PlayWind()
     {
         wind.GetComponent<AudioSource>().Play();
+    }
+
+    public void PlayMusic()
+    {
+        music.GetComponent<AudioSource>().Play();
     }
 }
