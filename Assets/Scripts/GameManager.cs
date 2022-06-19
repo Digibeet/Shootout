@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private SoundManager soundManager;
     [SerializeField] private GameObject Gunshot;
+    [SerializeField] private GameObject Lightning;
+    [SerializeField] private Text Feedback;
 
     public GameObject weakEnemy;
     public GameObject fastEnemy;
@@ -145,6 +147,9 @@ public class GameManager : MonoBehaviour
 
     public void EarlyShot()
     {
+        Lightning.GetComponent<SpriteRenderer>().enabled = true;
+        playerAnimator.Play("burn");
+        Feedback.enabled = true;
         Lose();
     }
 
