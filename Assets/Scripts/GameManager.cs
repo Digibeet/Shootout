@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private SoundManager soundManager;
+    [SerializeField] private GameObject Gunshot;
+
     public GameObject weakEnemy;
     public GameObject fastEnemy;
     [SerializeField] private GameObject player;
@@ -54,7 +56,7 @@ public class GameManager : MonoBehaviour
     private void Shoot()
     {
         playerAnimator.Play("Shoot_Player", -1, 0);
-        player.GetComponent<AudioSource>().Play();
+        Instantiate(Gunshot, new Vector2(0,0), Quaternion.identity);
         bullets_left--;
         bulletUI.GetComponent<BulletManager>().SetBulletImage(bullets_left);
     }

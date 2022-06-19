@@ -9,6 +9,6 @@ public class BulletManager : MonoBehaviour
 
     public void SetBulletImage(int bulletsLeft)
     {
-        this.GetComponent<Image>().sprite = bulletImages[bulletsLeft];     
+        GetComponent<Image>().sprite = bulletImages[bulletsLeft];
     }
 }
