@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TitleManager : MonoBehaviour
 {
     [SerializeField] private AudioSource gameStart;
+    [SerializeField] private GameObject FadeOut;
+
     public void StartNewGame()
     {
         DifficultyManager.Instance.Restart();
@@ -16,6 +19,7 @@ public class TitleManager : MonoBehaviour
     {
         Debug.Log("Starting new game");
         gameStart.Play();
+        FadeOut.SetActive(true);
         DifficultyManager.Instance.LockCursor();
         while (gameStart.isPlaying)
         {

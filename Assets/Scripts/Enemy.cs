@@ -23,6 +23,7 @@ public abstract class Enemy : MonoBehaviour
     {
         enemyAnimator = this.GetComponent<Animator>();
         enemyPlayer = this.GetComponent<AudioSource>();
+        won = false;
     }
 
     public virtual void InstantiateEnemy(GameManager new_gameManager)
@@ -74,6 +75,8 @@ public abstract class Enemy : MonoBehaviour
 
     protected virtual void Hit()
     {
+        Debug.Log("Enemy hit");
+        Debug.Log(lives + "Lives left");
         if (!won)
         {
             lives--;
@@ -86,6 +89,7 @@ public abstract class Enemy : MonoBehaviour
 
     protected void OnMouseDown()
     {
+        Debug.Log("Clicking on enemy");
         if (drawn)
         {
             Hit();
