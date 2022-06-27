@@ -1210,7 +1210,7 @@ MonoBehaviour:
   Gunshot: {fileID: 5330678627174273253, guid: 1efce7243d84e4b49b2b6198df11d3bd, type: 3}
   Lightning: {fileID: 335501754}
   Feedback: {fileID: 1213988563}
-  weakEnemy: {fileID: 1375424769945564106, guid: c540bc51007067f45a9b76dd60a0ff8c, type: 3}
+  weakEnemy: {fileID: 1375424769945564106, guid: cf5fc3a7ed34572459162a8b771d2452, type: 3}
   fastEnemy: {fileID: 8924443831876896418, guid: 44c5bb55a3f075047a0874c9f4cb8520, type: 3}
   player: {fileID: 1202480548}
   levelText: {fileID: 1109268722}
