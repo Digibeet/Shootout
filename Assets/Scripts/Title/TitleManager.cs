@@ -25,7 +25,7 @@ public class TitleManager : MonoBehaviour
         {
             yield return null;
         }
-        SceneManager.LoadScene("MainGameScene");
+        SceneManager.LoadScene("Level_1");
     }
 
 }

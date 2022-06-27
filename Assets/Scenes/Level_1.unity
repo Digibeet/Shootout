@@ -151,7 +151,7 @@ Animator:
   m_GameObject: {fileID: 335501754}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cb7c8940360136845b2395afee5fdc1b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 266387bd7b7f51e40b1683a6eb1cbab7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -200,7 +200,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 7397647621899862176, guid: ec4a7a5f02b23c54681eb34158ebd4b7, type: 3}
+  m_Sprite: {fileID: 7397647621899862176, guid: f19d71fc82858874586ebade4750943c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -510,7 +510,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 630719702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2010541597}
@@ -575,7 +575,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 611edc18449b56e47b73d77ecaa0b888, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 128ffc1220ad6e545bf170a72e1894e8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -606,13 +606,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletImages:
-  - {fileID: 21300000, guid: e26a775913031b54fa944555bc93aac8, type: 3}
-  - {fileID: 21300000, guid: 1dcdbfa188fecb44a8ed9809044ea0d3, type: 3}
-  - {fileID: 21300000, guid: c838225526eb0fb4dae064a4cbaa852d, type: 3}
-  - {fileID: 21300000, guid: b6cc3b0baedd8ae418efb93a67a15d49, type: 3}
-  - {fileID: 21300000, guid: c5132b82be6cdce4f9a1ad8da7691825, type: 3}
-  - {fileID: 21300000, guid: 780e3bd54abaf374baf76e8f4f4894c1, type: 3}
-  - {fileID: 21300000, guid: 611edc18449b56e47b73d77ecaa0b888, type: 3}
+  - {fileID: 21300000, guid: 860e9e847002f2a4287e8df2c3b81a5d, type: 3}
+  - {fileID: 21300000, guid: 6a923c25e19135743bcc9a1514854634, type: 3}
+  - {fileID: 21300000, guid: 447d1735cb4f7704793a56a8ac600134, type: 3}
+  - {fileID: 21300000, guid: f82496911c00c8844a3ae089a3e3f34c, type: 3}
+  - {fileID: 21300000, guid: b1d5544177cb7f64da506cf72e5f9344, type: 3}
+  - {fileID: 21300000, guid: 55f7d599519fc71458d39b59ffb088ee, type: 3}
+  - {fileID: 21300000, guid: 128ffc1220ad6e545bf170a72e1894e8, type: 3}
 --- !u!1 &1106142560
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,7 +922,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 8031338253240543404, guid: b0449b0c59f6a99449ac996c70f71869, type: 3}
+  m_Sprite: {fileID: 8031338253240543404, guid: 13cd779e73784ed4b83cde432b347e77, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -943,7 +943,7 @@ Animator:
   m_GameObject: {fileID: 1202480548}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 99d91e12b736e924c8a4b5deb7fb02b4, type: 2}
+  m_Controller: {fileID: 9100000, guid: b73322bc345a41a489852b6f9c5dbc7c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1162,7 +1162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d9af822444069b44900d5b6818e1a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crosshair: {fileID: 2800000, guid: ba75c4ce29d31e04092bfbeb7558b3ec, type: 3}
+  crosshair: {fileID: 2800000, guid: 14bc91574b5079c4d8d3e7e60d439ebe, type: 3}
 --- !u!4 &1950226866
 Transform:
   m_ObjectHideFlags: 0
@@ -1207,11 +1207,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundManager: {fileID: 554546280}
-  Gunshot: {fileID: 5330678627174273253, guid: c2134c8d6ed0f1547b72dbd29bf85565, type: 3}
+  Gunshot: {fileID: 5330678627174273253, guid: 1efce7243d84e4b49b2b6198df11d3bd, type: 3}
   Lightning: {fileID: 335501754}
   Feedback: {fileID: 1213988563}
-  weakEnemy: {fileID: 1375424769945564106, guid: cf5fc3a7ed34572459162a8b771d2452, type: 3}
-  fastEnemy: {fileID: 8924443831876896418, guid: b76f0684d30eef041afd0020428fd0ff, type: 3}
+  weakEnemy: {fileID: 1375424769945564106, guid: c540bc51007067f45a9b76dd60a0ff8c, type: 3}
+  fastEnemy: {fileID: 8924443831876896418, guid: 44c5bb55a3f075047a0874c9f4cb8520, type: 3}
   player: {fileID: 1202480548}
   levelText: {fileID: 1109268722}
   drawStarted: 0
@@ -1287,7 +1287,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5cdefcf356880ba4a8deaa5365711030, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 16153126bf1b0a641a8456e7233c2018, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

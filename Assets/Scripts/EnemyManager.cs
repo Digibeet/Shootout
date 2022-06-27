@@ -23,12 +23,12 @@ public class EnemyManager
         for (int weakEnemyCounter = 0; weakEnemyCounter < numberOfWeakEnemies; weakEnemyCounter++)
         {
             Debug.Log("spawning weak enemy " + weakEnemyCounter);
-            gameManager.CreateEnemy(gameManager.weakEnemy, "WeakEnemy", AssignRandomPosition(availablePositions));
+            gameManager.CreateEnemy(gameManager.weakEnemy, AssignRandomPosition(availablePositions));
         }
         for (int fastEnemyCounter = 0; fastEnemyCounter < numberOfFastEnemies; fastEnemyCounter++)
         {
             Debug.Log("spawning fast enemy " + fastEnemyCounter + 1);
-            gameManager.CreateEnemy(gameManager.fastEnemy, "FastEnemy", AssignRandomPosition(availablePositions));
+            gameManager.CreateEnemy(gameManager.fastEnemy, AssignRandomPosition(availablePositions));
         }
         Debug.Log("Spawned all enemies");
         return;

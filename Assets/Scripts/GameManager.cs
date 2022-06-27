@@ -68,10 +68,10 @@ public class GameManager : MonoBehaviour
         string new_levelText = "ROUND " + level;
         levelText.text = new_levelText;
     }
-    public void CreateEnemy(GameObject enemy, string enemyScript, Vector2 enemyPosition)
+    public void CreateEnemy(GameObject enemy, Vector2 enemyPosition)
     {
         GameObject newEnemy = Instantiate(enemy, enemyPosition, Quaternion.identity);
-        Enemy newEnemyScript = newEnemy.GetComponent(enemyScript) as Enemy;
+        Enemy newEnemyScript = newEnemy.GetComponent<Enemy>();
         newEnemyScript.InstantiateEnemy(this);
         enemies.Add(newEnemyScript);
     }
@@ -135,7 +135,7 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
         DifficultyManager.Instance.NextLevel();
-        SceneManager.LoadScene("MainGameScene");
+        SceneManager.LoadScene(Application.loadedLevel);
     }
 
     private void Lose()
