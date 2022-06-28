@@ -270,7 +270,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -468,6 +468,11 @@ MonoBehaviour:
   church: {fileID: 2043946543}
   wind: {fileID: 489055733}
   music: {fileID: 2070834449}
+  startingSounds:
+  - {fileID: 8300000, guid: c80666b49fe779a4e91f5c5362b2f57d, type: 3}
+  - {fileID: 8300000, guid: 27cb7215a63fbd64f8756b411e41386c, type: 3}
+  - {fileID: 8300000, guid: 84c844e4b1a6bbf4098ffab308cccaed, type: 3}
+  - {fileID: 8300000, guid: c8b5ecde10be623478568ec18e5ffd5b, type: 3}
 --- !u!4 &554546281
 Transform:
   m_ObjectHideFlags: 0
@@ -1466,7 +1471,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e703bd8db405abc448ca2bd601dfd49c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c80666b49fe779a4e91f5c5362b2f57d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

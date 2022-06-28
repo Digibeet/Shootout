@@ -135,7 +135,15 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
         DifficultyManager.Instance.NextLevel();
-        SceneManager.LoadScene(Application.loadedLevel);
+        if(DifficultyManager.Instance.GetLevel() == 5)
+        {
+            DifficultyManager.Instance.NextAct();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }    
     }
 
     private void Lose()
@@ -148,6 +156,7 @@ public class GameManager : MonoBehaviour
     public void EarlyShot()
     {
         Lightning.GetComponent<SpriteRenderer>().enabled = true;
+        Lightning.GetComponent<Animator>().Play("Flash", -1, 0);
         playerAnimator.Play("burn");
         Feedback.enabled = true;
         Lose();

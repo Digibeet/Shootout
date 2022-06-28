@@ -46,6 +46,11 @@ public class DifficultyManager : MonoBehaviour
         return level;
     }
 
+    public void NextAct()
+    {
+        level = 1;
+    }
+
     public void NextLevel()
     {
         level++;

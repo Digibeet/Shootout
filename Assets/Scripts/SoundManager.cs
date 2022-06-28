@@ -8,6 +8,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private GameObject church;
     [SerializeField] private GameObject wind;
     [SerializeField] private GameObject music;
+    [SerializeField] private AudioClip[] startingSounds;
     public void PlayCrows()
     {
         AudioSource crowsSource = crows.GetComponent<AudioSource>();
@@ -28,6 +29,9 @@ public class SoundManager : MonoBehaviour
 
     public void PlayMusic()
     {
-        music.GetComponent<AudioSource>().Play();
+        AudioClip startingSoundClip = startingSounds[DifficultyManager.Instance.GetLevel() - 1];
+        AudioSource source = music.GetComponent<AudioSource>();
+        source.clip = startingSoundClip;
+        source.Play();
     }
 }
