@@ -580,7 +580,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 128ffc1220ad6e545bf170a72e1894e8, type: 3}
+  m_Sprite: {fileID: -3008214916645752581, guid: 38abf8039df87ab499ffdbe43d340d2c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -598,26 +598,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 677273050}
   m_CullTransparentMesh: 1
---- !u!114 &677273054
-MonoBehaviour:
+--- !u!95 &677273054
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 677273050}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e65199cde78ef4742b16e8440423bdd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletImages:
-  - {fileID: 21300000, guid: 860e9e847002f2a4287e8df2c3b81a5d, type: 3}
-  - {fileID: 21300000, guid: 6a923c25e19135743bcc9a1514854634, type: 3}
-  - {fileID: 21300000, guid: 447d1735cb4f7704793a56a8ac600134, type: 3}
-  - {fileID: 21300000, guid: f82496911c00c8844a3ae089a3e3f34c, type: 3}
-  - {fileID: 21300000, guid: b1d5544177cb7f64da506cf72e5f9344, type: 3}
-  - {fileID: 21300000, guid: 55f7d599519fc71458d39b59ffb088ee, type: 3}
-  - {fileID: 21300000, guid: 128ffc1220ad6e545bf170a72e1894e8, type: 3}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c3c31b54724e1f148bc9db3548834478, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1106142560
 GameObject:
   m_ObjectHideFlags: 0
@@ -1213,6 +1212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundManager: {fileID: 554546280}
   Gunshot: {fileID: 5330678627174273253, guid: 1efce7243d84e4b49b2b6198df11d3bd, type: 3}
+  EmptyRevolver: {fileID: 7289045488614086195, guid: 798415e3a4975314b956d4f0eaf4967f, type: 3}
   Lightning: {fileID: 335501754}
   Feedback: {fileID: 1213988563}
   weakEnemy: {fileID: 1375424769945564106, guid: cf5fc3a7ed34572459162a8b771d2452, type: 3}

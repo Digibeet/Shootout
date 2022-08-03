@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private SoundManager soundManager;
     [SerializeField] private GameObject Gunshot;
+    [SerializeField] private GameObject EmptyRevolver;
     [SerializeField] private GameObject Lightning;
     [SerializeField] private Text Feedback;
 
@@ -30,7 +31,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         drawStarted = false;
-        bulletUI.GetComponent<BulletManager>().SetBulletImage(bullets_left);
         playerAnimator = player.GetComponent<Animator>();
         level = DifficultyManager.Instance.GetLevel();
         IntroduceLevel();
@@ -46,7 +46,10 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                Shoot();
+                if (bullets_left > 0)
+                    Shoot();
+                else
+                    NoAmmo();
                 if (!drawStarted)
                 {
                     EarlyShot();
@@ -60,7 +63,13 @@ public class GameManager : MonoBehaviour
         playerAnimator.Play("Shoot_Player", -1, 0);
         Instantiate(Gunshot, new Vector2(0,0), Quaternion.identity);
         bullets_left--;
-        bulletUI.GetComponent<BulletManager>().SetBulletImage(bullets_left);
+        int bulletsFired = 6 - bullets_left;
+        bulletUI.GetComponent<Animator>().Play("shoot_" + bulletsFired);
+    }
+
+    private void NoAmmo()
+    {
+        Instantiate(EmptyRevolver, new Vector2(0, 0), Quaternion.identity);
     }
 
     private void IntroduceLevel()
