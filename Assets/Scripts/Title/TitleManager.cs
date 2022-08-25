@@ -15,6 +15,12 @@ public class TitleManager : MonoBehaviour
         StartCoroutine(StartGame());
     }
 
+    public void StartVersus()
+    {
+        gameStart.Play();
+        SceneManager.LoadScene("Versus");
+    }
+
     IEnumerator StartGame()
     {
         Debug.Log("Starting new game");
