@@ -31,12 +31,17 @@ public class VersusManager : GameManager
             if (Input.GetMouseButtonDown(0))
             {
                 Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                worldPosition.z = 0;
                 if (worldPosition.x > 0)
                 {
                     if (bulletsLeft_p1 > 0)
                     {
                         Shoot(playerAnimator);
                         bulletsLeft_p1 = ReduceBullets(bulletsLeft_p1, 1, bulletUI_p1);
+                        BoxCollider2D opponentHitBox = player2.GetComponent<BoxCollider2D>();
+                        if(opponentHitBox.bounds.Contains(worldPosition)){
+                            player2.GetComponent<Player>().Hit();
+                        }
                     }
                     else
                         NoAmmo();
@@ -51,6 +56,11 @@ public class VersusManager : GameManager
                     {
                         Shoot(player2Animator);
                         bulletsLeft_p2 = ReduceBullets(bulletsLeft_p2, 1, bulletUI_p2);
+                        BoxCollider2D opponentHitBox = player.GetComponent<BoxCollider2D>();
+                        if (opponentHitBox.bounds.Contains(worldPosition))
+                        {
+                            player.GetComponent<Player>().Hit();
+                        }
                     }
                     else
                         NoAmmo();

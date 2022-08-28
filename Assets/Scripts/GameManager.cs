@@ -116,7 +116,7 @@ public class GameManager : MonoBehaviour
         soundManager.PlayWind();
         soundManager.PlayMusic();
         float startCount = 0.0f;
-        float startTime = 7.0f + Random.Range(0, 1);
+        float startTime = 0.0f + Random.Range(0, 1);
         while (startCount <= startTime)
         {
             startCount += Time.deltaTime;

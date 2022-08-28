@@ -869,19 +869,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e53ccc922098c284795a0553ef6607fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &1168830567
-BoxCollider:
+--- !u!61 &1168830567
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1168830562}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.35714287}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.52380955, y: 0.71428573}
+    newSize: {x: 2.1, y: 2.1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.52380955, y: 0.71428573, z: 0.2}
-  m_Center: {x: 0, y: 0.35714287, z: 0}
+  m_Size: {x: 0.52380955, y: 0.71428573}
+  m_EdgeRadius: 0
 --- !u!1 &1202480548
 GameObject:
   m_ObjectHideFlags: 0
@@ -998,19 +1011,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e53ccc922098c284795a0553ef6607fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &1202480553
-BoxCollider:
+--- !u!61 &1202480553
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202480548}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.35714287}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.52380955, y: 0.71428573}
+    newSize: {x: 2.1, y: 2.1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.52380955, y: 0.71428573, z: 0.2}
-  m_Center: {x: 0, y: 0.35714287, z: 0}
+  m_Size: {x: 0.52380955, y: 0.71428573}
+  m_EdgeRadius: 0
 --- !u!1 &1213988561
 GameObject:
   m_ObjectHideFlags: 0
