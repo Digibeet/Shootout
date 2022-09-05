@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] protected SoundManager soundManager;
     [SerializeField] protected GameObject Gunshot;
     [SerializeField] private GameObject EmptyRevolver;
-    [SerializeField] private GameObject Lightning;
+    [SerializeField] protected GameObject Lightning;
     [SerializeField] protected Text Feedback;
 
     public GameObject weakEnemy;
@@ -180,7 +180,7 @@ public class GameManager : MonoBehaviour
         }    
     }
 
-    private void Lose()
+    protected void Lose()
     {
         //Destroy(player);
         lost = true;

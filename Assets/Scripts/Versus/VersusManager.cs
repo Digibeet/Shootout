@@ -8,6 +8,8 @@ public class VersusManager : GameManager
     [SerializeField] protected GameObject player2;
     [SerializeField] private GameObject bulletUI_p1;
     [SerializeField] private GameObject bulletUI_p2;
+    [SerializeField] private GameObject SceneSelectionUI;
+    [SerializeField] private GameObject GameplayUI;
     private Animator player2Animator;
     private int bulletsLeft_p1 = 6;
     private int bulletsLeft_p2 = 6;
@@ -27,8 +29,10 @@ public class VersusManager : GameManager
     public void StartButton()
     {
         Debug.Log("Starting duelllll");
-        //lost = false;
-        //StartCoroutine(StartGame());
+        lost = false;
+        GameplayUI.SetActive(true);
+        SceneSelectionUI.SetActive(false);
+        StartCoroutine(StartGame());
     }
 
     protected override void Update()
@@ -41,7 +45,11 @@ public class VersusManager : GameManager
                 worldPosition.z = 0;
                 if (worldPosition.x > 0)
                 {
-                    if (bulletsLeft_p1 > 0)
+                    if (!drawStarted)
+                    {
+                        EarlyShot(player);
+                    }
+                    else if (bulletsLeft_p1 > 0)
                     {
                         Shoot(playerAnimator);
                         bulletsLeft_p1 = ReduceBullets(bulletsLeft_p1, 1, bulletUI_p1);
@@ -52,14 +60,15 @@ public class VersusManager : GameManager
                     }
                     else
                         NoAmmo();
-                    if (!drawStarted)
-                    {
-                        EarlyShot();
-                    }
+                    
                 }
                 else
                 {
-                    if (bulletsLeft_p2 > 0)
+                    if (!drawStarted)
+                    {
+                        EarlyShot(player2);
+                    }
+                    else if (bulletsLeft_p2 > 0)
                     {
                         Shoot(player2Animator);
                         bulletsLeft_p2 = ReduceBullets(bulletsLeft_p2, 1, bulletUI_p2);
@@ -71,14 +80,20 @@ public class VersusManager : GameManager
                     }
                     else
                         NoAmmo();
-                    if (!drawStarted)
-                    {
-                        EarlyShot();
-                    }
                 }
                 
             }
         }
+    }
+
+    public void EarlyShot(GameObject earlyPlayer)
+    {
+        Vector2 lightningPosition = earlyPlayer.transform.position;
+        lightningPosition.y += 2.7f;
+        CreateLightning(Lightning, lightningPosition);
+        earlyPlayer.GetComponent<Animator>().Play("burn");
+        Feedback.enabled = true;
+        Lose();
     }
 
     protected override void StartDuel()
