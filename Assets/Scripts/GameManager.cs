@@ -110,13 +110,13 @@ public class GameManager : MonoBehaviour
         newLightning.GetComponent<Animator>().Play("Flash", -1, 0);
     }
 
-    protected IEnumerator StartGame()
+    public IEnumerator StartGame()
     {
         Debug.Log("Starting game");
         soundManager.PlayWind();
         soundManager.PlayMusic();
         float startCount = 0.0f;
-        float startTime = 0.0f + Random.Range(0, 1);
+        float startTime = 5.0f + Random.Range(0, 1);
         while (startCount <= startTime)
         {
             startCount += Time.deltaTime;

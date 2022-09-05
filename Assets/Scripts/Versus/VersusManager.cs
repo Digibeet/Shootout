@@ -16,12 +16,19 @@ public class VersusManager : GameManager
     // Start is called before the first frame update
     protected override void Start()
     {
+        lost = true;
         drawStarted = false;
         endScene = "Versus";
         playerAnimator = player.GetComponent<Animator>();
         player2Animator = player2.GetComponent<Animator>();
         level = 1;
-        StartCoroutine(StartGame());
+    }
+
+    public void StartButton()
+    {
+        Debug.Log("Starting duelllll");
+        //lost = false;
+        //StartCoroutine(StartGame());
     }
 
     protected override void Update()
