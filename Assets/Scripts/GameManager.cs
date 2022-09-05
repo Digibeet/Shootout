@@ -6,33 +6,36 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private SoundManager soundManager;
-    [SerializeField] private GameObject Gunshot;
+    [SerializeField] protected SoundManager soundManager;
+    [SerializeField] protected GameObject Gunshot;
     [SerializeField] private GameObject EmptyRevolver;
     [SerializeField] private GameObject Lightning;
-    [SerializeField] private Text Feedback;
+    [SerializeField] protected Text Feedback;
 
     public GameObject weakEnemy;
     public GameObject fastEnemy;
-    [SerializeField] private GameObject player;
+    [SerializeField] protected GameObject player;
     [SerializeField] private Text levelText;
-    [SerializeField] private bool drawStarted;
+    [SerializeField] public static bool drawStarted;
     private EnemyManager enemyManager;
 
-    public int level { get; private set; }
+    public int level { get; protected set; }
     private List<Enemy> enemies = new List<Enemy>();
 
-    private Animator playerAnimator;
+    protected Animator playerAnimator;
 
     [SerializeField] GameObject bulletUI;
+    protected string endScene;
     int bullets_left = 6;
-    bool lost = false;
+    public static bool lost;
 
-    void Start()
+    protected virtual void Start()
     {
+        lost = false;
         drawStarted = false;
         playerAnimator = player.GetComponent<Animator>();
         level = DifficultyManager.Instance.GetLevel();
+        endScene = "TitleScene";
         IntroduceLevel();
         enemyManager = new EnemyManager(level, this);
         enemyManager.PlanEnemies();
@@ -40,14 +43,17 @@ public class GameManager : MonoBehaviour
         StartCoroutine(StartGame());
     }
 
-    void Update()
+    protected virtual void Update()
     {
         if (!lost)
         {
             if (Input.GetMouseButtonDown(0))
             {
                 if (bullets_left > 0)
-                    Shoot();
+                {
+                    Shoot(playerAnimator);
+                    bullets_left = ReduceBullets(bullets_left, 1, bulletUI);
+                }
                 else
                     NoAmmo();
                 if (!drawStarted)
@@ -58,16 +64,28 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Shoot()
+    protected int ReduceBullets(int bullets, int reductionAmount, GameObject bulletUI)
     {
-        playerAnimator.Play("Shoot_Player", -1, 0);
-        Instantiate(Gunshot, new Vector2(0,0), Quaternion.identity);
-        bullets_left--;
-        int bulletsFired = 6 - bullets_left;
-        bulletUI.GetComponent<Animator>().Play("shoot_" + bulletsFired);
+        int remainingBullets = bullets - reductionAmount;
+        if (remainingBullets < 0)
+        {
+            return 0;
+        }
+        else
+        {
+            int bulletsFired = 6 - remainingBullets;
+            bulletUI.GetComponent<Animator>().Play("shoot_" + bulletsFired);
+            return remainingBullets;
+        }
     }
 
-    private void NoAmmo()
+    protected void Shoot(Animator shooterAnimator)
+    {
+        shooterAnimator.Play("Shoot_Player", -1, 0);
+        Instantiate(Gunshot, new Vector2(0, 0), Quaternion.identity);
+    }
+
+    protected void NoAmmo()
     {
         Instantiate(EmptyRevolver, new Vector2(0, 0), Quaternion.identity);
     }
@@ -85,13 +103,20 @@ public class GameManager : MonoBehaviour
         enemies.Add(newEnemyScript);
     }
 
-    private IEnumerator StartGame()
+    protected void CreateLightning(GameObject lightning, Vector2 lightningPosition)
+    {
+        GameObject newLightning = Instantiate(lightning, lightningPosition, Quaternion.identity);
+        newLightning.GetComponent<SpriteRenderer>().enabled = true;
+        newLightning.GetComponent<Animator>().Play("Flash", -1, 0);
+    }
+
+    public IEnumerator StartGame()
     {
         Debug.Log("Starting game");
         soundManager.PlayWind();
         soundManager.PlayMusic();
         float startCount = 0.0f;
-        float startTime = 7.0f + Random.Range(0, 1);
+        float startTime = 5.0f + Random.Range(0, 1);
         while (startCount <= startTime)
         {
             startCount += Time.deltaTime;
@@ -103,7 +128,7 @@ public class GameManager : MonoBehaviour
         Debug.Log(drawStarted);
     }
 
-    private void StartDuel()
+    protected virtual void StartDuel()
     {
         Debug.Log("Starting duel");
         soundManager.PlayCrows();
@@ -164,8 +189,7 @@ public class GameManager : MonoBehaviour
 
     public void EarlyShot()
     {
-        Lightning.GetComponent<SpriteRenderer>().enabled = true;
-        Lightning.GetComponent<Animator>().Play("Flash", -1, 0);
+        CreateLightning(Lightning, new Vector2(-3, 0.5f));
         playerAnimator.Play("burn");
         Feedback.enabled = true;
         Lose();
@@ -177,7 +201,7 @@ public class GameManager : MonoBehaviour
         Lose();
     }
 
-    private IEnumerator EndGame()
+    protected virtual IEnumerator EndGame()
     {
         float sadCount = 0f;
         while (sadCount <= 4)
@@ -186,6 +210,6 @@ public class GameManager : MonoBehaviour
             //Debug.Log("Counting down draw " + drawCount);
             yield return null;
         }
-        SceneManager.LoadScene("TitleScene");
+        SceneManager.LoadScene(endScene);
     }
 }
