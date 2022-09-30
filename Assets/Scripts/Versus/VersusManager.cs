@@ -14,6 +14,8 @@ public class VersusManager : GameManager
     private int bulletsLeft_p1 = 6;
     private int bulletsLeft_p2 = 6;
 
+    public List<GameObject> backGrounds;
+
 
     // Start is called before the first frame update
     protected override void Start()
@@ -24,6 +26,25 @@ public class VersusManager : GameManager
         playerAnimator = player.GetComponent<Animator>();
         player2Animator = player2.GetComponent<Animator>();
         level = 1;
+
+        CreateBackgroundsTumbnails();
+    }
+
+    private void CreateBackgroundsTumbnails()
+    {
+        List<GameObject> backgroundTumbnails = new List<GameObject>();
+        Vector2 tumbnailPosition = new Vector2(-9, -3);
+        for(int backgroundIndex = 0; backgroundIndex < backGrounds.Count; backgroundIndex++)
+        {
+            GameObject background = backGrounds[backgroundIndex];
+            GameObject newTumbnail = Instantiate(background, tumbnailPosition, Quaternion.identity);
+            tumbnailPosition.x = tumbnailPosition.x + 3;
+            newTumbnail.transform.localScale = new Vector2(0.1f, 0.1f);
+            newTumbnail.AddComponent<BoxCollider2D>();
+            newTumbnail.AddComponent<LevelTumbail>();
+            backgroundTumbnails.Add(newTumbnail);
+        }
+        backgroundTumbnails[0].GetComponent<LevelTumbail>().CreateBackground();
     }
 
     public void StartButton()
