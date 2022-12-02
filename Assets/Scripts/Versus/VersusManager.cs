@@ -33,7 +33,7 @@ public class VersusManager : GameManager
     private void CreateBackgroundsTumbnails()
     {
         List<GameObject> backgroundTumbnails = new List<GameObject>();
-        Vector2 tumbnailPosition = new Vector2(-9, 3);
+        Vector2 tumbnailPosition = new Vector2(-9, 2);
         for(int backgroundIndex = 0; backgroundIndex < backGrounds.Count; backgroundIndex++)
         {
             GameObject background = backGrounds[backgroundIndex];
