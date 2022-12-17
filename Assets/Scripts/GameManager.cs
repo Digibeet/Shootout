@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     public int level { get; protected set; }
     private List<Enemy> enemies = new List<Enemy>();
 
-    protected Animator playerAnimator;
+    protected PlayerAnimator playerAnimator;
 
     [SerializeField] GameObject bulletUI;
     protected string endScene;
@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     {
         lost = false;
         drawStarted = false;
-        playerAnimator = player.GetComponent<Animator>();
+        playerAnimator = player.GetComponent<PlayerAnimator>();
         level = DifficultyManager.Instance.GetLevel();
         endScene = "TitleScene";
         IntroduceLevel();
@@ -79,9 +79,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    protected void Shoot(Animator shooterAnimator)
+    protected void Shoot(PlayerAnimator shootingPlayer)
     {
-        shooterAnimator.Play("Shoot_Player", -1, 0);
+        shootingPlayer.Shoot();
         Instantiate(Gunshot, new Vector2(0, 0), Quaternion.identity);
     }
 
@@ -128,14 +128,14 @@ public class GameManager : MonoBehaviour
         Debug.Log(drawStarted);
     }
 
-    protected virtual void StartDuel()
+    public virtual void StartDuel()
     {
         Debug.Log("Starting duel");
         soundManager.PlayCrows();
         Enemy drawingEnemy = enemyManager.GetRandomEnemy(enemies);
         DifficultyManager.Instance.UnlockCursor();
         drawingEnemy.Draw();
-        playerAnimator.Play("Draw_Player");
+        playerAnimator.Draw();
         //soundManager.PlayChurch();
         Debug.Log("Enemies left " + enemies.Count);
         if (enemies.Count > 0)
@@ -190,14 +190,14 @@ public class GameManager : MonoBehaviour
     public void EarlyShot()
     {
         CreateLightning(Lightning, new Vector2(-3, 0.5f));
-        playerAnimator.Play("burn");
+        playerAnimator.EarlyShot();
         Feedback.enabled = true;
         Lose();
     }
 
     public void TooLate()
     {
-        playerAnimator.Play("Player_Die");
+        playerAnimator.Die();
         Lose();
     }
 

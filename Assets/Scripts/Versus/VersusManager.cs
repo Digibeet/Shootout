@@ -8,13 +8,11 @@ public class VersusManager : GameManager
     [SerializeField] protected GameObject player2;
     [SerializeField] private GameObject bulletUI_p1;
     [SerializeField] private GameObject bulletUI_p2;
-    [SerializeField] private GameObject SceneSelectionUI;
-    [SerializeField] private GameObject GameplayUI;
-    private Animator player2Animator;
+
+    private PlayerAnimator player1Animator;
+    private PlayerAnimator player2Animator;
     private int bulletsLeft_p1 = 6;
     private int bulletsLeft_p2 = 6;
-
-    public List<GameObject> backGrounds;
 
 
     // Start is called before the first frame update
@@ -23,37 +21,7 @@ public class VersusManager : GameManager
         lost = true;
         drawStarted = false;
         endScene = "Versus";
-        playerAnimator = player.GetComponent<Animator>();
-        player2Animator = player2.GetComponent<Animator>();
         level = 1;
-
-        CreateBackgroundsTumbnails();
-    }
-
-    private void CreateBackgroundsTumbnails()
-    {
-        List<GameObject> backgroundTumbnails = new List<GameObject>();
-        Vector2 tumbnailPosition = new Vector2(-9, 2);
-        for(int backgroundIndex = 0; backgroundIndex < backGrounds.Count; backgroundIndex++)
-        {
-            GameObject background = backGrounds[backgroundIndex];
-            GameObject newTumbnail = Instantiate(background, tumbnailPosition, Quaternion.identity);
-            tumbnailPosition.x = tumbnailPosition.x + 3;
-            newTumbnail.transform.localScale = new Vector2(0.1f, 0.1f);
-            newTumbnail.AddComponent<BoxCollider2D>();
-            newTumbnail.AddComponent<LevelTumbail>();
-            backgroundTumbnails.Add(newTumbnail);
-        }
-        backgroundTumbnails[0].GetComponent<LevelTumbail>().CreateBackground();
-    }
-
-    public void StartButton()
-    {
-        Debug.Log("Starting duelllll");
-        lost = false;
-        GameplayUI.SetActive(true);
-        SceneSelectionUI.SetActive(false);
-        StartCoroutine(StartGame());
     }
 
     protected override void Update()
@@ -72,7 +40,7 @@ public class VersusManager : GameManager
                     }
                     else if (bulletsLeft_p1 > 0)
                     {
-                        Shoot(playerAnimator);
+                        Shoot(player1Animator);
                         bulletsLeft_p1 = ReduceBullets(bulletsLeft_p1, 1, bulletUI_p1);
                         BoxCollider2D opponentHitBox = player2.GetComponent<BoxCollider2D>();
                         if(opponentHitBox.bounds.Contains(worldPosition)){
@@ -117,11 +85,12 @@ public class VersusManager : GameManager
         Lose();
     }
 
-    protected override void StartDuel()
+    public override void StartDuel()
     {
+        lost = false;
         Debug.Log("Starting duel");
         soundManager.PlayCrows();
-        playerAnimator.Play("Draw_Player");
-        player2Animator.Play("Draw_Player");
+        player1Animator.Draw();
+        player2Animator.Draw();
     }
 }
