@@ -24,7 +24,7 @@ public class GameConfigurator : MonoBehaviour
     private void SelectCharacter()
     {
         player1 = Instantiate(characters[0], new Vector2(-6,-4), Quaternion.identity);
-        player2 = Instantiate(characters[0], new Vector2(6, -4), Quaternion.identity);
+        player2 = Instantiate(characters[1], new Vector2(6, -4), Quaternion.identity);
         player2.transform.localScale = new Vector3(-player2.transform.localScale.x,player2.transform.localScale.y,1);
     }
 

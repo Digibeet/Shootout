@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 7270895507841025191}
   - component: {fileID: 7270895507841025190}
   - component: {fileID: 7270895507841025185}
-  - component: {fileID: 7270895507841025184}
+  - component: {fileID: 8563831820653207490}
+  - component: {fileID: 1079847427618852079}
   m_Layer: 3
   m_Name: Soldier
   m_TagString: Untagged
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: -693012600020271943, guid: 4238cfc74256ee54aa2653bc79eabf90, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 2.1, y: 2.1}
@@ -116,7 +117,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e53ccc922098c284795a0553ef6607fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &7270895507841025184
+--- !u!114 &8563831820653207490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7270895507841025186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6031a44ab0ce51741a3327619aea62d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAnimator: {fileID: 0}
+  characterTumbnail: {fileID: 0}
+--- !u!61 &1079847427618852079
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,10 +144,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.35714287}
+  m_Offset: {x: 0.03099975, y: 0.38}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 1, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 0.48, y: 0.76}
     newSize: {x: 2.1, y: 2.1}
     adaptiveTilingThreshold: 0.5
@@ -140,5 +155,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.52380955, y: 0.71428573}
+  m_Size: {x: 0.62, y: 0.76}
   m_EdgeRadius: 0
