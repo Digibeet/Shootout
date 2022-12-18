@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     protected void KillPlayer()
     {
         GameManager.lost = true;
-        this.GetComponent<Animator>().Play("Player_Die");
+        this.GetComponent<PlayerAnimator>().Die();
         //Destroy(gameObject);
     }
 

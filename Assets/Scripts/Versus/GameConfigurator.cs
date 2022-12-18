@@ -5,12 +5,15 @@ using UnityEngine;
 public class GameConfigurator : MonoBehaviour
 {
     public List<GameObject> backGrounds;
+    public List<GameObject> characters;
     [SerializeField] private GameObject startButton;
     [SerializeField] private GameObject selectButton;
     [SerializeField] private GameObject SceneSelectionUI;
     [SerializeField] private GameObject GameplayUI;
     public GameObject GameManager;
-    private VersusManager versusManager;
+
+    private GameObject player1;
+    private GameObject player2;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +23,9 @@ public class GameConfigurator : MonoBehaviour
 
     private void SelectCharacter()
     {
-        
+        player1 = Instantiate(characters[0], new Vector2(-6,-4), Quaternion.identity);
+        player2 = Instantiate(characters[0], new Vector2(6, -4), Quaternion.identity);
+        player2.transform.localScale = new Vector3(-player2.transform.localScale.x,player2.transform.localScale.y,1);
     }
 
     public void CreateBackgroundsTumbnails()
@@ -51,6 +56,7 @@ public class GameConfigurator : MonoBehaviour
 
     public void SelectSceneButton()
     {
+        GameManager.GetComponent<VersusManager>().SetPlayers(player1, player2);
         selectButton.SetActive(false);
         startButton.SetActive(true);
         CreateBackgroundsTumbnails();

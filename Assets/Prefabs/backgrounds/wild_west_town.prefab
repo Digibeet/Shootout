@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6840561523696365616}
   - component: {fileID: 6840561523696365617}
+  - component: {fileID: 9021668504871867347}
   m_Layer: 6
   m_Name: wild_west_town
   m_TagString: Untagged
@@ -82,3 +83,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9021668504871867347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6840561523696365622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e1a87ad054d1124a98eec2e92b82001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: {fileID: 8300000, guid: 14a282cea98e7b7458b32b2cac8e2068, type: 3}
+  duellSound: {fileID: 8300000, guid: c80666b49fe779a4e91f5c5362b2f57d, type: 3}

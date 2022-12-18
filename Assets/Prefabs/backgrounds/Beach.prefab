@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7059457727185843965}
   - component: {fileID: 498209161338148058}
+  - component: {fileID: 2614693500462645488}
   m_Layer: 0
   m_Name: Beach
   m_TagString: Untagged
@@ -82,3 +83,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2614693500462645488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969447280050054776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 285bf5696bf199a40b6d80ff70f19c7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: {fileID: 8300000, guid: bdd776cd9bd2496478e1b5e99e16ac79, type: 3}
+  duellSound: {fileID: 8300000, guid: c80666b49fe779a4e91f5c5362b2f57d, type: 3}

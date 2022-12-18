@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class PlayerAnimator : MonoBehaviour
 {
     public Animator playerAnimator;
+    public Sprite characterTumbnail;
 
     public void Start()
     {

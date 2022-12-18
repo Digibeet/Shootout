@@ -93,4 +93,13 @@ public class VersusManager : GameManager
         player1Animator.Draw();
         player2Animator.Draw();
     }
+
+    public void SetPlayers(GameObject new_player1, GameObject new_player2)
+    {
+        player = new_player1;
+        player2 = new_player2;
+        player1Animator = player.GetComponent<PlayerAnimator>();
+        player2Animator = player2.GetComponent<PlayerAnimator>();
+        print("setting players");
+    }
 }
