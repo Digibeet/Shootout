@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class SoldierPlayerAnimator : PlayerAnimator
 {
+    public void Awake()
+    {
+        character_name = "soldier";
+    }
     public override void Die()
     {
         throw new System.NotImplementedException();

@@ -4,13 +4,15 @@ using UnityEngine;
 
 public abstract class PlayerAnimator : MonoBehaviour
 {
-    public Animator playerAnimator;
+    protected Animator playerAnimator;
     public Sprite characterTumbnail;
+    public string character_name;
 
-    public void Start()
+    public virtual void Start()
     {
         playerAnimator = GetComponent<Animator>();
     }
+
     public abstract void Draw();
     public abstract void Shoot();
     public abstract void Die();

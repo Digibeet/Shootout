@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAnimator: {fileID: 0}
-  characterTumbnail: {fileID: 0}
+  characterTumbnail: {fileID: 21300000, guid: f92fb86636451fb40a424b8fd58937bb, type: 3}
 --- !u!61 &1079847427618852079
 BoxCollider2D:
   m_ObjectHideFlags: 0
