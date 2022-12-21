@@ -8,24 +8,16 @@ public class TumbnailController : MonoBehaviour
     private GameConfigurator gameConfigurator;
     private int playerSide;
 
+    public void Init(GameObject new_gameCharacter, GameConfigurator new_GameConfigurator, int new_playerSide)
+    {
+        gameCharacter = new_gameCharacter;
+        gameConfigurator = new_GameConfigurator;
+        playerSide = new_playerSide;
+    }
+
     public GameObject GetCharacter()
     {
         return gameCharacter;
-    }
-
-    public void SetGameCharacter(GameObject new_gameCharacter)
-    {
-        gameCharacter = new_gameCharacter;
-    }
-
-    public void SetGameConfigurator(GameConfigurator new_GameConfigurator)
-    {
-        gameConfigurator = new_GameConfigurator;
-    } 
-
-    public void SetPlayerSide(int new_playerSide)
-    {
-        playerSide = new_playerSide;
     }
 
     private void OnMouseDown()
