@@ -1,0 +1,519 @@
+fileFormatVersion: 2
+guid: edc5ca55e3c2c71439b39334190e2cf0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3143445493733564481
+    second: soldier_die_spritesheet_0
+  - first:
+      213: 4675961905397691137
+    second: soldier_die_spritesheet_1
+  - first:
+      213: 322331060254772940
+    second: soldier_die_spritesheet_2
+  - first:
+      213: 4251740290724136194
+    second: soldier_die_spritesheet_1
+  - first:
+      213: 8247459920208617629
+    second: soldier_die_spritesheet_x
+  - first:
+      213: 3575617230608830896
+    second: soldier_die_spritesheet_7
+  - first:
+      213: 141106195938095866
+    second: soldier_die_spritesheet_9
+  - first:
+      213: -8096561946560258672
+    second: soldier_die_spritesheet_11
+  - first:
+      213: 5786564099323431870
+    second: soldier_die_spritesheet_12
+  - first:
+      213: -9067820932311152081
+    second: soldier_die_spritesheet_13
+  - first:
+      213: -4391910188378184751
+    second: soldier_die_spritesheet_15
+  - first:
+      213: -1299720501627301468
+    second: soldier_die_spritesheet_17
+  - first:
+      213: 5002170139191279163
+    second: soldier_die_spritesheet_8
+  - first:
+      213: 8135568485560626268
+    second: soldier_die_spritesheet_19
+  - first:
+      213: -6527228329801243346
+    second: soldier_die_spritesheet_6
+  - first:
+      213: -157190260928723677
+    second: soldier_die_spritesheet_
+  - first:
+      213: 6165370045127589843
+    second: soldier_die_spritesheet_4
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: soldier_die_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 51
+        width: 35
+        height: 37
+      alignment: 9
+      pivot: {x: 0.62857145, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103fc72249a54e040800000000000000
+      internalID: 4675961905397691137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_die_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 51
+        width: 26
+        height: 36
+      alignment: 9
+      pivot: {x: 0.5769231, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce8f8a3466297400800000000000000
+      internalID: 322331060254772940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_die_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 51
+        width: 24
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5833333, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20504d98447310b30800000000000000
+      internalID: 4251740290724136194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_die_spritesheet_x
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 72
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d906e4bb91dd47270800000000000000
+      internalID: 8247459920208617629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_die_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 0
+        width: 69
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b194334de42f9130800000000000000
+      internalID: 3575617230608830896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_die_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 0
+        width: 24
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af23f7c665f45f100800000000000000
+      internalID: 141106195938095866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_die_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 0
+        width: 24
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d94599ecb33af80800000000000000
+      internalID: -8096561946560258672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_die_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 0
+        width: 66
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebb833ac3610e4050800000000000000
+      internalID: 5786564099323431870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_die_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 0
+        width: 55
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2a0ebac7e0a82280800000000000000
+      internalID: -9067820932311152081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_die_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 0
+        width: 55
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d3ac48f3fccc03c0800000000000000
+      internalID: -4391910188378184751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_die_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 0
+        width: 54
+        height: 36
+      alignment: 9
+      pivot: {x: 0.7592593, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a15639071776fde0800000000000000
+      internalID: -1299720501627301468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_die_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 0
+        width: 52
+        height: 37
+      alignment: 9
+      pivot: {x: 0.75, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3eff8c2d374b6540800000000000000
+      internalID: 5002170139191279163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_die_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 0
+        width: 49
+        height: 40
+      alignment: 9
+      pivot: {x: 0.7346939, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5c24bbfe6857e070800000000000000
+      internalID: 8135568485560626268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_die_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 0
+        width: 44
+        height: 39
+      alignment: 9
+      pivot: {x: 0.70454544, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e25a452ba60aa65a0800000000000000
+      internalID: -6527228329801243346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_die_spritesheet_
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 0
+        width: 41
+        height: 36
+      alignment: 9
+      pivot: {x: 0.68292683, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325413f5a4c81ddf0800000000000000
+      internalID: -157190260928723677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soldier_die_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 0
+        width: 35
+        height: 36
+      alignment: 9
+      pivot: {x: 0.62857145, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dff9a8f36bcf8550800000000000000
+      internalID: 6165370045127589843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

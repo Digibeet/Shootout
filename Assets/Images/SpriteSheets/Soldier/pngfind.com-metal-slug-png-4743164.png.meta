@@ -6038,7 +6038,7 @@ TextureImporter:
         y: 661
         width: 24
         height: 35
-      alignment: 7
+      alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -6059,7 +6059,7 @@ TextureImporter:
         y: 661
         width: 26
         height: 36
-      alignment: 7
+      alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -6078,10 +6078,10 @@ TextureImporter:
         serializedVersion: 2
         x: 864
         y: 661
-        width: 26
+        width: 35
         height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.42857143, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6089,27 +6089,6 @@ TextureImporter:
       bones: []
       spriteID: 43b74383f8dbc4430800000000000000
       internalID: 3768595411023199028
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pngfind.com-metal-slug-png-4743164_217
-      rect:
-        serializedVersion: 2
-        x: 892
-        y: 676
-        width: 7
-        height: 13
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a0c84d7bfb76e4b0800000000000000
-      internalID: -5411501582170144601
       vertices: []
       indices: 
       edges: []
@@ -6204,10 +6183,10 @@ TextureImporter:
         serializedVersion: 2
         x: 6
         y: 609
-        width: 26
+        width: 35
         height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.42857143, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6224,11 +6203,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 49
-        y: 556
-        width: 31
-        height: 90
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        y: 609
+        width: 41
+        height: 37
+      alignment: 9
+      pivot: {x: 0.36585367, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6241,27 +6220,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngfind.com-metal-slug-png-4743164_224
-      rect:
-        serializedVersion: 2
-        x: 76
-        y: 622
-        width: 14
-        height: 22
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2db26a37bf7a56760800000000000000
-      internalID: 7450545856973253586
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: pngfind.com-metal-slug-png-4743164_225
       rect:
         serializedVersion: 2
@@ -6269,8 +6227,8 @@ TextureImporter:
         y: 609
         width: 44
         height: 40
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.3409091, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6286,12 +6244,12 @@ TextureImporter:
       name: pngfind.com-metal-slug-png-4743164_226
       rect:
         serializedVersion: 2
-        x: 135
-        y: 556
-        width: 63
-        height: 94
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 149
+        y: 609
+        width: 49
+        height: 41
+      alignment: 9
+      pivot: {x: 0.30612245, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6311,8 +6269,8 @@ TextureImporter:
         y: 609
         width: 52
         height: 38
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.28846154, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6332,8 +6290,8 @@ TextureImporter:
         y: 609
         width: 54
         height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.2777778, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6351,10 +6309,10 @@ TextureImporter:
         serializedVersion: 2
         x: 328
         y: 609
-        width: 45
+        width: 55
         height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.27272728, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6367,48 +6325,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngfind.com-metal-slug-png-4743164_230
-      rect:
-        serializedVersion: 2
-        x: 365
-        y: 640
-        width: 5
-        height: 6
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c01ed21ff5ec8b700800000000000000
-      internalID: 556421465443787020
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pngfind.com-metal-slug-png-4743164_231
-      rect:
-        serializedVersion: 2
-        x: 371
-        y: 636
-        width: 8
-        height: 9
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a9154d22cf048380800000000000000
-      internalID: -8970027231157610074
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: pngfind.com-metal-slug-png-4743164_232
       rect:
         serializedVersion: 2
@@ -6416,8 +6332,8 @@ TextureImporter:
         y: 609
         width: 55
         height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.27272728, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6437,8 +6353,8 @@ TextureImporter:
         y: 609
         width: 66
         height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.22727273, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6456,10 +6372,10 @@ TextureImporter:
         serializedVersion: 2
         x: 528
         y: 609
-        width: 24
-        height: 36
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 67
+        height: 39
+      alignment: 9
+      pivot: {x: 0.2238806, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6472,36 +6388,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngfind.com-metal-slug-png-4743164_235
-      rect:
-        serializedVersion: 2
-        x: 554
-        y: 613
-        width: 41
-        height: 35
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 020fb56b16db52650800000000000000
-      internalID: 6207575888769052704
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: pngfind.com-metal-slug-png-4743164_236
       rect:
         serializedVersion: 2
         x: 605
         y: 609
-        width: 24
-        height: 35
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 69
+        height: 38
+      alignment: 9
+      pivot: {x: 0.2173913, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6514,36 +6409,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngfind.com-metal-slug-png-4743164_237
-      rect:
-        serializedVersion: 2
-        x: 636
-        y: 612
-        width: 38
-        height: 35
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 633bf6b462030c7d0800000000000000
-      internalID: -2900265218994097354
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: pngfind.com-metal-slug-png-4743164_238
       rect:
         serializedVersion: 2
         x: 683
         y: 609
-        width: 27
-        height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 72
+        height: 39
+      alignment: 9
+      pivot: {x: 0.2361111, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6556,36 +6430,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngfind.com-metal-slug-png-4743164_239
-      rect:
-        serializedVersion: 2
-        x: 724
-        y: 611
-        width: 31
-        height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a61fb24d015e73cc0800000000000000
-      internalID: -3731261905811279510
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: pngfind.com-metal-slug-png-4743164_240
       rect:
         serializedVersion: 2
-        x: 763
+        x: 771
         y: 609
-        width: 35
+        width: 72
         height: 41
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6598,267 +6451,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pngfind.com-metal-slug-png-4743164_241
-      rect:
-        serializedVersion: 2
-        x: 812
-        y: 611
-        width: 31
-        height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 558c0cbe9c29b0a20800000000000000
-      internalID: 3029676570278152277
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pngfind.com-metal-slug-png-4743164_242
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 625
-        width: 7
-        height: 13
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64a02cd3fd7acb570800000000000000
-      internalID: 8483840375314844230
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pngfind.com-metal-slug-png-4743164_243
-      rect:
-        serializedVersion: 2
-        x: 370
-        y: 628
-        width: 13
-        height: 8
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fdbb381c742a28e10800000000000000
-      internalID: 2198497997183237087
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pngfind.com-metal-slug-png-4743164_244
-      rect:
-        serializedVersion: 2
-        x: 566
-        y: 623
-        width: 20
-        height: 9
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e236886f1606965e0800000000000000
-      internalID: -1915894192605207762
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pngfind.com-metal-slug-png-4743164_245
-      rect:
-        serializedVersion: 2
-        x: 652
-        y: 623
-        width: 9
-        height: 8
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 51d84de1b13906b40800000000000000
-      internalID: 5431502895299464469
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pngfind.com-metal-slug-png-4743164_246
-      rect:
-        serializedVersion: 2
-        x: 660
-        y: 628
-        width: 4
-        height: 4
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e07ac3b0d0ac18c0800000000000000
-      internalID: -4027167148546035481
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pngfind.com-metal-slug-png-4743164_247
-      rect:
-        serializedVersion: 2
-        x: 363
-        y: 624
-        width: 4
-        height: 4
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 747d246d5a5378130800000000000000
-      internalID: 3568880216094988103
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pngfind.com-metal-slug-png-4743164_248
-      rect:
-        serializedVersion: 2
-        x: 367
-        y: 622
-        width: 5
-        height: 5
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 369fd379bf29b6290800000000000000
-      internalID: -7896055912392165021
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pngfind.com-metal-slug-png-4743164_249
-      rect:
-        serializedVersion: 2
-        x: 372
-        y: 617
-        width: 10
-        height: 11
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 811c62db26ed297a0800000000000000
-      internalID: -6371786007114235624
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pngfind.com-metal-slug-png-4743164_250
-      rect:
-        serializedVersion: 2
-        x: 740
-        y: 621
-        width: 4
-        height: 7
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81836b788f013fba0800000000000000
-      internalID: -6056478414268385256
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pngfind.com-metal-slug-png-4743164_251
-      rect:
-        serializedVersion: 2
-        x: 828
-        y: 621
-        width: 4
-        height: 7
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e6764a951ccb67900800000000000000
-      internalID: 681939932211865454
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pngfind.com-metal-slug-png-4743164_252
-      rect:
-        serializedVersion: 2
-        x: 235
-        y: 563
-        width: 13
-        height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac942cdd05927bb40800000000000000
-      internalID: 5455874900877265354
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: pngfind.com-metal-slug-png-4743164_253
       rect:
         serializedVersion: 2
         x: 338
         y: 555
-        width: 34
-        height: 38
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 27
+        height: 18
+      alignment: 9
+      pivot: {x: 0.4814815, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7128,10 +6729,10 @@ TextureImporter:
         serializedVersion: 2
         x: 6
         y: 555
-        width: 27
-        height: 31
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 74
+        height: 40
+      alignment: 9
+      pivot: {x: 0.24324325, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7149,10 +6750,10 @@ TextureImporter:
         serializedVersion: 2
         x: 91
         y: 555
-        width: 27
-        height: 27
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 74
+        height: 40
+      alignment: 9
+      pivot: {x: 0.22972973, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7170,10 +6771,10 @@ TextureImporter:
         serializedVersion: 2
         x: 176
         y: 555
-        width: 26
-        height: 22
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 72
+        height: 38
+      alignment: 9
+      pivot: {x: 0.2361111, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7193,8 +6794,8 @@ TextureImporter:
         y: 555
         width: 28
         height: 18
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.4642857, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7214,8 +6815,8 @@ TextureImporter:
         y: 555
         width: 29
         height: 18
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.44827586, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

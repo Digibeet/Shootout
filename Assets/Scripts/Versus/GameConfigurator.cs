@@ -11,6 +11,7 @@ public class GameConfigurator : MonoBehaviour
     [SerializeField] private GameObject selectButton;
     [SerializeField] private GameObject sceneSelectionUI;
     [SerializeField] private GameObject GameplayUI;
+    [SerializeField] private GameObject characterTumbnails;
     public GameObject GameManager;
 
     private GameObject player1;
@@ -32,16 +33,18 @@ public class GameConfigurator : MonoBehaviour
 
     private void CreateCharacterTumbnails()
     {
-        Vector2 tumbnailPosition = new Vector2(-9, 2);
-        Transform tumbnailParent = sceneSelectionUI.transform.Find("CharacterTumbnails");
+        Vector2 tumbnailPositionForPlayer1 = new Vector2(-9, 2);
+        Vector2 tumbnailPositionForPlayer2 = new Vector2(3, 2);
         for (int characterIndex = 0; characterIndex < characters.Count; characterIndex++)
         {
-            SpawnCharacterTumbnail(characters[characterIndex], tumbnailPosition, 1);
-            tumbnailPosition.x += 3;
+            SpawnCharacterTumbnail(characters[characterIndex], tumbnailPositionForPlayer1, 1);
+            tumbnailPositionForPlayer1.x += 3;
+            SpawnCharacterTumbnail(characters[characterIndex], tumbnailPositionForPlayer2, 2);
+            tumbnailPositionForPlayer2.x += 3;
         }
     }
 
-    private void SpawnCharacterTumbnail(GameObject character, Vector2 tumbnailPosition, int playerSide)
+    private GameObject SpawnCharacterTumbnail(GameObject character, Vector2 tumbnailPosition, int playerSide)
     {
         PlayerAnimator characterInfo = character.GetComponent<PlayerAnimator>();
         Sprite tumbnail = characterInfo.characterTumbnail;
@@ -53,6 +56,8 @@ public class GameConfigurator : MonoBehaviour
         newTumbnail.AddComponent<TumbnailController>().Init(character, this, playerSide);
         newTumbnail.AddComponent<SpriteRenderer>().sprite = tumbnail;
         newTumbnail.AddComponent<BoxCollider2D>();
+        newTumbnail.transform.parent = characterTumbnails.transform;
+        return newTumbnail;
     }
 
     private void CreateBackgroundsTumbnails()
@@ -87,6 +92,7 @@ public class GameConfigurator : MonoBehaviour
         GameManager.GetComponent<VersusManager>().SetPlayers(player1, player2);
         selectButton.SetActive(false);
         startButton.SetActive(true);
+        Destroy(characterTumbnails);
         CreateBackgroundsTumbnails();
     }
 
