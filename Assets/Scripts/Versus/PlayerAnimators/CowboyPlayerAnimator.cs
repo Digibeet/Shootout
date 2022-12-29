@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CowboyPlayerAnimator : PlayerAnimator
 {
+    [SerializeField] protected AudioClip fallSound;
     public void Awake()
     {
         character_name = "cowboy";
@@ -20,6 +21,7 @@ public class CowboyPlayerAnimator : PlayerAnimator
     {
         yield return new WaitUntil(() => !dieSoundSource);
         playerAnimator.Play("Cowboy_die_2");
+        playSound(fallSound);
     }
 
     public override void EarlyShot()

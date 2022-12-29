@@ -161,3 +161,4 @@ MonoBehaviour:
   drawSound: {fileID: 8300000, guid: b6c3852f388d5f74095e24123516628d, type: 3}
   dieSound: {fileID: 8300000, guid: 8dfd31927bf3c774e88fe0b09320de43, type: 3}
   emptyClipSound: {fileID: 8300000, guid: 27c52a315b0d96c40981f8b3b35324d5, type: 3}
+  fallSound: {fileID: 8300000, guid: 0ebb5249479f7e44d82b11177e977451, type: 3}
