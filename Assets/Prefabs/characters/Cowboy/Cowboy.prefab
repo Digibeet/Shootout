@@ -159,5 +159,5 @@ MonoBehaviour:
   character_name: Cowboy
   shotSound: {fileID: 8300000, guid: 07dcb2a62c639674e8dc2bdb047e7ed1, type: 3}
   drawSound: {fileID: 8300000, guid: b6c3852f388d5f74095e24123516628d, type: 3}
-  dieSound: {fileID: 0}
+  dieSound: {fileID: 8300000, guid: 8dfd31927bf3c774e88fe0b09320de43, type: 3}
   emptyClipSound: {fileID: 8300000, guid: 27c52a315b0d96c40981f8b3b35324d5, type: 3}

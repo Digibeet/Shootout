@@ -11,11 +11,13 @@ public class ArcherPlayerAnimator : PlayerAnimator
     public override void Die()
     {
         playerAnimator.Play("Archer_die");
+        playSound(dieSound);
     }
 
     public override void Draw()
     {
         playerAnimator.Play("Archer_draw");
+        playSound(drawSound);
     }
 
     public override void EarlyShot()

@@ -18,7 +18,7 @@ public abstract class PlayerAnimator : MonoBehaviour
     }
 
     //function to instantiate an empty GameObject with the sounds object as parent to play a given sound
-    protected void playSound(AudioClip sound)
+    protected AudioSource playSound(AudioClip sound)
     {
         GameObject soundObject = new GameObject();
         soundObject.transform.parent = GameObject.Find("Sounds").transform;
@@ -26,6 +26,7 @@ public abstract class PlayerAnimator : MonoBehaviour
         audioSource.clip = sound;
         audioSource.Play();
         Destroy(soundObject, sound.length);
+        return audioSource;
     }
 
 

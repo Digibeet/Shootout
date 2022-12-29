@@ -8,14 +8,17 @@ public class SoldierPlayerAnimator : PlayerAnimator
     {
         character_name = "soldier";
     }
+
     public override void Die()
     {
         playerAnimator.Play("Soldier_die");
+        playSound(dieSound);
     }
 
     public override void Draw()
     {
         playerAnimator.Play("Soldier_draw");
+        playSound(drawSound);
     }
 
     public override void EarlyShot()

@@ -157,3 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterTumbnail: {fileID: 21300000, guid: c89aa35ea63e2cc47ab31df289010b1f, type: 3}
   character_name: Archer
+  shotSound: {fileID: 8300000, guid: 8f12ab1f624e9be45bf7333c13e4913a, type: 3}
+  drawSound: {fileID: 8300000, guid: e3d6cd28302c6a049a29771df1560da2, type: 3}
+  dieSound: {fileID: 8300000, guid: 201ab93cbb6048844a5c3925a6d4bde5, type: 3}
+  emptyClipSound: {fileID: 0}

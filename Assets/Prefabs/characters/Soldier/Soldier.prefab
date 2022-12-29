@@ -133,7 +133,7 @@ MonoBehaviour:
   character_name: Soldier
   shotSound: {fileID: 8300000, guid: 6c2c83547a7c0d843b5c24e3357a2058, type: 3}
   drawSound: {fileID: 8300000, guid: 8e9925688526ee9419760800f152140e, type: 3}
-  dieSound: {fileID: 0}
+  dieSound: {fileID: 8300000, guid: fa8f3edf082c3c94fa5b17d019329b10, type: 3}
   emptyClipSound: {fileID: 8300000, guid: 27c52a315b0d96c40981f8b3b35324d5, type: 3}
 --- !u!61 &1079847427618852079
 BoxCollider2D:
