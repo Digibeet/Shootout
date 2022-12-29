@@ -26,5 +26,6 @@ public class SoldierPlayerAnimator : PlayerAnimator
     public override void Shoot()
     {
         playerAnimator.Play("Soldier_shoot", -1, 0);
+        playSound(shotSound);
     }
 }

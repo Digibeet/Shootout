@@ -5,11 +5,12 @@ using UnityEngine;
 public abstract class LevelManager : MonoBehaviour
 {
     [SerializeField] protected AudioClip music;
+    [SerializeField] protected AudioClip backgroundSounds;
     [SerializeField] protected AudioClip duellSound;
     public virtual void PlayAmbiantSounds() {
         AudioSource musicAudioSource = CreateAudioSource(music, "MusicPlayer");
-        musicAudioSource.Play();
-        musicAudioSource.loop = true;
+        //musicAudioSource.Play();
+        //musicAudioSource.loop = true;
     }
 
     public abstract void PlayAnimations();

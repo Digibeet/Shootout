@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] protected SoundManager soundManager;
-    [SerializeField] protected GameObject Gunshot;
     [SerializeField] private GameObject EmptyRevolver;
     [SerializeField] protected GameObject Lightning;
     [SerializeField] protected Text Feedback;
@@ -55,7 +54,7 @@ public class GameManager : MonoBehaviour
                     bullets_left = ReduceBullets(bullets_left, 1, bulletUI);
                 }
                 else
-                    NoAmmo();
+                    NoAmmo(playerAnimator);
                 if (!drawStarted)
                 {
                     EarlyShot();
@@ -82,12 +81,11 @@ public class GameManager : MonoBehaviour
     protected void Shoot(PlayerAnimator shootingPlayer)
     {
         shootingPlayer.Shoot();
-        Instantiate(Gunshot, new Vector2(0, 0), Quaternion.identity);
     }
 
-    protected void NoAmmo()
+    protected void NoAmmo(PlayerAnimator shootingPlayer)
     {
-        Instantiate(EmptyRevolver, new Vector2(0, 0), Quaternion.identity);
+        shootingPlayer.EmptyClip();
     }
 
     private void IntroduceLevel()

@@ -26,5 +26,6 @@ public class ArcherPlayerAnimator : PlayerAnimator
     public override void Shoot()
     {
         playerAnimator.Play("Archer_shoot");
+        playSound(shotSound);
     }
 }

@@ -48,7 +48,7 @@ public class VersusManager : GameManager
                         }
                     }
                     else
-                        NoAmmo();
+                        NoAmmo(player1Animator);
                     
                 }
                 else
@@ -68,7 +68,7 @@ public class VersusManager : GameManager
                         }
                     }
                     else
-                        NoAmmo();
+                        NoAmmo(player2Animator);
                 }
                 
             }
@@ -84,6 +84,7 @@ public class VersusManager : GameManager
         Feedback.enabled = true;
         Lose();
     }
+
 
     public override void StartDuel()
     {
