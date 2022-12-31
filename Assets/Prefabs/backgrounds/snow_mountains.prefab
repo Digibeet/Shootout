@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6138708682038901428}
   - component: {fileID: 3612123246325094547}
+  - component: {fileID: 1041245481017521188}
   m_Layer: 0
   m_Name: snow_mountains
   m_TagString: Untagged
@@ -82,3 +83,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1041245481017521188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3431120309149411889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e71527dc62f8d0499ede63e65b0a545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: {fileID: 0}
+  backgroundSounds: {fileID: 0}
+  duellSound: {fileID: 0}

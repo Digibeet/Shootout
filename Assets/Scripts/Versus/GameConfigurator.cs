@@ -67,6 +67,12 @@ public class GameConfigurator : MonoBehaviour
         Vector2 tumbnailPosition = new Vector2(-9, 2);
         for (int backgroundIndex = 0; backgroundIndex < backGrounds.Count; backgroundIndex++)
         {
+            //after 7 tumbnails, move to next row
+            if (backgroundIndex % 7 == 0 && backgroundIndex != 0)
+            {
+                tumbnailPosition.y -= 3;
+                tumbnailPosition.x = -9;
+            }
             GameObject background = backGrounds[backgroundIndex];
             GameObject newTumbnail = Instantiate(background, tumbnailPosition, Quaternion.identity);
             tumbnailPosition.x = tumbnailPosition.x + 3;
