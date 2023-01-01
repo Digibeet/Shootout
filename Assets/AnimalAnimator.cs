@@ -25,9 +25,14 @@ public class AnimalAnimator : MonoBehaviour
 
     protected virtual IEnumerator MoveAnimalCoroutine()
     {
+        float MaximumXCoordinate = 10.0f;
+        float MinimumXCoordinate = -10.0f;
+        float MinimumYCoordinate = 0.0f;
+        float MaximumYCoordinate = 5.0f;
+        
         while (true)
         {
-            Vector3 direction = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
+            Vector3 direction = new Vector3(Random.Range(MinimumXCoordinate, MaximumXCoordinate), Random.Range(-MinimumYCoordinate, MaximumYCoordinate), 0);
             //if direction in x is less than 0 flip the animal
             if (direction.x < 0)
             {
@@ -37,10 +42,20 @@ public class AnimalAnimator : MonoBehaviour
             {
                 transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, 1);
             }
-            float speed = Random.Range(0.5f, 1.5f);
+            float speed = 0.3f;
             float duration = Random.Range(1f, 3f);
             float time = 0;
-            while (time < duration)
+            while (time < duration && transform.position.x < MaximumXCoordinate && transform.position.x > MinimumXCoordinate && transform.position.y < MaximumYCoordinate && transform.position.y > MinimumYCoordinate)
+            {
+                transform.position = Vector3.Lerp(transform.position, direction, time / duration);
+                time += Time.deltaTime;
+                yield return null;
+            }
+            {
+                transform.position += direction * speed * Time.deltaTime;
+                time += Time.deltaTime;
+                yield return null;
+            }
             {
                 transform.position += direction * speed * Time.deltaTime;
                 time += Time.deltaTime;
@@ -48,6 +63,7 @@ public class AnimalAnimator : MonoBehaviour
             }
         }
     }
+            
     //Plays a random sound from the animalSounds array at a random moment between x and y seconds
     protected virtual IEnumerator PlayAnimalSoundsCoroutine(float minimal_time, float maximum_time)
     {
