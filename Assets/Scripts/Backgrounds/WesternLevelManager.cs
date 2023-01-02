@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class WesternLevelManager : LevelManager
 {
-    public override void PlayAnimations()
-    {
-        throw new System.NotImplementedException();
-    }
 
     public override void PlayDuellStart()
     {
@@ -15,15 +11,8 @@ public class WesternLevelManager : LevelManager
         duellStartAudioSource.Play();
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public override void SpawnObjects()
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

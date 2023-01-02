@@ -23,42 +23,24 @@ public class AnimalAnimator : MonoBehaviour
         return newAudioSource;
     }
 
-    protected virtual IEnumerator MoveAnimalCoroutine()
+    //Coroutine that moves the object to a random position within set bounds at a steady speed
+    protected IEnumerator MoveAnimalCoroutine()
     {
-        float MaximumXCoordinate = 10.0f;
-        float MinimumXCoordinate = -10.0f;
-        float MinimumYCoordinate = 0.0f;
-        float MaximumYCoordinate = 5.0f;
-        
         while (true)
         {
-            Vector3 direction = new Vector3(Random.Range(MinimumXCoordinate, MaximumXCoordinate), Random.Range(-MinimumYCoordinate, MaximumYCoordinate), 0);
-            //if direction in x is less than 0 flip the animal
-            if (direction.x < 0)
+            Vector2 newPosition = new Vector3(Random.Range(-10.0f, 10.0f), Random.Range(0.0f, 4.0f));
+            //if new position is left of current position, flip the sprite
+            if (newPosition.x < this.transform.position.x)
             {
-                transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1);
+                this.transform.localScale = new Vector3(-2, 2);
+            } else
+            {
+                this.transform.localScale = new Vector3(2, 2);
             }
-            else
+            float speed = 1.0f;
+            while (Vector3.Distance(this.transform.position, newPosition) > 0.1f)
             {
-                transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, 1);
-            }
-            float speed = 0.3f;
-            float duration = Random.Range(1f, 3f);
-            float time = 0;
-            while (time < duration && transform.position.x < MaximumXCoordinate && transform.position.x > MinimumXCoordinate && transform.position.y < MaximumYCoordinate && transform.position.y > MinimumYCoordinate)
-            {
-                transform.position = Vector3.Lerp(transform.position, direction, time / duration);
-                time += Time.deltaTime;
-                yield return null;
-            }
-            {
-                transform.position += direction * speed * Time.deltaTime;
-                time += Time.deltaTime;
-                yield return null;
-            }
-            {
-                transform.position += direction * speed * Time.deltaTime;
-                time += Time.deltaTime;
+                this.transform.position = Vector2.MoveTowards(this.transform.position, newPosition, speed * Time.deltaTime);
                 yield return null;
             }
         }

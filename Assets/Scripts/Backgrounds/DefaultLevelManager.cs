@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class DefaultLevelManager : LevelManager
 {
-    public override void PlayAnimations()
+    public override void PlayDuellStart()
     {
         
     }
 
-    public override void PlayDuellStart()
+    public override void SpawnObjects()
     {
-        
+
     }
 }

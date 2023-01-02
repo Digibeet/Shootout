@@ -18,12 +18,12 @@ public class LevelTumbail : MonoBehaviour
         }
     }
 
-    public void CreateBackground()
+    public GameObject CreateBackground()
     {
         GameObject newBackground = Instantiate(this.gameObject, new Vector3(0, 0, 1), Quaternion.identity);
         newBackground.transform.localScale = new Vector2(1f, 1f);
         newBackground.transform.SetParent(GameObject.Find("Background").transform);
-        newBackground.GetComponent<LevelManager>().PlayAmbiantSounds();
-        //newBackground.transform.position = new Vector3(0, 0, 1);
+        newBackground.GetComponent<LevelManager>().InitiateLevel();
+        return newBackground;
     }
 }

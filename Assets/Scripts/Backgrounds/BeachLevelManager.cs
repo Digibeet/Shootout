@@ -4,25 +4,24 @@ using UnityEngine;
 
 public class BeachLevelManager : LevelManager
 {
-    public override void PlayAnimations()
-    {
-        throw new System.NotImplementedException();
-    }
-
+    [SerializeField] private GameObject seagull;
+    
     public override void PlayDuellStart()
     {
-        throw new System.NotImplementedException();
+        SpawnObjects();
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public override void SpawnObjects()
     {
-        
+        SpawnSeagulls(5);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void SpawnSeagulls(int amountOfSeagulls){
+    for (int i = 0; i < amountOfSeagulls; i++)
+        {
+            Vector2 spawnPosition = new Vector2(Random.Range(-10, 10), Random.Range(0, 4));
+            GameObject newSeagull = Instantiate(seagull, spawnPosition, Quaternion.identity);
+            newSeagull.transform.parent = levelObjectsParent.transform;
+        }
     }
 }

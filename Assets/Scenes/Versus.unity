@@ -2115,9 +2115,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 621008484006906305, guid: 9093e4ab2e3ad40459e815e9a091daea, type: 3}
+      propertyPath: animalSounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 621008484006906305, guid: 9093e4ab2e3ad40459e815e9a091daea, type: 3}
+      propertyPath: animalSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 235e096d67091774082d4a99b0ea08a3, type: 3}
     - target: {fileID: 621008484006906309, guid: 9093e4ab2e3ad40459e815e9a091daea, type: 3}
       propertyPath: m_Name
       value: Seagull
+      objectReference: {fileID: 0}
+    - target: {fileID: 621008484006906309, guid: 9093e4ab2e3ad40459e815e9a091daea, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 621008484006906310, guid: 9093e4ab2e3ad40459e815e9a091daea, type: 3}
       propertyPath: m_RootOrder
@@ -2125,11 +2137,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 621008484006906310, guid: 9093e4ab2e3ad40459e815e9a091daea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 621008484006906310, guid: 9093e4ab2e3ad40459e815e9a091daea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.27
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 621008484006906310, guid: 9093e4ab2e3ad40459e815e9a091daea, type: 3}
       propertyPath: m_LocalPosition.z

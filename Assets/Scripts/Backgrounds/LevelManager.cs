@@ -7,6 +7,25 @@ public abstract class LevelManager : MonoBehaviour
     [SerializeField] protected AudioClip music;
     [SerializeField] protected AudioClip backgroundSounds;
     [SerializeField] protected AudioClip duellSound;
+    protected static GameObject levelObjectsParent;
+
+    protected void Awake()
+    {
+        Debug.Log("Starting the levelManager");
+        levelObjectsParent = GameObject.Find("LevelObjects");
+        if (levelObjectsParent == null)
+        {
+            levelObjectsParent = new GameObject("LevelObjects");
+        }
+    }
+
+    public void InitiateLevel()
+    {
+        DestroyLevelObjects();
+        SpawnObjects();
+        PlayAmbiantSounds();
+    }
+
     public virtual void PlayAmbiantSounds() {
         if (music)
         {
@@ -16,7 +35,15 @@ public abstract class LevelManager : MonoBehaviour
         }
     }
 
-    public abstract void PlayAnimations();
+    protected void DestroyLevelObjects()
+    {
+        foreach (Transform child in levelObjectsParent.transform)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+
+    public abstract void SpawnObjects();
 
     public abstract void PlayDuellStart();
 

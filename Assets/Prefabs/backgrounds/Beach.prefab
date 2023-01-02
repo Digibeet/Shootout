@@ -96,4 +96,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   music: {fileID: 8300000, guid: bdd776cd9bd2496478e1b5e99e16ac79, type: 3}
+  backgroundSounds: {fileID: 0}
   duellSound: {fileID: 8300000, guid: c80666b49fe779a4e91f5c5362b2f57d, type: 3}
+  seagull: {fileID: 2198209958964013962, guid: 9093e4ab2e3ad40459e815e9a091daea, type: 3}
