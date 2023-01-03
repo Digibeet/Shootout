@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2198209958964013958}
   - component: {fileID: 2198209958964013959}
   - component: {fileID: 2198209958964013956}
-  - component: {fileID: 2198209958964013957}
+  - component: {fileID: 1869450392301958730}
   m_Layer: 3
   m_Name: Seagull
   m_TagString: Untagged
@@ -103,7 +103,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2198209958964013957
+--- !u!114 &1869450392301958730
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,8 +112,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2198209958964013962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07f0068fd830bde49b211b22d105150f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a741469cd49bdf43ab8f1243a501b64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalSounds:
-  - {fileID: 8300000, guid: 235e096d67091774082d4a99b0ea08a3, type: 3}
+  animalSounds: []

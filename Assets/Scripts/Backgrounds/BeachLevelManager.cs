@@ -13,7 +13,20 @@ public class BeachLevelManager : LevelManager
 
     public override void SpawnObjects()
     {
-        SpawnSeagulls(5);
+        SpawnSeagulls(6);
+    }
+
+    protected override void PlayAmbiantSounds()
+    {
+        if (backgroundSounds[0])
+        {
+            foreach (AudioClip clip in backgroundSounds)
+            {
+                AudioSource backgroundAudioSource = CreateAudioSource(clip, "BackgroundSoundPlayer");
+                backgroundAudioSource.Play();
+                backgroundAudioSource.loop = true;
+            }
+        }
     }
 
     private void SpawnSeagulls(int amountOfSeagulls){

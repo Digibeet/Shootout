@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class LevelManager : MonoBehaviour
 {
     [SerializeField] protected AudioClip music;
-    [SerializeField] protected AudioClip backgroundSounds;
+    [SerializeField] protected List<AudioClip> backgroundSounds;
     [SerializeField] protected AudioClip duellSound;
     protected static GameObject levelObjectsParent;
 
@@ -26,7 +26,7 @@ public abstract class LevelManager : MonoBehaviour
         PlayAmbiantSounds();
     }
 
-    public virtual void PlayAmbiantSounds() {
+    protected virtual void PlayAmbiantSounds() {
         if (music)
         {
             AudioSource musicAudioSource = CreateAudioSource(music, "MusicPlayer");
