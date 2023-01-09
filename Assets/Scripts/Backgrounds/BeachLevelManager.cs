@@ -13,7 +13,7 @@ public class BeachLevelManager : LevelManager
 
     public override void SpawnObjects()
     {
-        SpawnSeagulls(6);
+        SpawnSeagulls(2);
     }
 
     protected override void PlayAmbiantSounds()

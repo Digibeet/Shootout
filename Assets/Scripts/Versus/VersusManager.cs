@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class VersusManager : GameManager
 {
-    [SerializeField] protected GameObject player2;
+    protected GameObject player2;
     [SerializeField] private GameObject bulletUI_p1;
     [SerializeField] private GameObject bulletUI_p2;
+    [SerializeField] private GameObject gameConfigurator;
+    private GameConfigurator versusGameConfigurator;
 
     private PlayerAnimator player1Animator;
     private PlayerAnimator player2Animator;
@@ -22,6 +24,7 @@ public class VersusManager : GameManager
         drawStarted = false;
         endScene = "Versus";
         level = 1;
+        versusGameConfigurator = gameConfigurator.GetComponent<GameConfigurator>();
     }
 
     protected override void Update()
@@ -44,7 +47,7 @@ public class VersusManager : GameManager
                         bulletsLeft_p1 = ReduceBullets(bulletsLeft_p1, 1, bulletUI_p1);
                         BoxCollider2D opponentHitBox = player2.GetComponent<BoxCollider2D>();
                         if(opponentHitBox.bounds.Contains(worldPosition)){
-                            player2.GetComponent<Player>().Hit();
+                            ShootPlayer(player2.GetComponent<Player>());
                         }
                     }
                     else
@@ -64,7 +67,7 @@ public class VersusManager : GameManager
                         BoxCollider2D opponentHitBox = player.GetComponent<BoxCollider2D>();
                         if (opponentHitBox.bounds.Contains(worldPosition))
                         {
-                            player.GetComponent<Player>().Hit();
+                            ShootPlayer(player.GetComponent<Player>());
                         }
                     }
                     else
@@ -73,6 +76,26 @@ public class VersusManager : GameManager
                 
             }
         }
+    }
+
+    protected void ShootPlayer(Player player)
+    {
+        if (player.Hit())
+        {
+            StartCoroutine(EndGame());
+        }
+    }
+
+    protected override IEnumerator EndGame()
+    {
+        lost = true;
+        float deathCount = 0f;
+        while (deathCount <= 4)
+        {
+            deathCount += Time.deltaTime;
+            yield return null;
+        }
+        versusGameConfigurator.Victory();
     }
 
     public void EarlyShot(GameObject earlyPlayer)

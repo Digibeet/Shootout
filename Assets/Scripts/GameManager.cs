@@ -210,4 +210,9 @@ public class GameManager : MonoBehaviour
         }
         SceneManager.LoadScene(endScene);
     }
+
+    public void ChangeLevelText(string newLevelText)
+    {
+        levelText.text = newLevelText;
+    }
 }

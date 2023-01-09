@@ -5,22 +5,17 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private int lives = 1;
-
-    protected void KillPlayer()
-    {
-        GameManager.lost = true;
-        this.GetComponent<PlayerAnimator>().Die();
-        //Destroy(gameObject);
-    }
-
-    public virtual void Hit()
+    
+    public virtual bool Hit()
     {
         Debug.Log("Enemy hit");
         Debug.Log(lives + "Lives left");
         lives--;
         if (lives <= 0)
         {
-            KillPlayer();
+            this.GetComponent<PlayerAnimator>().Die();
+            return true;
         }
+        return false;
     }
 }

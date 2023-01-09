@@ -10,6 +10,7 @@ public class GameConfigurator : MonoBehaviour
     [SerializeField] private GameObject startButton;
     [SerializeField] private GameObject selectButton;
     [SerializeField] private GameObject sceneSelectionUI;
+    [SerializeField] private GameObject victoryUI;
     [SerializeField] private GameObject GameplayUI;
     [SerializeField] private GameObject characterTumbnails;
     public GameObject GameManager;
@@ -115,7 +116,13 @@ public class GameConfigurator : MonoBehaviour
         }
     }
 
-    private GameObject SwitchCharacter(GameObject newPlayer, GameObject oldPlayer)
+    public void Victory()
+    {
+        GameplayUI.SetActive(false);
+        victoryUI.SetActive(true);
+    }
+
+        private GameObject SwitchCharacter(GameObject newPlayer, GameObject oldPlayer)
     {
         newPlayer.transform.position = oldPlayer.transform.position;
         newPlayer.transform.localScale = oldPlayer.transform.localScale;
