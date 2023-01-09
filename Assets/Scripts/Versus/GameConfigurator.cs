@@ -106,7 +106,9 @@ public class GameConfigurator : MonoBehaviour
     public void RestartButton()
     {
         player1.GetComponent<PlayerAnimator>().ResetPlayer();
-        player1.GetComponent<PlayerAnimator>().ResetPlayer();
+        player2.GetComponent<PlayerAnimator>().ResetPlayer();
+        victoryUI.SetActive(false);
+        GameplayUI.SetActive(true);
         GameManager.GetComponent<VersusManager>().Restart();
     }
 

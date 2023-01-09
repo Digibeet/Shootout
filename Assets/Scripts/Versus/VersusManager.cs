@@ -29,7 +29,7 @@ public class VersusManager : GameManager
     {
         lost = true;
         drawStarted = false;
-        StartGame();
+        StartCoroutine(StartGame());
     }
 
     protected override void Update()
