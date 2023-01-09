@@ -26,6 +26,11 @@ public class SoldierPlayerAnimator : PlayerAnimator
         throw new System.NotImplementedException();
     }
 
+    public override void ResetPlayer()
+    {
+        playerAnimator.Play("Soldier_idle");
+    }
+
     public override void Shoot()
     {
         playerAnimator.Play("Soldier_shoot", -1, 0);

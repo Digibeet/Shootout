@@ -40,4 +40,9 @@ public class CowboyPlayerAnimator : PlayerAnimator
         playerAnimator.Play("Cowboy_shoot", -1, 0);
         playSound(shotSound);
     }
+
+    public override void ResetPlayer()
+    {
+        playerAnimator.Play("Cowboy_idle");
+    }
 }

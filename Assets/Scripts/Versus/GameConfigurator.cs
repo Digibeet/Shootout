@@ -103,6 +103,22 @@ public class GameConfigurator : MonoBehaviour
         CreateBackgroundsTumbnails();
     }
 
+    public void RestartButton()
+    {
+        player1.GetComponent<PlayerAnimator>().ResetPlayer();
+        player1.GetComponent<PlayerAnimator>().ResetPlayer();
+        GameManager.GetComponent<VersusManager>().Restart();
+    }
+
+    public void SelectCharacterButton()
+    {
+    }
+    
+    public void MainMenuButton()
+    {
+        
+    }
+
     public void ChangeCharacter(GameObject new_character, int playerSide)
     {
         GameObject new_player = Instantiate(new_character, new Vector2(0, 0), Quaternion.identity);

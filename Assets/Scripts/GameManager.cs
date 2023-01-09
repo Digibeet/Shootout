@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
     int bullets_left = 6;
     public static bool lost;
 
+    [SerializeField] private AudioClip duellStartClip;
+
     protected virtual void Start()
     {
         lost = false;
@@ -111,8 +113,7 @@ public class GameManager : MonoBehaviour
     public IEnumerator StartGame()
     {
         Debug.Log("Starting game");
-        soundManager.PlayWind();
-        soundManager.PlayMusic();
+        playSound(duellStartClip);
         float startCount = 0.0f;
         float startTime = 5.0f + Random.Range(0, 1);
         while (startCount <= startTime)
@@ -214,5 +215,16 @@ public class GameManager : MonoBehaviour
     public void ChangeLevelText(string newLevelText)
     {
         levelText.text = newLevelText;
+    }
+
+    public AudioSource playSound(AudioClip sound)
+    {
+        GameObject soundObject = new GameObject();
+        soundObject.transform.parent = GameObject.Find("Sounds").transform;
+        AudioSource audioSource = soundObject.AddComponent<AudioSource>();
+        audioSource.clip = sound;
+        audioSource.Play();
+        Destroy(soundObject, sound.length);
+        return audioSource;
     }
 }

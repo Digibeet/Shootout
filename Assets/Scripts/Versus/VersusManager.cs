@@ -16,8 +16,6 @@ public class VersusManager : GameManager
     private int bulletsLeft_p1 = 6;
     private int bulletsLeft_p2 = 6;
 
-
-    // Start is called before the first frame update
     protected override void Start()
     {
         lost = true;
@@ -25,6 +23,13 @@ public class VersusManager : GameManager
         endScene = "Versus";
         level = 1;
         versusGameConfigurator = gameConfigurator.GetComponent<GameConfigurator>();
+    }
+
+    public void Restart()
+    {
+        lost = true;
+        drawStarted = false;
+        StartGame();
     }
 
     protected override void Update()
@@ -113,7 +118,6 @@ public class VersusManager : GameManager
     {
         lost = false;
         Debug.Log("Starting duel");
-        soundManager.PlayCrows();
         player1Animator.Draw();
         player2Animator.Draw();
     }

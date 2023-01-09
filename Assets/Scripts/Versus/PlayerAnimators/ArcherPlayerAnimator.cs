@@ -30,4 +30,9 @@ public class ArcherPlayerAnimator : PlayerAnimator
         playerAnimator.Play("Archer_shoot");
         playSound(shotSound);
     }
+
+    public override void ResetPlayer()
+    {
+        playerAnimator.Play("Archer_idle");
+    }
 }

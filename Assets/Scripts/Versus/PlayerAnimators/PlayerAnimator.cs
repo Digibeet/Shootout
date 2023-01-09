@@ -29,7 +29,7 @@ public abstract class PlayerAnimator : MonoBehaviour
         return audioSource;
     }
 
-
+    public abstract void ResetPlayer();
     public abstract void Draw();
     public abstract void Shoot();
     public abstract void Die();
