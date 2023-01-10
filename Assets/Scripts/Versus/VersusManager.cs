@@ -29,6 +29,8 @@ public class VersusManager : GameManager
     {
         lost = true;
         drawStarted = false;
+        bulletsLeft_p1 = 6;
+        bulletsLeft_p2 = 6;
         StartCoroutine(StartGame());
     }
 
@@ -117,7 +119,7 @@ public class VersusManager : GameManager
     public override void StartDuel()
     {
         lost = false;
-        Debug.Log("Starting duel");
+        Debug.Log("Starting duel via versusmanager");
         player1Animator.Draw();
         player2Animator.Draw();
     }

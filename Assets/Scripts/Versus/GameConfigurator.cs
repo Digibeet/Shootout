@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameConfigurator : MonoBehaviour
@@ -88,7 +89,7 @@ public class GameConfigurator : MonoBehaviour
 
     public void StartButton()
     {
-        Debug.Log("Starting duelllll");
+        Debug.Log("Clicking start button");
         sceneSelectionUI.SetActive(false);
         GameplayUI.SetActive(true);
         StartCoroutine(GameManager.GetComponent<VersusManager>().StartGame());
@@ -114,11 +115,12 @@ public class GameConfigurator : MonoBehaviour
 
     public void SelectCharacterButton()
     {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     
     public void MainMenuButton()
     {
-        
+        SceneManager.LoadScene(0);
     }
 
     public void ChangeCharacter(GameObject new_character, int playerSide)

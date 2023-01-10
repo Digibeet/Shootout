@@ -119,12 +119,10 @@ public class GameManager : MonoBehaviour
         while (startCount <= startTime)
         {
             startCount += Time.deltaTime;
-            //Debug.Log("Counting down draw " + startCount);
             yield return null;
         }
         drawStarted = true;
         StartDuel();
-        Debug.Log(drawStarted);
     }
 
     public virtual void StartDuel()
