@@ -16,6 +16,8 @@ public class VersusManager : GameManager
     private int bulletsLeft_p1 = 6;
     private int bulletsLeft_p2 = 6;
 
+    [SerializeField] private List<GameObject> tallies;
+
     protected override void Start()
     {
         lost = true;
@@ -23,6 +25,8 @@ public class VersusManager : GameManager
         endScene = "Versus";
         level = 1;
         versusGameConfigurator = gameConfigurator.GetComponent<GameConfigurator>();
+        PrintScore(1);
+        PrintScore(2);
     }
 
     public void Restart()
@@ -32,6 +36,8 @@ public class VersusManager : GameManager
         bulletsLeft_p1 = 6;
         bulletsLeft_p2 = 6;
         StartCoroutine(StartGame());
+        PrintScore(1);
+        PrintScore(2);
     }
 
     protected override void Update()
@@ -53,7 +59,10 @@ public class VersusManager : GameManager
                         Shoot(player1Animator);
                         bulletsLeft_p1 = ReduceBullets(bulletsLeft_p1, 1, bulletUI_p1);
                         BoxCollider2D opponentHitBox = player2.GetComponent<BoxCollider2D>();
-                        if(opponentHitBox.bounds.Contains(worldPosition)){
+                        if(opponentHitBox.bounds.Contains(worldPosition))
+                        {
+                            ScoreManager.IncreaseScore(1);
+                            PrintScore(1);
                             ShootPlayer(player2.GetComponent<Player>());
                         }
                     }
@@ -74,6 +83,8 @@ public class VersusManager : GameManager
                         BoxCollider2D opponentHitBox = player.GetComponent<BoxCollider2D>();
                         if (opponentHitBox.bounds.Contains(worldPosition))
                         {
+                            ScoreManager.IncreaseScore(2);
+                            PrintScore(2);
                             ShootPlayer(player.GetComponent<Player>());
                         }
                     }
@@ -83,6 +94,70 @@ public class VersusManager : GameManager
                 
             }
         }
+    }
+
+    private void PrintScore(int player)
+    {
+        Debug.Log("printing score of player " + player);
+        int score = ScoreManager.GetScore(player);
+        if (score == 0){
+            return;
+        }
+        List<GameObject> scoreInTallies = ConvertScoreToTallies(score);
+        if (player == 1)
+        {
+            Debug.Log("Destroying old score");
+            Transform scoreParent = bulletUI_p1.transform.parent.Find("Score_p1");
+            //Reset old score by destroying all children of scoreParent
+            foreach (Transform child in scoreParent)
+            {
+                Destroy(child.gameObject);
+            }
+            for (int tallyIndex = 0; tallyIndex < scoreInTallies.Count; tallyIndex++)
+            {
+                GameObject currentTally = scoreInTallies[tallyIndex];
+                float xPosition = -8 + tallyIndex * 0.8f;
+                currentTally.transform.position = new Vector2(xPosition, -4.4f);
+                currentTally.transform.parent = scoreParent;
+            }
+        } if(player == 2)
+        {
+            Transform scoreParent = bulletUI_p2.transform.parent.Find("Score_p2");
+            //Reset old score by destroying all children of scoreParent
+            foreach (Transform child in scoreParent)
+            {
+                Destroy(child.gameObject);
+            }
+
+            for (int tallyIndex = 0; tallyIndex < scoreInTallies.Count; tallyIndex++)
+            {
+                GameObject currentTally = scoreInTallies[tallyIndex];
+                float xPosition = 8 - tallyIndex * 0.8f;
+                currentTally.transform.position = new Vector2(xPosition, -4.4f);
+                currentTally.transform.parent = scoreParent;
+            }
+        }
+    }
+
+    private List<GameObject> ConvertScoreToTallies(int score)
+    {
+        List<GameObject> tallyScore = new List<GameObject>();
+        int amountOfFullTallies = Mathf.FloorToInt(score / 5);
+        if (amountOfFullTallies > 0)
+        {
+            for (int i = 0; i < amountOfFullTallies; i++)
+            {
+                GameObject new_tally = Instantiate(tallies[4]);
+                tallyScore.Add(new_tally);
+            }
+        }
+        int rest = score % 5;
+        if (rest > 0)
+        {
+            GameObject remainingTally = Instantiate(tallies[rest - 1]);
+            tallyScore.Add(remainingTally);
+        }
+        return tallyScore;
     }
 
     protected void ShootPlayer(Player player)

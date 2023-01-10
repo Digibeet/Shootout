@@ -22,6 +22,9 @@ public class GameConfigurator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameplayUI.SetActive(false);
+        victoryUI.SetActive(false);
+        startButton.SetActive(false);
         SelectCharacter();
     }
 
@@ -138,7 +141,6 @@ public class GameConfigurator : MonoBehaviour
 
     public void Victory()
     {
-        GameplayUI.SetActive(false);
         victoryUI.SetActive(true);
     }
 
