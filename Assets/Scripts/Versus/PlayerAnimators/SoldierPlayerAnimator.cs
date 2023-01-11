@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SoldierPlayerAnimator : PlayerAnimator
 {
+    [SerializeField] protected AudioClip fallSound;
     public void Awake()
     {
         character_name = "soldier";
@@ -35,5 +36,10 @@ public class SoldierPlayerAnimator : PlayerAnimator
     {
         playerAnimator.Play("Soldier_shoot", -1, 0);
         playSound(shotSound);
+    }
+
+    public void Fall()
+    {
+        playSound(fallSound);
     }
 }

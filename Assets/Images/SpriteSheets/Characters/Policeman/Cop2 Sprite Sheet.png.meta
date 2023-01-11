@@ -1,0 +1,1308 @@
+fileFormatVersion: 2
+guid: dd89711facb497a4291a5d04efc5cc1b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4172545679644978405
+    second: Cop2 Sprite Sheet_0
+  - first:
+      213: -1387312386279456920
+    second: Cop2 Sprite Sheet_1
+  - first:
+      213: 5177838145779881018
+    second: Cop2 Sprite Sheet_2
+  - first:
+      213: 1803342258563374536
+    second: Cop2 Sprite Sheet_3
+  - first:
+      213: -6821691165492869819
+    second: Cop2 Sprite Sheet_4
+  - first:
+      213: 5930274665929720459
+    second: Cop2 Sprite Sheet_5
+  - first:
+      213: -4686335249174029572
+    second: Cop2 Sprite Sheet_6
+  - first:
+      213: 1702807629181285588
+    second: Cop2 Sprite Sheet_7
+  - first:
+      213: -4886003988892508557
+    second: Cop2 Sprite Sheet_8
+  - first:
+      213: -7757825787648185140
+    second: Cop2 Sprite Sheet_9
+  - first:
+      213: 8674413905246482684
+    second: Cop2 Sprite Sheet_10
+  - first:
+      213: 8446048423179812572
+    second: Cop2 Sprite Sheet_11
+  - first:
+      213: -9011225718855967120
+    second: Cop2 Sprite Sheet_12
+  - first:
+      213: 57321885889037181
+    second: Cop2 Sprite Sheet_13
+  - first:
+      213: 2354218368707555104
+    second: Cop2 Sprite Sheet_14
+  - first:
+      213: 2000933376288027252
+    second: Cop2 Sprite Sheet_15
+  - first:
+      213: -7582128076022202596
+    second: Cop2 Sprite Sheet_16
+  - first:
+      213: -4282255917482541142
+    second: Cop2 Sprite Sheet_17
+  - first:
+      213: -2098541663333622693
+    second: Cop2 Sprite Sheet_18
+  - first:
+      213: -4219668348396437916
+    second: Cop2 Sprite Sheet_19
+  - first:
+      213: -8297720335537845006
+    second: Cop2 Sprite Sheet_20
+  - first:
+      213: 4164147254556354492
+    second: Cop2 Sprite Sheet_21
+  - first:
+      213: -5066222897130209754
+    second: Cop2 Sprite Sheet_22
+  - first:
+      213: -972565381964532690
+    second: Cop2 Sprite Sheet_23
+  - first:
+      213: 8105705402331240131
+    second: Cop2 Sprite Sheet_24
+  - first:
+      213: 8657887096892681232
+    second: Cop2 Sprite Sheet_25
+  - first:
+      213: 6314558451538917629
+    second: Cop2 Sprite Sheet_26
+  - first:
+      213: 1048987970715160778
+    second: Cop2 Sprite Sheet_27
+  - first:
+      213: -9079424786525551765
+    second: Cop2 Sprite Sheet_28
+  - first:
+      213: 5802939115058926330
+    second: Cop2 Sprite Sheet_29
+  - first:
+      213: 5869237554493413248
+    second: Cop2 Sprite Sheet_30
+  - first:
+      213: -4658422022434327077
+    second: Cop2 Sprite Sheet_31
+  - first:
+      213: 5733899394565828130
+    second: Cop2 Sprite Sheet_32
+  - first:
+      213: 8683910215263967031
+    second: Cop2 Sprite Sheet_33
+  - first:
+      213: 4887587301682276367
+    second: Cop2 Sprite Sheet_34
+  - first:
+      213: -3451181284993619360
+    second: Cop2 Sprite Sheet_35
+  - first:
+      213: -1701375109015056101
+    second: Cop2 Sprite Sheet_36
+  - first:
+      213: 2838606671290199996
+    second: Cop2 Sprite Sheet_37
+  - first:
+      213: 7352848681576127763
+    second: Cop2 Sprite Sheet_38
+  - first:
+      213: 6099384275912157345
+    second: Cop2 Sprite Sheet_39
+  - first:
+      213: -66774584373864616
+    second: Cop2 Sprite Sheet_40
+  - first:
+      213: -2549089388113991950
+    second: Cop2 Sprite Sheet_41
+  - first:
+      213: 4831583298244641349
+    second: Cop2 Sprite Sheet_42
+  - first:
+      213: -5371754625271733214
+    second: Cop2 Sprite Sheet_43
+  - first:
+      213: -3819689176511624798
+    second: Cop2 Sprite Sheet_44
+  - first:
+      213: -1438491227246415789
+    second: Cop2 Sprite Sheet_45
+  - first:
+      213: 4275162986995941486
+    second: Cop2 Sprite Sheet_46
+  - first:
+      213: -7703662012857412391
+    second: Cop2 Sprite Sheet_47
+  - first:
+      213: 5559919593521705050
+    second: Cop2 Sprite Sheet_48
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 30
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 74
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 224
+        width: 18
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b139babbfc32816c0800000000000000
+      internalID: -4172545679644978405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 224
+        width: 18
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86f30572cb64fbce0800000000000000
+      internalID: -1387312386279456920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 224
+        width: 18
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a345da73c506bd740800000000000000
+      internalID: 5177838145779881018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 224
+        width: 18
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cdde1aca32c60910800000000000000
+      internalID: 1803342258563374536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 224
+        width: 18
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5458061270c7451a0800000000000000
+      internalID: -6821691165492869819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 224
+        width: 18
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b824d3383619c4250800000000000000
+      internalID: 5930274665929720459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 224
+        width: 18
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfa179e8beac6feb0800000000000000
+      internalID: -4686335249174029572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 224
+        width: 18
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d4fc22548691a710800000000000000
+      internalID: 1702807629181285588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 192
+        width: 18
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37e9bee524d613cb0800000000000000
+      internalID: -4886003988892508557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 194
+        width: 21
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc6dd18c8aa65490800000000000000
+      internalID: -7757825787648185140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 195
+        width: 22
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0fce0ec75b16870800000000000000
+      internalID: 8674413905246482684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 194
+        width: 21
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde7163ba44663570800000000000000
+      internalID: 8446048423179812572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 192
+        width: 17
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07ed9b4c3f1b1f280800000000000000
+      internalID: -9011225718855967120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 194
+        width: 15
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d73854693f5abc000800000000000000
+      internalID: 57321885889037181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 196
+        width: 14
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02f6386122ddba020800000000000000
+      internalID: 2354218368707555104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 194
+        width: 15
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 472fed8ed4eb4cb10800000000000000
+      internalID: 2000933376288027252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 160
+        width: 18
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1f3e2bcfaed6c690800000000000000
+      internalID: -7582128076022202596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 160
+        width: 20
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaf73217eee5294c0800000000000000
+      internalID: -4282255917482541142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 160
+        width: 23
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c54aac97b70e2e0800000000000000
+      internalID: -2098541663333622693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 160
+        width: 17
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46efedf6ef9b075c0800000000000000
+      internalID: -4219668348396437916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 160
+        width: 17
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc4bba615398dc80800000000000000
+      internalID: -8297720335537845006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 160
+        width: 18
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7ef3c8dd50ac930800000000000000
+      internalID: 4164147254556354492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 128
+        width: 19
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62e7a97fd1921b9b0800000000000000
+      internalID: -5066222897130209754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 128
+        width: 23
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e24792f10f0c082f0800000000000000
+      internalID: -972565381964532690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 128
+        width: 21
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c61be71e104d7070800000000000000
+      internalID: 8105705402331240131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 128
+        width: 21
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ce9b3717ef62870800000000000000
+      internalID: 8657887096892681232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 96
+        width: 15
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df8fa69a471d1a750800000000000000
+      internalID: 6314558451538917629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 96
+        width: 15
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac092286001ce8e00800000000000000
+      internalID: 1048987970715160778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 96
+        width: 15
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b638442f2476ff180800000000000000
+      internalID: -9079424786525551765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 96
+        width: 15
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af29e4e316e288050800000000000000
+      internalID: 5802939115058926330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 96
+        width: 15
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08756f19578b37150800000000000000
+      internalID: 5869237554493413248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 96
+        width: 15
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd5f1fa1ad5f95fb0800000000000000
+      internalID: -4658422022434327077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 96
+        width: 15
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e6ceeae17e29f40800000000000000
+      internalID: 5733899394565828130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 64
+        width: 20
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737d13ad452738870800000000000000
+      internalID: 8683910215263967031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 64
+        width: 20
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f086b7d51c234d340800000000000000
+      internalID: 4887587301682276367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 64
+        width: 20
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06aaa7c08e0fa10d0800000000000000
+      internalID: -3451181284993619360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 64
+        width: 20
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1157754a508368e0800000000000000
+      internalID: -1701375109015056101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 64
+        width: 20
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbf6e4b5ab1c46720800000000000000
+      internalID: 2838606671290199996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 64
+        width: 20
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d5b883be09a0660800000000000000
+      internalID: 7352848681576127763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 32
+        width: 18
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8e85adead55a450800000000000000
+      internalID: 6099384275912157345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 32
+        width: 20
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8571f5a8ed4c21ff0800000000000000
+      internalID: -66774584373864616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 32
+        width: 20
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f66fb805b0df9cd0800000000000000
+      internalID: -2549089388113991950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 32
+        width: 18
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5420592396b3d0340800000000000000
+      internalID: 4831583298244641349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 18
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 224ed1c01a1b375b0800000000000000
+      internalID: -5371754625271733214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 0
+        width: 20
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a9ce997eecbdfac0800000000000000
+      internalID: -3819689176511624798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 20
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 350367ba9d3790ce0800000000000000
+      internalID: -1438491227246415789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 0
+        width: 20
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e608accf51e645b30800000000000000
+      internalID: 4275162986995941486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 0
+        width: 25
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d496fd0738171590800000000000000
+      internalID: -7703662012857412391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cop2 Sprite Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 0
+        width: 26
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a50789f996dc82d40800000000000000
+      internalID: 5559919593521705050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

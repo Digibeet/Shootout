@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    private static int player1_score = 4;
+    private static int player1_score = 0;
     private static int player2_score = 0;
     
     public static ScoreManager Instance; 

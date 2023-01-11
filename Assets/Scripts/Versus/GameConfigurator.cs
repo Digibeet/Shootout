@@ -42,10 +42,18 @@ public class GameConfigurator : MonoBehaviour
         Vector2 tumbnailPositionForPlayer2 = new Vector2(3, 2);
         for (int characterIndex = 0; characterIndex < characters.Count; characterIndex++)
         {
+            if (characterIndex % 3 == 0 && characterIndex != 0)
+            {
+                Debug.Log("HIT");
+                tumbnailPositionForPlayer1.y -= 2;
+                tumbnailPositionForPlayer1.x = -9;
+                tumbnailPositionForPlayer2.y -= 2;
+                tumbnailPositionForPlayer2.x = 3;
+            }
             SpawnCharacterTumbnail(characters[characterIndex], tumbnailPositionForPlayer1, 1);
-            tumbnailPositionForPlayer1.x += 3;
+            tumbnailPositionForPlayer1.x += 2;
             SpawnCharacterTumbnail(characters[characterIndex], tumbnailPositionForPlayer2, 2);
-            tumbnailPositionForPlayer2.x += 3;
+            tumbnailPositionForPlayer2.x += 2;         
         }
     }
 
@@ -56,7 +64,7 @@ public class GameConfigurator : MonoBehaviour
         string characterName = characterInfo.character_name;
         Debug.Log("Spawning tumbnail with name " + characterName);
         GameObject newTumbnail = new GameObject(characterName);
-        newTumbnail.transform.localScale = new Vector2(0.5f, 0.5f);
+        newTumbnail.transform.localScale = new Vector2(0.3f, 0.3f);
         newTumbnail.transform.position = tumbnailPosition;
         newTumbnail.AddComponent<TumbnailController>().Init(character, this, playerSide);
         newTumbnail.AddComponent<SpriteRenderer>().sprite = tumbnail;

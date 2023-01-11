@@ -2047,6 +2047,7 @@ MonoBehaviour:
   - {fileID: 8277292862480074980, guid: b6c3329b0bd7af748b0282da08590c13, type: 3}
   - {fileID: 7270895507841025186, guid: abb1ba69b94ad4f46b957262c08201ca, type: 3}
   - {fileID: 9127195650538884174, guid: 3406ca5708bb90849849a3bd0aa3b424, type: 3}
+  - {fileID: 4623231635866190154, guid: a6f01ad1f9a6c45409220375f447c521, type: 3}
   startButton: {fileID: 1576927151}
   selectButton: {fileID: 863558358}
   sceneSelectionUI: {fileID: 746368223}
