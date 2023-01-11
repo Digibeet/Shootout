@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5583008390050609576}
   - component: {fileID: 5583008390050609577}
-  - component: {fileID: 8579449187783139542}
+  - component: {fileID: 3937853696931131614}
   m_Layer: 6
   m_Name: forest
   m_TagString: Untagged
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8579449187783139542
+--- !u!114 &3937853696931131614
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,9 +92,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5583008390050609582}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e71527dc62f8d0499ede63e65b0a545, type: 3}
+  m_Script: {fileID: 11500000, guid: 220bd4d407a113348a6d1a6b945f6d67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   music: {fileID: 0}
-  backgroundSounds: {fileID: 0}
+  backgroundSounds: []
   duellSound: {fileID: 0}

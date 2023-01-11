@@ -44,7 +44,6 @@ public class GameConfigurator : MonoBehaviour
         {
             if (characterIndex % 3 == 0 && characterIndex != 0)
             {
-                Debug.Log("HIT");
                 tumbnailPositionForPlayer1.y -= 2;
                 tumbnailPositionForPlayer1.x = -9;
                 tumbnailPositionForPlayer2.y -= 2;

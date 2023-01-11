@@ -5,11 +5,6 @@ using UnityEngine;
 public class BeachLevelManager : LevelManager
 {
     [SerializeField] private GameObject seagull;
-    
-    public override void PlayDuellStart()
-    {
-        SpawnObjects();
-    }
 
     public override void SpawnObjects()
     {

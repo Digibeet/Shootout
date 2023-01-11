@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class LevelManager : MonoBehaviour
+public class LevelManager : MonoBehaviour
 {
     [SerializeField] protected AudioClip music;
     [SerializeField] protected List<AudioClip> backgroundSounds;
@@ -11,7 +11,6 @@ public abstract class LevelManager : MonoBehaviour
 
     protected void Awake()
     {
-        Debug.Log("Starting the levelManager");
         levelObjectsParent = GameObject.Find("LevelObjects");
         if (levelObjectsParent == null)
         {
@@ -26,14 +25,6 @@ public abstract class LevelManager : MonoBehaviour
         PlayAmbiantSounds();
     }
 
-    protected virtual void PlayAmbiantSounds() {
-        if (music)
-        {
-            AudioSource musicAudioSource = CreateAudioSource(music, "MusicPlayer");
-            musicAudioSource.Play();
-            musicAudioSource.loop = true;
-        }
-    }
 
     protected void DestroyLevelObjects()
     {
@@ -43,15 +34,37 @@ public abstract class LevelManager : MonoBehaviour
         }
     }
 
-    public abstract void SpawnObjects();
+    protected virtual void PlayAmbiantSounds()
+    {
+        StartCoroutine(PlayBackgroundSounds());
+    }
 
-    public abstract void PlayDuellStart();
+    public virtual void SpawnObjects()
+    {
+        
+    }
 
-    public virtual AudioSource CreateAudioSource(AudioClip audio, string name) {
+    private IEnumerator PlayBackgroundSounds()
+    {
+        if (backgroundSounds.Count > 0)
+        {
+            while (true)
+            {
+                int randomSound = Random.Range(0, backgroundSounds.Count - 1);
+                Debug.Log(randomSound);
+                AudioSource audioSource = ScoreManager.playSound(backgroundSounds[randomSound]);
+                Debug.Log("playing random background sound");
+                yield return new WaitUntil(() => !audioSource);
+            }
+        }
+    }
+
+    protected AudioSource CreateAudioSource(AudioClip clip, string name)
+    {
         GameObject audioSourceObject = new GameObject(name);
-        audioSourceObject.transform.SetParent(this.transform);
-        AudioSource newAudioSource = audioSourceObject.AddComponent<AudioSource>();
-        newAudioSource.clip = audio;
-        return newAudioSource;
+        audioSourceObject.transform.parent = levelObjectsParent.transform;
+        AudioSource audioSource = audioSourceObject.AddComponent<AudioSource>();
+        audioSource.clip = clip;
+        return audioSource;
     }
 }

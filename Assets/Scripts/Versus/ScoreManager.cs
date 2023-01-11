@@ -54,5 +54,15 @@ public class ScoreManager : MonoBehaviour
             return 0;
         }
     }
+    public static AudioSource playSound(AudioClip sound)
+    {
+        GameObject soundObject = new GameObject();
+        soundObject.transform.parent = GameObject.Find("Sounds").transform;
+        AudioSource audioSource = soundObject.AddComponent<AudioSource>();
+        audioSource.clip = sound;
+        audioSource.Play();
+        Destroy(soundObject, sound.length);
+        return audioSource;
+    }
 
 }
