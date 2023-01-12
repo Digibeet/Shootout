@@ -8,6 +8,7 @@ public class VersusManager : GameManager
     protected GameObject player2;
     [SerializeField] private GameObject bulletUI_p1;
     [SerializeField] private GameObject bulletUI_p2;
+    [SerializeField] private GameObject UI;
     [SerializeField] private GameObject gameConfigurator;
     private GameConfigurator versusGameConfigurator;
 
@@ -100,61 +101,54 @@ public class VersusManager : GameManager
     {
         Debug.Log("printing score of player " + player);
         int score = ScoreManager.GetScore(player);
-        if (score == 0){
+        if (score == 0 || player > 2 || player < 1){
             return;
         }
-        List<GameObject> scoreInTallies = ConvertScoreToTallies(score);
+        string tallyParentString;
+        float tallyBasePosition;
+        float tallyOffset;
         if (player == 1)
         {
-            Debug.Log("Destroying old score");
-            Transform scoreParent = bulletUI_p1.transform.parent.Find("Score_p1");
-            //Reset old score by destroying all children of scoreParent
-            foreach (Transform child in scoreParent)
-            {
-                Destroy(child.gameObject);
-            }
-            for (int tallyIndex = 0; tallyIndex < scoreInTallies.Count; tallyIndex++)
-            {
-                GameObject currentTally = scoreInTallies[tallyIndex];
-                float xPosition = -8 + tallyIndex * 0.8f;
-                currentTally.transform.position = new Vector2(xPosition, -4.4f);
-                currentTally.transform.parent = scoreParent;
-            }
-        } if(player == 2)
+            tallyParentString = "Gameplay/Player1/Score_p1";
+            tallyBasePosition = -20.0f;
+            tallyOffset = 20.0f;
+        } else
         {
-            Transform scoreParent = bulletUI_p2.transform.parent.Find("Score_p2");
-            //Reset old score by destroying all children of scoreParent
-            foreach (Transform child in scoreParent)
-            {
-                Destroy(child.gameObject);
-            }
-
-            for (int tallyIndex = 0; tallyIndex < scoreInTallies.Count; tallyIndex++)
-            {
-                GameObject currentTally = scoreInTallies[tallyIndex];
-                float xPosition = 8 - tallyIndex * 0.8f;
-                currentTally.transform.position = new Vector2(xPosition, -4.4f);
-                currentTally.transform.parent = scoreParent;
-            }
+            tallyParentString = "Gameplay/Player2/Score_p2";
+            tallyBasePosition = 20.0f;
+            tallyOffset = -20.0f;
+        }
+        Transform scoreParent = UI.transform.Find(tallyParentString);
+        List<GameObject> scoreInTallies = ConvertScoreToTallies(score, scoreParent);
+        for (int tallyIndex = 0; tallyIndex < scoreInTallies.Count; tallyIndex++)
+        {
+            GameObject currentTally = scoreInTallies[tallyIndex];
+            float xPosition = tallyBasePosition + tallyIndex * tallyOffset;
+            Vector2 tallyPosition = new Vector2(xPosition, -20.0f);
+            currentTally.transform.localPosition = tallyPosition;
         }
     }
 
-    private List<GameObject> ConvertScoreToTallies(int score)
+    private List<GameObject> ConvertScoreToTallies(int score, Transform tallyParent)
     {
+        foreach (Transform child in tallyParent)
+        {
+            Destroy(child.gameObject);
+        }
         List<GameObject> tallyScore = new List<GameObject>();
         int amountOfFullTallies = Mathf.FloorToInt(score / 5);
         if (amountOfFullTallies > 0)
         {
             for (int i = 0; i < amountOfFullTallies; i++)
             {
-                GameObject new_tally = Instantiate(tallies[4]);
+                GameObject new_tally = Instantiate(tallies[4], tallyParent);
                 tallyScore.Add(new_tally);
             }
         }
         int rest = score % 5;
         if (rest > 0)
         {
-            GameObject remainingTally = Instantiate(tallies[rest - 1]);
+            GameObject remainingTally = Instantiate(tallies[rest - 1], tallyParent);
             tallyScore.Add(remainingTally);
         }
         return tallyScore;
