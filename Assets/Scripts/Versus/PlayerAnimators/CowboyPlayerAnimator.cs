@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CowboyPlayerAnimator : PlayerAnimator
 {
-    [SerializeField] protected AudioClip fallSound;
     public void Awake()
     {
         character_name = "cowboy";

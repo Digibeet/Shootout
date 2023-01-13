@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PolicemanPlayerAnimator : PlayerAnimator
 {
-    [SerializeField] protected AudioClip fallSound;
     public void Awake()
     {
         character_name = "policeman";

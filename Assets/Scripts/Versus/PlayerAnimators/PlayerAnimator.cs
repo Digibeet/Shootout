@@ -11,6 +11,7 @@ public abstract class PlayerAnimator : MonoBehaviour
     [SerializeField] protected AudioClip drawSound;
     [SerializeField] protected AudioClip dieSound;
     [SerializeField] protected AudioClip emptyClipSound;
+    [SerializeField] protected AudioClip fallSound;
 
     public virtual void Start()
     {
