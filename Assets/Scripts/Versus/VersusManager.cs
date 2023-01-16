@@ -21,24 +21,26 @@ public class VersusManager : GameManager
 
     protected override void Start()
     {
-        lost = true;
-        drawStarted = false;
-        endScene = "Versus";
         level = 1;
         versusGameConfigurator = gameConfigurator.GetComponent<GameConfigurator>();
+        InitializeLevel();
+    }
+
+    private void InitializeLevel()
+    {
+        lost = true;
+        drawStarted = false;
+        timer.text = "0";
         PrintScore(1);
         PrintScore(2);
+        bulletsLeft_p1 = 6;
+        bulletsLeft_p2 = 6;
     }
 
     public void Restart()
     {
-        lost = true;
-        drawStarted = false;
-        bulletsLeft_p1 = 6;
-        bulletsLeft_p2 = 6;
+        InitializeLevel();
         StartCoroutine(StartGame());
-        PrintScore(1);
-        PrintScore(2);
     }
 
     protected override void Update()
@@ -191,6 +193,19 @@ public class VersusManager : GameManager
         Debug.Log("Starting duel via versusmanager");
         player1Animator.Draw();
         player2Animator.Draw();
+        timer.gameObject.SetActive(true);
+        StartCoroutine(RunTimer());
+    }
+
+    private IEnumerator RunTimer()
+    {
+        float time = 0.0f;
+        while(lost == false)
+        {
+            time += Time.deltaTime;
+            timer.text = time.ToString("F2");
+            yield return null;
+        }
     }
 
     public void SetPlayers(GameObject new_player1, GameObject new_player2)

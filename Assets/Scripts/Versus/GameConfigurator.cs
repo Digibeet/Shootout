@@ -12,7 +12,8 @@ public class GameConfigurator : MonoBehaviour
     [SerializeField] private GameObject selectButton;
     [SerializeField] private GameObject sceneSelectionUI;
     [SerializeField] private GameObject victoryUI;
-    [SerializeField] private GameObject GameplayUI;
+    [SerializeField] private GameObject gameplayUI;
+    
     [SerializeField] private GameObject characterTumbnails;
     public GameObject GameManager;
 
@@ -22,7 +23,7 @@ public class GameConfigurator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameplayUI.SetActive(false);
+        gameplayUI.SetActive(false);
         victoryUI.SetActive(false);
         startButton.SetActive(false);
         SelectCharacter();
@@ -101,7 +102,7 @@ public class GameConfigurator : MonoBehaviour
     {
         Debug.Log("Clicking start button");
         sceneSelectionUI.SetActive(false);
-        GameplayUI.SetActive(true);
+        gameplayUI.SetActive(true);
         StartCoroutine(GameManager.GetComponent<VersusManager>().StartGame());
     }
 
@@ -119,7 +120,7 @@ public class GameConfigurator : MonoBehaviour
         player1.GetComponent<PlayerAnimator>().ResetPlayer();
         player2.GetComponent<PlayerAnimator>().ResetPlayer();
         victoryUI.SetActive(false);
-        GameplayUI.SetActive(true);
+        gameplayUI.SetActive(true);
         GameManager.GetComponent<VersusManager>().Restart();
     }
 

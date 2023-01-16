@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject EmptyRevolver;
     [SerializeField] protected GameObject Lightning;
     [SerializeField] protected Text Feedback;
+    [SerializeField] protected Text timer;
 
     public GameObject weakEnemy;
     public GameObject fastEnemy;
@@ -127,14 +128,11 @@ public class GameManager : MonoBehaviour
 
     public virtual void StartDuel()
     {
-        Debug.Log("Starting duel");
         soundManager.PlayCrows();
         Enemy drawingEnemy = enemyManager.GetRandomEnemy(enemies);
         DifficultyManager.Instance.UnlockCursor();
         drawingEnemy.Draw();
         playerAnimator.Draw();
-        //soundManager.PlayChurch();
-        Debug.Log("Enemies left " + enemies.Count);
         if (enemies.Count > 0)
         {
             Debug.Log("Drawing new enemy");
