@@ -35,6 +35,7 @@ public class VersusManager : GameManager
         PrintScore(2);
         bulletsLeft_p1 = 6;
         bulletsLeft_p2 = 6;
+        timer.gameObject.SetActive(false);
     }
 
     public void Restart()
@@ -101,7 +102,6 @@ public class VersusManager : GameManager
 
     private void PrintScore(int player)
     {
-        Debug.Log("printing score of player " + player);
         int score = ScoreManager.GetScore(player);
         if (score == 0 || player > 2 || player < 1){
             return;

@@ -1,0 +1,1359 @@
+fileFormatVersion: 2
+guid: 6e598ae7b5bcb994790d0b41df84c38c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2632902578271860919
+    second: Rogue Sprite Sheet_0
+  - first:
+      213: -1612197825416955981
+    second: Rogue Sprite Sheet_1
+  - first:
+      213: -1307440623283092131
+    second: Rogue Sprite Sheet_2
+  - first:
+      213: -5562729105478833925
+    second: Rogue Sprite Sheet_3
+  - first:
+      213: -8079245426478300942
+    second: Rogue Sprite Sheet_4
+  - first:
+      213: 4960767487897103188
+    second: Rogue Sprite Sheet_5
+  - first:
+      213: -1423232167279197212
+    second: Rogue Sprite Sheet_6
+  - first:
+      213: -8643550308528887919
+    second: Rogue Sprite Sheet_7
+  - first:
+      213: 7391059768627754989
+    second: Rogue Sprite Sheet_8
+  - first:
+      213: 8622811268525555577
+    second: Rogue Sprite Sheet_9
+  - first:
+      213: -7590769889524806983
+    second: Rogue Sprite Sheet_10
+  - first:
+      213: 5201255335492518622
+    second: Rogue Sprite Sheet_11
+  - first:
+      213: -2168539648013512780
+    second: Rogue Sprite Sheet_12
+  - first:
+      213: 8898572240652258116
+    second: Rogue Sprite Sheet_13
+  - first:
+      213: 6872158707287747586
+    second: Rogue Sprite Sheet_14
+  - first:
+      213: 192111457569429895
+    second: Rogue Sprite Sheet_15
+  - first:
+      213: -2287352455223449
+    second: Rogue Sprite Sheet_16
+  - first:
+      213: 2614633713644403735
+    second: Rogue Sprite Sheet_17
+  - first:
+      213: 4318092262867486583
+    second: Rogue Sprite Sheet_18
+  - first:
+      213: 2164983902054804657
+    second: Rogue Sprite Sheet_19
+  - first:
+      213: -3203074127836977193
+    second: Rogue Sprite Sheet_20
+  - first:
+      213: -4945555926529346327
+    second: Rogue Sprite Sheet_21
+  - first:
+      213: -6482755012012939220
+    second: Rogue Sprite Sheet_22
+  - first:
+      213: -2986229325113364034
+    second: Rogue Sprite Sheet_23
+  - first:
+      213: 911047344871303183
+    second: Rogue Sprite Sheet_24
+  - first:
+      213: 2755763864610141835
+    second: Rogue Sprite Sheet_25
+  - first:
+      213: -4548704019936386567
+    second: Rogue Sprite Sheet_26
+  - first:
+      213: 3335867384708510462
+    second: Rogue Sprite Sheet_27
+  - first:
+      213: -1938861594843440313
+    second: Rogue Sprite Sheet_28
+  - first:
+      213: -4825582605821704575
+    second: Rogue Sprite Sheet_29
+  - first:
+      213: 9177260127253231204
+    second: Rogue Sprite Sheet_30
+  - first:
+      213: 5748858068338530204
+    second: Rogue Sprite Sheet_31
+  - first:
+      213: -8647771596654254509
+    second: Rogue Sprite Sheet_32
+  - first:
+      213: -3180681360242766346
+    second: Rogue Sprite Sheet_33
+  - first:
+      213: 930360805901514100
+    second: Rogue Sprite Sheet_34
+  - first:
+      213: 769562976160876731
+    second: Rogue Sprite Sheet_35
+  - first:
+      213: -7838757805757618436
+    second: Rogue Sprite Sheet_36
+  - first:
+      213: -4381985662503851333
+    second: Rogue Sprite Sheet_37
+  - first:
+      213: -3040153073678933664
+    second: Rogue Sprite Sheet_38
+  - first:
+      213: 639170005142995944
+    second: Rogue Sprite Sheet_39
+  - first:
+      213: -5876438328204691345
+    second: Rogue Sprite Sheet_40
+  - first:
+      213: -3367421844920985479
+    second: Rogue Sprite Sheet_41
+  - first:
+      213: 3914076462938837982
+    second: Rogue Sprite Sheet_42
+  - first:
+      213: 1175679766573710639
+    second: Rogue Sprite Sheet_43
+  - first:
+      213: -3720118828585837846
+    second: Rogue Sprite Sheet_44
+  - first:
+      213: 2930104137531758109
+    second: Rogue Sprite Sheet_45
+  - first:
+      213: 2945408649476957221
+    second: Rogue Sprite Sheet_46
+  - first:
+      213: -4958823711052484613
+    second: Rogue Sprite Sheet_47
+  - first:
+      213: -602889608971885317
+    second: Rogue Sprite Sheet_48
+  - first:
+      213: -7310355370118537454
+    second: Rogue Sprite Sheet_49
+  - first:
+      213: -4115019791989754432
+    second: Rogue Sprite Sheet_50
+  - first:
+      213: 4840711014411645017
+    second: Rogue Sprite Sheet_51
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 30
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 224
+        width: 21
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94745e50e0d067bd0800000000000000
+      internalID: -2632902578271860919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 224
+        width: 21
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b77d5c9e9250a9e0800000000000000
+      internalID: -1612197825416955981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 224
+        width: 21
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d55cb442ea90bdde0800000000000000
+      internalID: -1307440623283092131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 224
+        width: 21
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf82536e9573dc2b0800000000000000
+      internalID: -5562729105478833925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 192
+        width: 21
+        height: 21
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f0cf8d1711c0ef80800000000000000
+      internalID: -8079245426478300942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 192
+        width: 23
+        height: 21
+      alignment: 9
+      pivot: {x: 0.45652175, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45be9693fbf28d440800000000000000
+      internalID: 4960767487897103188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 192
+        width: 22
+        height: 21
+      alignment: 9
+      pivot: {x: 0.47727272, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e30a6c62e9af3ce0800000000000000
+      internalID: -1423232167279197212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 192
+        width: 22
+        height: 21
+      alignment: 9
+      pivot: {x: 0.47727272, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 197eae53ac0fb0880800000000000000
+      internalID: -8643550308528887919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 192
+        width: 23
+        height: 21
+      alignment: 9
+      pivot: {x: 0.45652175, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de7fcb633b1529660800000000000000
+      internalID: 7391059768627754989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 192
+        width: 22
+        height: 21
+      alignment: 9
+      pivot: {x: 0.47727272, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f73b1c9216aa770800000000000000
+      internalID: 8622811268525555577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 192
+        width: 21
+        height: 21
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed203229b229e2840800000000000000
+      internalID: 5201255335492518622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 192
+        width: 22
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bfcdc6fdacc7e1e0800000000000000
+      internalID: -2168539648013512780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 160
+        width: 18
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44bca346e441e7b70800000000000000
+      internalID: 8898572240652258116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 162
+        width: 18
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20c6efb1fefce5f50800000000000000
+      internalID: 6872158707287747586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 163
+        width: 19
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78955b15a548aa200800000000000000
+      internalID: 192111457569429895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 162
+        width: 18
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7672e614aafd7fff0800000000000000
+      internalID: -2287352455223449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 160
+        width: 18
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71cf887728b094420800000000000000
+      internalID: 2614633713644403735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 163
+        width: 18
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777449be802fceb30800000000000000
+      internalID: 4318092262867486583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 164
+        width: 18
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc6a6a63619b0e10800000000000000
+      internalID: 2164983902054804657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 163
+        width: 18
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d768052d056c83d0800000000000000
+      internalID: -3203074127836977193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 128
+        width: 21
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e4f366661bdd5bb0800000000000000
+      internalID: -4945555926529346327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 128
+        width: 19
+        height: 20
+      alignment: 9
+      pivot: {x: 0.55263156, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c28e517e9a0a806a0800000000000000
+      internalID: -6482755012012939220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 128
+        width: 17
+        height: 20
+      alignment: 9
+      pivot: {x: 0.61764705, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb173c22048ce86d0800000000000000
+      internalID: -2986229325113364034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 128
+        width: 16
+        height: 20
+      alignment: 9
+      pivot: {x: 0.65625, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f08ed94bbb0b4ac00800000000000000
+      internalID: 911047344871303183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 128
+        width: 25
+        height: 21
+      alignment: 9
+      pivot: {x: 0.42, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b86f1fa52a07e3620800000000000000
+      internalID: 2755763864610141835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 128
+        width: 24
+        height: 21
+      alignment: 9
+      pivot: {x: 0.4375, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f1ec4f3bc1cfd0c0800000000000000
+      internalID: -4548704019936386567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 128
+        width: 22
+        height: 21
+      alignment: 9
+      pivot: {x: 0.47727272, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef2bc5356b16b4e20800000000000000
+      internalID: 3335867384708510462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 128
+        width: 20
+        height: 21
+      alignment: 9
+      pivot: {x: 0.525, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74b95bae6a7c715e0800000000000000
+      internalID: -1938861594843440313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 96
+        width: 21
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18681b1ef26180db0800000000000000
+      internalID: -4825582605821704575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 96
+        width: 22
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 466f848667d2c5f70800000000000000
+      internalID: 9177260127253231204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 96
+        width: 22
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c97d47354fb08cf40800000000000000
+      internalID: 5748858068338530204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 96
+        width: 22
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 356e5bafc81fcf780800000000000000
+      internalID: -8647771596654254509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 96
+        width: 19
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fd0603a723fbd3d0800000000000000
+      internalID: -3180681360242766346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 64
+        width: 21
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 475b4b4493e49ec00800000000000000
+      internalID: 930360805901514100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 64
+        width: 22
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb88c5213790eaa00800000000000000
+      internalID: 769562976160876731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 64
+        width: 22
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf62f73ae43273390800000000000000
+      internalID: -7838757805757618436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 64
+        width: 21
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba6a97b14f0033c0800000000000000
+      internalID: -4381985662503851333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 64
+        width: 20
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0612e8c03e43fc5d0800000000000000
+      internalID: -3040153073678933664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 64
+        width: 19
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e302a3bbb9ced800800000000000000
+      internalID: 639170005142995944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 32
+        width: 21
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f687ed6a972b27ea0800000000000000
+      internalID: -5876438328204691345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 32
+        width: 23
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97818946ca38441d0800000000000000
+      internalID: -3367421844920985479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 32
+        width: 23
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed3df2d2ec7915630800000000000000
+      internalID: 3914076462938837982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 32
+        width: 21
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2d7d38c48ad05010800000000000000
+      internalID: 1175679766573710639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 0
+        width: 21
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea16eba2ab7f5cc0800000000000000
+      internalID: -3720118828585837846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 0
+        width: 23
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d169b705032d9a820800000000000000
+      internalID: 2930104137531758109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 0
+        width: 23
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 524ef6eaf8130e820800000000000000
+      internalID: 2945408649476957221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 0
+        width: 23
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bffaee69b18be2bb0800000000000000
+      internalID: -4958823711052484613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 0
+        width: 26
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf4e47a481b12a7f0800000000000000
+      internalID: -602889608971885317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 0
+        width: 26
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f1736d5866c8a90800000000000000
+      internalID: -7310355370118537454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 0
+        width: 26
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c5bfbe2d4384e6c0800000000000000
+      internalID: -4115019791989754432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rogue Sprite Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 0
+        width: 26
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 950b35a3509ad2340800000000000000
+      internalID: 4840711014411645017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -62,7 +62,6 @@ public class GameConfigurator : MonoBehaviour
         PlayerAnimator characterInfo = character.GetComponent<PlayerAnimator>();
         Sprite tumbnail = characterInfo.characterTumbnail;
         string characterName = characterInfo.character_name;
-        Debug.Log("Spawning tumbnail with name " + characterName);
         GameObject newTumbnail = new GameObject(characterName);
         newTumbnail.transform.localScale = new Vector2(0.3f, 0.3f);
         newTumbnail.transform.position = tumbnailPosition;
