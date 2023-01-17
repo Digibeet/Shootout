@@ -96,5 +96,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   music: {fileID: 0}
-  backgroundSounds: []
+  backgroundSounds:
+  - {fileID: 8300000, guid: 5f592d1a09b6e214eab241ed8e764879, type: 3}
   duellSound: {fileID: 0}

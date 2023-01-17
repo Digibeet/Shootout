@@ -4,10 +4,22 @@ using UnityEngine;
 
 public class SheriffPlayerAnimator : PlayerAnimator
 {
+    [SerializeField] private AudioClip gunsDropping;
     public override void Die()
     {
         playerAnimator.Play("Sheriff_die");
         playSound(dieSound);
+    }
+
+    private void DieContinue()
+    {
+        playerAnimator.Play("Sheriff_die_2");
+        playSound(fallSound);
+    }
+    
+    private void GunsDropping()
+    {
+        playSound(gunsDropping);
     }
 
     public override void Draw()
