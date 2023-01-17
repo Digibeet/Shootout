@@ -29,7 +29,8 @@ public class GameManager : MonoBehaviour
     int bullets_left = 6;
     public static bool lost;
 
-    [SerializeField] private AudioClip duellStartClip;
+    [SerializeField] private List<AudioClip> duellStartClip;
+    [SerializeField] protected AudioClip drawStartSound;
 
     protected virtual void Start()
     {
@@ -114,7 +115,8 @@ public class GameManager : MonoBehaviour
     public IEnumerator StartGame()
     {
         Debug.Log("Starting game");
-        playSound(duellStartClip);
+        int randomClipIndex = Random.Range(0, duellStartClip.Count);
+        playSound(duellStartClip[randomClipIndex]);
         float startCount = 0.0f;
         float startTime = 5.0f + Random.Range(0, 1);
         while (startCount <= startTime)

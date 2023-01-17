@@ -61,7 +61,7 @@ public class ScoreManager : MonoBehaviour
         AudioSource audioSource = soundObject.AddComponent<AudioSource>();
         audioSource.clip = sound;
         audioSource.Play();
-        Destroy(soundObject, sound.length);
+        //Destroy(soundObject, sound.length);
         return audioSource;
     }
 

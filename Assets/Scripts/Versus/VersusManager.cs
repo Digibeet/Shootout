@@ -190,7 +190,8 @@ public class VersusManager : GameManager
     public override void StartDuel()
     {
         lost = false;
-        Debug.Log("Starting duel via versusmanager");
+        drawStarted = true;
+        ScoreManager.playSound(drawStartSound);
         player1Animator.Draw();
         player2Animator.Draw();
         timer.gameObject.SetActive(true);
