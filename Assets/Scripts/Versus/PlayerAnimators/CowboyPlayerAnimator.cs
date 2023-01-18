@@ -43,7 +43,10 @@ public class CowboyPlayerAnimator : PlayerAnimator
 
     public override void ResetPlayer()
     {
-        StopCoroutine(dyingCoroutine);
+        if (dyingCoroutine != null)
+        {
+            StopCoroutine(dyingCoroutine);
+        }
         playerAnimator.Play("Cowboy_idle", -1, 0);
     }
 }
