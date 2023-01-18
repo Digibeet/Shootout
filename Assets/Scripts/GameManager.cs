@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] protected SoundManager soundManager;
     [SerializeField] private GameObject EmptyRevolver;
     [SerializeField] protected GameObject Lightning;
-    [SerializeField] protected Text Feedback;
-    [SerializeField] protected Text timer;
+    
 
     public GameObject weakEnemy;
     public GameObject fastEnemy;
@@ -24,16 +24,29 @@ public class GameManager : MonoBehaviour
 
     protected PlayerAnimator playerAnimator;
 
-    [SerializeField] GameObject bulletUI;
+    
     protected string endScene;
     int bullets_left = 6;
     public static bool lost;
 
+    //UI
+    [SerializeField] GameObject bulletUI; 
+    [SerializeField] protected Text Feedback;
+    [SerializeField] protected Text timer;
+
+    //Sounds
     [SerializeField] private List<AudioClip> duellStartClip;
     [SerializeField] protected AudioClip drawStartSound;
+    
+    //Lights
+    [SerializeField] protected GameObject lightObject;
+    public static Light2D globalLight;
 
     protected virtual void Start()
     {
+        globalLight = lightObject.GetComponent<Light2D>();
+        Debug.Log(globalLight.intensity);
+        globalLight.intensity = 2;
         lost = false;
         drawStarted = false;
         playerAnimator = player.GetComponent<PlayerAnimator>();
@@ -42,8 +55,6 @@ public class GameManager : MonoBehaviour
         IntroduceLevel();
         enemyManager = new EnemyManager(level, this);
         enemyManager.PlanEnemies();
-        Debug.Log("Enemies planned");
-        StartCoroutine(StartGame());
     }
 
     protected virtual void Update()

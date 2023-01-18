@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5277591906682639941}
   - component: {fileID: 3327034299108045922}
-  - component: {fileID: 2257896719259779145}
-  m_Layer: 0
+  - component: {fileID: 1263073857901017021}
+  m_Layer: 6
   m_Name: PoliceStation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2257896719259779145
+--- !u!114 &1263073857901017021
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,10 +92,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3715785644328994496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 220bd4d407a113348a6d1a6b945f6d67, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d8ce4459e587af4db04163a8bf0be3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: {fileID: 0}
+  music: {fileID: 8300000, guid: aa08513daca5de04da2c194c4509e572, type: 3}
   backgroundSounds:
   - {fileID: 8300000, guid: aa08513daca5de04da2c194c4509e572, type: 3}
   duellSound: {fileID: 0}
+  lightIntensity: 0.6

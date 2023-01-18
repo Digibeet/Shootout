@@ -51,7 +51,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -96,4 +96,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   music: {fileID: 8300000, guid: 14a282cea98e7b7458b32b2cac8e2068, type: 3}
+  backgroundSounds: []
   duellSound: {fileID: 8300000, guid: c80666b49fe779a4e91f5c5362b2f57d, type: 3}
+  lightIntensity: 1.2

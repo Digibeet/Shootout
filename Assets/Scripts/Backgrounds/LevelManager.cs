@@ -7,7 +7,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] protected AudioClip music;
     [SerializeField] protected List<AudioClip> backgroundSounds;
     [SerializeField] protected AudioClip duellSound;
+    [SerializeField] protected float lightIntensity;
     protected static GameObject levelObjectsParent;
+    
 
     protected void Awake()
     {
@@ -23,6 +25,7 @@ public class LevelManager : MonoBehaviour
         DestroyLevelObjects();
         SpawnObjects();
         PlayAmbiantSounds();
+        SetGlobalLight(lightIntensity);
     }
 
 
@@ -44,6 +47,11 @@ public class LevelManager : MonoBehaviour
         
     }
 
+    public virtual void SetGlobalLight(float intensity)
+    {
+        GameManager.globalLight.intensity = intensity;
+    }
+    
     private IEnumerator PlayBackgroundSounds()
     {
         if (backgroundSounds.Count > 0)

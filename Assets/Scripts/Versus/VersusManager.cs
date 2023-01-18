@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class VersusManager : GameManager
 {
@@ -22,6 +22,7 @@ public class VersusManager : GameManager
     protected override void Start()
     {
         level = 1;
+        globalLight = lightObject.GetComponent<Light2D>();
         versusGameConfigurator = gameConfigurator.GetComponent<GameConfigurator>();
         InitializeLevel();
     }
