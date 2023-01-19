@@ -1826,7 +1826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_LightType: 4
-  m_BlendStyleIndex: 1
+  m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
@@ -2116,13 +2116,15 @@ MonoBehaviour:
   - {fileID: 2175214792461219121, guid: aa8663595452a2942bd4a889d1fca674, type: 3}
   - {fileID: 3139476426752729798, guid: 73d820f07e410724db746798d285437c, type: 3}
   - {fileID: 2091952973699923228, guid: 49993116e28b3054b9e334c7911a1da6, type: 3}
-  - {fileID: 3715785644328994496, guid: 6183522b49a8f1545af7e2dc58a7888f, type: 3}
+  - {fileID: 9040559909743654407, guid: b065b59fa5961554c80f0b272c1ab1d8, type: 3}
+  - {fileID: 3431120309149411889, guid: 9d6b4c4d718af794f9e1eea255854c9e, type: 3}
   characters:
   - {fileID: 8277292862480074980, guid: b6c3329b0bd7af748b0282da08590c13, type: 3}
   - {fileID: 7270895507841025186, guid: abb1ba69b94ad4f46b957262c08201ca, type: 3}
   - {fileID: 9127195650538884174, guid: 3406ca5708bb90849849a3bd0aa3b424, type: 3}
-  - {fileID: 4623231635866190154, guid: a6f01ad1f9a6c45409220375f447c521, type: 3}
+  - {fileID: 4442864628490192819, guid: a6f01ad1f9a6c45409220375f447c521, type: 3}
   - {fileID: 2675984768626362468, guid: 465081626bb7b1f469ea0e6e5b09a9fa, type: 3}
+  - {fileID: 6343987820188359487, guid: 43948e75a7eec3447b374e22dd039803, type: 3}
   startButton: {fileID: 1576927151}
   selectButton: {fileID: 863558358}
   sceneSelectionUI: {fileID: 746368223}
