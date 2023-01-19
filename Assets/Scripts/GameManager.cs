@@ -125,7 +125,6 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator StartGame()
     {
-        Debug.Log("Starting game");
         int randomClipIndex = Random.Range(0, duellStartClip.Count);
         playSound(duellStartClip[randomClipIndex]);
         float startCount = 0.0f;

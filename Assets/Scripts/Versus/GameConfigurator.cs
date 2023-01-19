@@ -102,7 +102,6 @@ public class GameConfigurator : MonoBehaviour
 
     public void StartButton()
     {
-        Debug.Log("Clicking start button");
         sceneSelectionUI.SetActive(false);
         gameplayUI.SetActive(true);
         StartCoroutine(GameManager.GetComponent<VersusManager>().StartGame());

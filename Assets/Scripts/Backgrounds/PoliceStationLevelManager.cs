@@ -6,6 +6,6 @@ public class PoliceStationLevelManager : LevelManager
 {
     public override void SetGlobalLight(float intensity)
     {
-        base.SetGlobalLight(0.8f);
+        base.SetGlobalLight(0.2f);
     }
 }
