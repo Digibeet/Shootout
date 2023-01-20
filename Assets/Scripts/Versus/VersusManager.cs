@@ -24,6 +24,7 @@ public class VersusManager : GameManager
         level = 1;
         globalLight = lightObject.GetComponent<Light2D>();
         versusGameConfigurator = gameConfigurator.GetComponent<GameConfigurator>();
+        SetGlobalLight(1, Color.white);
         InitializeLevel();
     }
 

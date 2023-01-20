@@ -100,3 +100,4 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c8e9790dbe7b7dc47bf9331b669b804b, type: 3}
   duellSound: {fileID: 0}
   lightIntensity: 0.9
+  lightColor: {r: 1, g: 1, b: 1, a: 1}

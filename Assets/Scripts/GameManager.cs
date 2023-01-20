@@ -235,4 +235,15 @@ public class GameManager : MonoBehaviour
         Destroy(soundObject, sound.length);
         return audioSource;
     }
+
+    public static void SetGlobalLight(float intensity)
+    {
+        GameManager.globalLight.intensity = intensity;
+    }
+    
+    public static void SetGlobalLight(float intensity, Color color)
+    {
+        GameManager.globalLight.intensity = intensity;
+        GameManager.globalLight.color = color;
+    }
 }
