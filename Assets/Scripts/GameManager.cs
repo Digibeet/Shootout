@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.Experimental.Rendering.Universal;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -40,11 +40,11 @@ public class GameManager : MonoBehaviour
     
     //Lights
     [SerializeField] protected GameObject lightObject;
-    public static Light2D globalLight;
+    public static UnityEngine.Rendering.Universal.Light2D globalLight;
 
     protected virtual void Start()
     {
-        globalLight = lightObject.GetComponent<Light2D>();
+        globalLight = lightObject.GetComponent<UnityEngine.Rendering.Universal.Light2D>();
         Debug.Log(globalLight.intensity);
         globalLight.intensity = 2;
         lost = false;

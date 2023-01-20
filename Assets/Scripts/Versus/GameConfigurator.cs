@@ -66,7 +66,9 @@ public class GameConfigurator : MonoBehaviour
         newTumbnail.transform.localScale = new Vector2(0.3f, 0.3f);
         newTumbnail.transform.position = tumbnailPosition;
         newTumbnail.AddComponent<TumbnailController>().Init(character, this, playerSide);
-        newTumbnail.AddComponent<SpriteRenderer>().sprite = tumbnail;
+        SpriteRenderer tumbnailSpriteRenderer = newTumbnail.AddComponent<SpriteRenderer>();
+        tumbnailSpriteRenderer.sprite = tumbnail;
+        tumbnailSpriteRenderer.sortingLayerName = "Background";
         newTumbnail.AddComponent<BoxCollider2D>();
         newTumbnail.transform.parent = characterTumbnails.transform;
         return newTumbnail;
@@ -96,6 +98,8 @@ public class GameConfigurator : MonoBehaviour
             newTumbnail.AddComponent<LevelTumbail>();
             newTumbnail.transform.parent = tumbnailParent;
             backgroundTumbnails.Add(newTumbnail);
+            //lighting
+            newTumbnail.GetComponent<SpriteRenderer>().sortingLayerName = "Background";
         }
         backgroundTumbnails[0].GetComponent<LevelTumbail>().CreateBackground();
     }

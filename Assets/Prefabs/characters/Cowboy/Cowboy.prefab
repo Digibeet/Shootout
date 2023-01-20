@@ -31,6 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6, y: -4, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -46,6 +47,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -75,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 946818747
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 8031338253240543404, guid: 2d13221c6385d8a48be7541e2029e6c2, type: 3}
+  m_Sprite: {fileID: 8031338253240543404, guid: 22aa29b129805a04489b97ea70a2a2be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -88,7 +90,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 1
 --- !u!95 &8277292862480074983
 Animator:
-  serializedVersion: 3
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -101,6 +103,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -134,7 +137,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.52380955, y: 0.71428573}
+    oldSize: {x: 0.5, y: 0.6818182}
     newSize: {x: 2.1, y: 2.1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
