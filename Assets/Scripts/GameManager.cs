@@ -27,7 +27,10 @@ public class GameManager : MonoBehaviour
     
     protected string endScene;
     int bullets_left = 6;
-    public static bool lost;
+    public static bool gameActive;
+
+    //Coroutines
+    protected Coroutine startGameCoroutineInstance;
 
     //UI
     [SerializeField] GameObject bulletUI; 
@@ -47,7 +50,7 @@ public class GameManager : MonoBehaviour
         globalLight = lightObject.GetComponent<UnityEngine.Rendering.Universal.Light2D>();
         Debug.Log(globalLight.intensity);
         globalLight.intensity = 2;
-        lost = false;
+        gameActive = false;
         drawStarted = false;
         playerAnimator = player.GetComponent<PlayerAnimator>();
         level = DifficultyManager.Instance.GetLevel();
@@ -59,7 +62,7 @@ public class GameManager : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (!lost)
+        if (!gameActive)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -123,10 +126,16 @@ public class GameManager : MonoBehaviour
         newLightning.GetComponent<Animator>().Play("Flash", -1, 0);
     }
 
-    public IEnumerator StartGame()
+    public void StartGame()
     {
+        gameActive = true;
         int randomClipIndex = Random.Range(0, duellStartClip.Count);
         playSound(duellStartClip[randomClipIndex]);
+        startGameCoroutineInstance = StartCoroutine(StartGameCoroutine());
+    }
+
+    protected IEnumerator StartGameCoroutine()
+    {      
         float startCount = 0.0f;
         float startTime = 5.0f + Random.Range(0, 1);
         while (startCount <= startTime)
@@ -190,7 +199,7 @@ public class GameManager : MonoBehaviour
     protected void Lose()
     {
         //Destroy(player);
-        lost = true;
+        gameActive = true;
         StartCoroutine(EndGame());
     }
 

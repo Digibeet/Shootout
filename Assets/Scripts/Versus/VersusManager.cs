@@ -30,7 +30,7 @@ public class VersusManager : GameManager
 
     private void InitializeLevel()
     {
-        lost = true;
+        gameActive = false;
         drawStarted = false;
         timer.text = "0";
         PrintScore(1);
@@ -43,12 +43,12 @@ public class VersusManager : GameManager
     public void Restart()
     {
         InitializeLevel();
-        StartCoroutine(StartGame());
+        startGameCoroutineInstance = StartCoroutine(StartGameCoroutine());
     }
 
     protected override void Update()
     {
-        if (!lost)
+        if (gameActive)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -58,7 +58,7 @@ public class VersusManager : GameManager
                 {
                     if (!drawStarted)
                     {
-                        EarlyShot(player);
+                        EarlyShot(1);
                     }
                     else if (bulletsLeft_p1 > 0)
                     {
@@ -80,7 +80,7 @@ public class VersusManager : GameManager
                 {
                     if (!drawStarted)
                     {
-                        EarlyShot(player2);
+                        EarlyShot(2);
                     }
                     else if (bulletsLeft_p2 > 0)
                     {
@@ -168,7 +168,8 @@ public class VersusManager : GameManager
 
     protected override IEnumerator EndGame()
     {
-        lost = true;
+        Debug.Log("Game concluded");
+        gameActive = false;
         float deathCount = 0f;
         while (deathCount <= 4)
         {
@@ -178,20 +179,38 @@ public class VersusManager : GameManager
         versusGameConfigurator.Victory();
     }
 
-    public void EarlyShot(GameObject earlyPlayer)
+    public void EarlyShot(int playerNumber)
     {
+        if(playerNumber > 2 || playerNumber < 1)
+        {
+            Debug.LogError(playerNumber + " playerNumber for earlyshot is not a valid player");
+            return;
+        }
+        GameObject earlyPlayer;
+        if (playerNumber == 1)
+        {
+            ScoreManager.IncreaseScore(2);
+            PrintScore(2);
+            earlyPlayer = player;
+        } else
+        {
+            ScoreManager.IncreaseScore(1);
+            PrintScore(1);
+            earlyPlayer = player2;
+        }
+        Debug.Log("Early shot detected for player " + playerNumber);
         Vector2 lightningPosition = earlyPlayer.transform.position;
         lightningPosition.y += 2.7f;
         CreateLightning(Lightning, lightningPosition);
-        earlyPlayer.GetComponent<Animator>().Play("burn");
-        Feedback.enabled = true;
-        Lose();
+        earlyPlayer.GetComponent<PlayerAnimator>().EarlyShot();
+        StopCoroutine(startGameCoroutineInstance);
+        StartCoroutine(EndGame());
     }
 
 
     public override void StartDuel()
     {
-        lost = false;
+        gameActive = true;
         drawStarted = true;
         ScoreManager.playSound(drawStartSound);
         player1Animator.Draw();
@@ -203,7 +222,7 @@ public class VersusManager : GameManager
     private IEnumerator RunTimer()
     {
         float time = 0.0f;
-        while(lost == false)
+        while(gameActive == true)
         {
             time += Time.deltaTime;
             timer.text = time.ToString("F2");

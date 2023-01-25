@@ -23,7 +23,7 @@ public class SoldierPlayerAnimator : PlayerAnimator
 
     public override void EarlyShot()
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public override void ResetPlayer()

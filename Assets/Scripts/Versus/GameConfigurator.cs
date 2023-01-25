@@ -108,7 +108,7 @@ public class GameConfigurator : MonoBehaviour
     {
         sceneSelectionUI.SetActive(false);
         gameplayUI.SetActive(true);
-        StartCoroutine(GameManager.GetComponent<VersusManager>().StartGame());
+        GameManager.GetComponent<VersusManager>().StartGame();
     }
 
     public void SelectSceneButton()

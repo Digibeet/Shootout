@@ -10,4 +10,5 @@ public class PoliceStationLevelManager : LevelManager
     {
         lights.SetActive(true);
     }
+
 }

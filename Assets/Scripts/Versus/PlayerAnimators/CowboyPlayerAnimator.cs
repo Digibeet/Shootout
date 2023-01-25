@@ -5,6 +5,8 @@ using UnityEngine;
 public class CowboyPlayerAnimator : PlayerAnimator
 {
     private Coroutine dyingCoroutine;
+ 
+    
     public void Awake()
     {
         character_name = "cowboy";
