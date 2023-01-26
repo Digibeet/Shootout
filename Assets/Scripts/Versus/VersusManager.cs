@@ -43,7 +43,7 @@ public class VersusManager : GameManager
     public void Restart()
     {
         InitializeLevel();
-        startGameCoroutineInstance = StartCoroutine(StartGameCoroutine());
+        StartGame();
     }
 
     protected override void Update()
