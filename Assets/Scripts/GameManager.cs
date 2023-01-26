@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
 public class GameManager : MonoBehaviour
 {
     [SerializeField] protected SoundManager soundManager;
     [SerializeField] private GameObject EmptyRevolver;
     [SerializeField] protected GameObject Lightning;
-    [SerializeField] protected Text Feedback;
-    [SerializeField] protected Text timer;
+    
 
     public GameObject weakEnemy;
     public GameObject fastEnemy;
@@ -24,16 +24,33 @@ public class GameManager : MonoBehaviour
 
     protected PlayerAnimator playerAnimator;
 
-    [SerializeField] GameObject bulletUI;
+    
     protected string endScene;
     int bullets_left = 6;
-    public static bool lost;
+    public static bool gameActive;
 
-    [SerializeField] private AudioClip duellStartClip;
+    //Coroutines
+    protected Coroutine startGameCoroutineInstance;
+
+    //UI
+    [SerializeField] GameObject bulletUI; 
+    [SerializeField] protected Text Feedback;
+    [SerializeField] protected Text timer;
+
+    //Sounds
+    [SerializeField] private List<AudioClip> duellStartClip;
+    [SerializeField] protected AudioClip drawStartSound;
+    
+    //Lights
+    [SerializeField] protected GameObject lightObject;
+    public static UnityEngine.Rendering.Universal.Light2D globalLight;
 
     protected virtual void Start()
     {
-        lost = false;
+        globalLight = lightObject.GetComponent<UnityEngine.Rendering.Universal.Light2D>();
+        Debug.Log(globalLight.intensity);
+        globalLight.intensity = 2;
+        gameActive = false;
         drawStarted = false;
         playerAnimator = player.GetComponent<PlayerAnimator>();
         level = DifficultyManager.Instance.GetLevel();
@@ -41,13 +58,11 @@ public class GameManager : MonoBehaviour
         IntroduceLevel();
         enemyManager = new EnemyManager(level, this);
         enemyManager.PlanEnemies();
-        Debug.Log("Enemies planned");
-        StartCoroutine(StartGame());
     }
 
     protected virtual void Update()
     {
-        if (!lost)
+        if (!gameActive)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -111,10 +126,16 @@ public class GameManager : MonoBehaviour
         newLightning.GetComponent<Animator>().Play("Flash", -1, 0);
     }
 
-    public IEnumerator StartGame()
+    public void StartGame()
     {
-        Debug.Log("Starting game");
-        playSound(duellStartClip);
+        gameActive = true;
+        int randomClipIndex = Random.Range(0, duellStartClip.Count);
+        playSound(duellStartClip[randomClipIndex]);
+        startGameCoroutineInstance = StartCoroutine(StartGameCoroutine());
+    }
+
+    protected IEnumerator StartGameCoroutine()
+    {      
         float startCount = 0.0f;
         float startTime = 5.0f + Random.Range(0, 1);
         while (startCount <= startTime)
@@ -178,7 +199,7 @@ public class GameManager : MonoBehaviour
     protected void Lose()
     {
         //Destroy(player);
-        lost = true;
+        gameActive = true;
         StartCoroutine(EndGame());
     }
 
@@ -222,5 +243,16 @@ public class GameManager : MonoBehaviour
         audioSource.Play();
         Destroy(soundObject, sound.length);
         return audioSource;
+    }
+
+    public static void SetGlobalLight(float intensity)
+    {
+        GameManager.globalLight.intensity = intensity;
+    }
+    
+    public static void SetGlobalLight(float intensity, Color color)
+    {
+        GameManager.globalLight.intensity = intensity;
+        GameManager.globalLight.color = color;
     }
 }

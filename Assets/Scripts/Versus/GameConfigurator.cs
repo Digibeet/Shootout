@@ -39,8 +39,8 @@ public class GameConfigurator : MonoBehaviour
 
     private void CreateCharacterTumbnails()
     {
-        Vector2 tumbnailPositionForPlayer1 = new Vector2(-9, 2);
-        Vector2 tumbnailPositionForPlayer2 = new Vector2(3, 2);
+        Vector2 tumbnailPositionForPlayer1 = new Vector3(-9, 2,-1);
+        Vector2 tumbnailPositionForPlayer2 = new Vector3(3, 2,-1);
         for (int characterIndex = 0; characterIndex < characters.Count; characterIndex++)
         {
             if (characterIndex % 3 == 0 && characterIndex != 0)
@@ -66,7 +66,9 @@ public class GameConfigurator : MonoBehaviour
         newTumbnail.transform.localScale = new Vector2(0.3f, 0.3f);
         newTumbnail.transform.position = tumbnailPosition;
         newTumbnail.AddComponent<TumbnailController>().Init(character, this, playerSide);
-        newTumbnail.AddComponent<SpriteRenderer>().sprite = tumbnail;
+        SpriteRenderer tumbnailSpriteRenderer = newTumbnail.AddComponent<SpriteRenderer>();
+        tumbnailSpriteRenderer.sprite = tumbnail;
+        tumbnailSpriteRenderer.sortingLayerName = "Background";
         newTumbnail.AddComponent<BoxCollider2D>();
         newTumbnail.transform.parent = characterTumbnails.transform;
         return newTumbnail;
@@ -76,7 +78,7 @@ public class GameConfigurator : MonoBehaviour
     {
         Transform tumbnailParent = sceneSelectionUI.transform.Find("LevelTumbnails");
         List<GameObject> backgroundTumbnails = new List<GameObject>();
-        Vector2 tumbnailPosition = new Vector2(-9, 2);
+        Vector2 tumbnailPosition = new Vector3(-9, 2,-1);
         for (int backgroundIndex = 0; backgroundIndex < backGrounds.Count; backgroundIndex++)
         {
             //after 7 tumbnails, move to next row
@@ -87,22 +89,26 @@ public class GameConfigurator : MonoBehaviour
             }
             GameObject background = backGrounds[backgroundIndex];
             GameObject newTumbnail = Instantiate(background, tumbnailPosition, Quaternion.identity);
+            Vector3 currentLocalPosition = newTumbnail.transform.localPosition;
+            Vector3 newLocalPosition = new Vector3(currentLocalPosition.x, currentLocalPosition.y, -1);
+            newTumbnail.transform.localPosition = newLocalPosition;
             tumbnailPosition.x = tumbnailPosition.x + 3;
-            newTumbnail.transform.localScale = new Vector2(0.1f, 0.1f);
+            newTumbnail.transform.localScale = new Vector3(0.1f, 0.1f,-1.0f);
             newTumbnail.AddComponent<BoxCollider2D>();
             newTumbnail.AddComponent<LevelTumbail>();
             newTumbnail.transform.parent = tumbnailParent;
             backgroundTumbnails.Add(newTumbnail);
+            //lighting
+            newTumbnail.GetComponent<SpriteRenderer>().sortingLayerName = "Background";
         }
         backgroundTumbnails[0].GetComponent<LevelTumbail>().CreateBackground();
     }
 
     public void StartButton()
     {
-        Debug.Log("Clicking start button");
         sceneSelectionUI.SetActive(false);
         gameplayUI.SetActive(true);
-        StartCoroutine(GameManager.GetComponent<VersusManager>().StartGame());
+        GameManager.GetComponent<VersusManager>().StartGame();
     }
 
     public void SelectSceneButton()

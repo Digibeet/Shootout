@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CowboyPlayerAnimator : PlayerAnimator
 {
+    private Coroutine dyingCoroutine;
+ 
+    
     public void Awake()
     {
         character_name = "cowboy";
@@ -13,7 +16,7 @@ public class CowboyPlayerAnimator : PlayerAnimator
     {
         playerAnimator.Play("Cowboy_die");
         AudioSource dieSoundSource = playSound(dieSound);
-        StartCoroutine(DieSoundFinished(dieSoundSource));
+        dyingCoroutine = StartCoroutine(DieSoundFinished(dieSoundSource));
     }
 
     IEnumerator DieSoundFinished(AudioSource dieSoundSource)
@@ -42,6 +45,10 @@ public class CowboyPlayerAnimator : PlayerAnimator
 
     public override void ResetPlayer()
     {
-        playerAnimator.Play("Cowboy_idle");
+        if (dyingCoroutine != null)
+        {
+            StopCoroutine(dyingCoroutine);
+        }
+        playerAnimator.Play("Cowboy_idle", -1, 0);
     }
 }

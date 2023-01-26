@@ -120,7 +120,7 @@ TextureImporter:
       213: -7514715285556730882
     second: cowboy_sheet_38
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -141,6 +141,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -179,6 +180,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -216,6 +218,42 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -227,8 +265,8 @@ TextureImporter:
         y: 114
         width: 11
         height: 15
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -248,8 +286,8 @@ TextureImporter:
         y: 114
         width: 12
         height: 14
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 9
+      pivot: {x: 0.45833334, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -269,8 +307,8 @@ TextureImporter:
         y: 114
         width: 17
         height: 11
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 9
+      pivot: {x: 0.32352942, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -290,8 +328,8 @@ TextureImporter:
         y: 114
         width: 21
         height: 9
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 9
+      pivot: {x: 0.26190478, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -311,8 +349,8 @@ TextureImporter:
         y: 114
         width: 21
         height: 8
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 9
+      pivot: {x: 0.26190478, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -332,8 +370,8 @@ TextureImporter:
         y: 114
         width: 21
         height: 7
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 9
+      pivot: {x: 0.26190478, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -353,8 +391,8 @@ TextureImporter:
         y: 114
         width: 21
         height: 6
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 9
+      pivot: {x: 0.26190478, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -374,8 +412,8 @@ TextureImporter:
         y: 92
         width: 21
         height: 7
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 9
+      pivot: {x: 0.26190478, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -395,8 +433,8 @@ TextureImporter:
         y: 92
         width: 21
         height: 5
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 9
+      pivot: {x: 0.26190478, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -584,8 +622,8 @@ TextureImporter:
         y: 70
         width: 11
         height: 14
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -605,8 +643,8 @@ TextureImporter:
         y: 70
         width: 11
         height: 14
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -626,8 +664,8 @@ TextureImporter:
         y: 70
         width: 12
         height: 15
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 9
+      pivot: {x: 0.45833334, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -689,8 +727,8 @@ TextureImporter:
         y: 48
         width: 12
         height: 15
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 9
+      pivot: {x: 0.45833334, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -710,8 +748,8 @@ TextureImporter:
         y: 48
         width: 12
         height: 15
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 9
+      pivot: {x: 0.45833334, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -727,12 +765,12 @@ TextureImporter:
       name: cowboy_sheet_24
       rect:
         serializedVersion: 2
-        x: 107
+        x: 106
         y: 48
-        width: 12
+        width: 13
         height: 15
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -752,8 +790,8 @@ TextureImporter:
         y: 48
         width: 12
         height: 15
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 9
+      pivot: {x: 0.45833334, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -878,8 +916,8 @@ TextureImporter:
         y: 26
         width: 22
         height: 15
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 9
+      pivot: {x: 0.1590909, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -899,8 +937,8 @@ TextureImporter:
         y: 26
         width: 24
         height: 15
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 9
+      pivot: {x: 0.1875, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -916,12 +954,12 @@ TextureImporter:
       name: cowboy_sheet_33
       rect:
         serializedVersion: 2
-        x: 176
+        x: 175
         y: 26
-        width: 15
+        width: 16
         height: 15
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 9
+      pivot: {x: 0.34375, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1047,7 +1085,49 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: fd191c6a1133dd247b2a24ef8e35b45c, type: 3}
+      name: _NormalMap
+    nameFileIdTable:
+      cowboy_sheet_33: -672422144115430955
+      cowboy_sheet_7: -9037764632287843537
+      cowboy_sheet_22: -8672138096967350221
+      cowboy_sheet_26: 6594744102739895435
+      cowboy_sheet_6: 7387718766604639402
+      cowboy_sheet_16: 4798230411451590255
+      cowboy_sheet_27: 2556009339886806382
+      cowboy_sheet_2: -3243399899849727383
+      cowboy_sheet_15: 2314480278835981272
+      cowboy_sheet_4: -4156519638070647178
+      cowboy_sheet_5: -2013774569765403453
+      cowboy_sheet_9: -898336317526084597
+      cowboy_sheet_34: 3084272027371280802
+      cowboy_sheet_28: 8544198779258840734
+      cowboy_sheet_8: -6323254268822822049
+      cowboy_sheet_14: 4281498878554735804
+      cowboy_sheet_29: -7567327159443479643
+      cowboy_sheet_1: -2967227306869429619
+      cowboy_sheet_0: 8031338253240543404
+      cowboy_sheet_30: 4060684981652112467
+      cowboy_sheet_25: -1218772835741675054
+      cowboy_sheet_11: -3813697561425643764
+      cowboy_sheet_12: -1348484781439628388
+      cowboy_sheet_10: -4494758312468751059
+      cowboy_sheet_32: -5875190123198428424
+      cowboy_sheet_35: -824291749311388683
+      cowboy_sheet_37: 7090667326982506704
+      cowboy_sheet_3: 8383031147298356279
+      cowboy_sheet_13: 4463656905051219137
+      cowboy_sheet_23: -4744285648978345564
+      cowboy_sheet_24: 2648114849179491200
+      cowboy_sheet_38: -7514715285556730882
+      cowboy_sheet_36: 3547958243567254349
+      cowboy_sheet_17: -6294733789497007650
+      cowboy_sheet_18: -5345384357845515582
+      cowboy_sheet_20: 3830861907005771207
+      cowboy_sheet_21: -5140517928629757518
+      cowboy_sheet_31: 6453187260458086019
+      cowboy_sheet_19: 8715561726441797021
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -129,7 +129,7 @@ TextureImporter:
       213: -4294334988850416496
     second: Seagull_sprite_sheet_41
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -150,6 +150,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -188,6 +189,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -227,6 +229,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1132,6 +1158,49 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Seagull_sprite_sheet_1: -6526703941698860908
+      Seagull_sprite_sheet_29: -1629698575026210899
+      Seagull_sprite_sheet_26: 3669394072919698841
+      Seagull_sprite_sheet_8: -49821349119997989
+      Seagull_sprite_sheet_24: -3760821548972673128
+      Seagull_sprite_sheet_22: -3323422285395796063
+      Seagull_sprite_sheet_3: -8181431860833816299
+      Seagull_sprite_sheet_17: 3270724475427393176
+      Seagull_sprite_sheet_27: 619942626466363699
+      Seagull_sprite_sheet_18: -7873500660674644869
+      Seagull_sprite_sheet_28: -8992537066992135087
+      Seagull_sprite_sheet_14: 8976890685282669253
+      Seagull_sprite_sheet_10: -4236239130117672384
+      Seagull_sprite_sheet_4: 6263755120561583726
+      Seagull_sprite_sheet_13: -5514084539448513715
+      Seagull_sprite_sheet_7: 5542631483920591080
+      Seagull_sprite_sheet_32: -2465186757558625357
+      Seagull_sprite_sheet_12: 4662105791026961203
+      Seagull_sprite_sheet_36: 7910765736968125562
+      Seagull_sprite_sheet_34: -4619590590312908647
+      Seagull_sprite_sheet_6: -2236424488686034167
+      Seagull_sprite_sheet_30: 1796913414573835733
+      Seagull_sprite_sheet_15: 6677350902209921060
+      Seagull_sprite_sheet_5: 2146651432650149667
+      Seagull_sprite_sheet_2: 2680756627451699741
+      Seagull_sprite_sheet_40: 4712403311382556244
+      Seagull_sprite_sheet_19: -8608550071637993378
+      Seagull_sprite_sheet_11: -7139457358015340696
+      Seagull_sprite_sheet_23: -8096305453425684339
+      Seagull_sprite_sheet_37: 7606034785630562553
+      Seagull_sprite_sheet_39: -8172279295352251502
+      Seagull_sprite_sheet_41: -4294334988850416496
+      Seagull_sprite_sheet_31: 2998407090717471016
+      Seagull_sprite_sheet_38: 5074880498829319783
+      Seagull_sprite_sheet_20: -7939783612904547976
+      Seagull_sprite_sheet_0: 633474012844346585
+      Seagull_sprite_sheet_16: -7268824196034148001
+      Seagull_sprite_sheet_21: -8787122325550366874
+      Seagull_sprite_sheet_25: 7898596470491475893
+      Seagull_sprite_sheet_33: -3544249073740114986
+      Seagull_sprite_sheet_9: -3399255923639791881
+      Seagull_sprite_sheet_35: 4340027664523740564
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

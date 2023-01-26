@@ -276,7 +276,7 @@ TextureImporter:
       213: -7307681281998975784
     second: archer_charactersheet_90
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -297,6 +297,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -335,6 +336,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -374,6 +376,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -2307,7 +2333,101 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 122c6d4e50c9d284785dbac901c401ca, type: 3}
+      name: _NormalMap
+    nameFileIdTable:
+      archer_charactersheet_6: 5204095399662812462
+      archer_charactersheet_31: -7350168983167522710
+      archer_charactersheet_15: 2467584199141334351
+      archer_charactersheet_64: -5814691106063907999
+      archer_charactersheet_70: 8587631170007552516
+      archer_charactersheet_18: 8375915361391669376
+      archer_charactersheet_32: -3195802105613351902
+      archer_charactersheet_24: -1392580300015103359
+      archer_charactersheet_82: -3493794421101620881
+      archer_charactersheet_86: 8720444305570042372
+      archer_charactersheet_5: -5604421517726186513
+      archer_charactersheet_85: 2577819154544830303
+      archer_charactersheet_29: -7660501049745894424
+      archer_charactersheet_71: -838419249480314535
+      archer_charactersheet_89: 62587398424572373
+      archer_charactersheet_52: 2111585193386795960
+      archer_charactersheet_19: 111910914392934003
+      archer_charactersheet_20: -5325499970539465791
+      archer_charactersheet_49: 4304686310888009842
+      archer_charactersheet_38: 5338496750966417480
+      archer_charactersheet_7: -4540011877752036248
+      archer_charactersheet_61: -5053166314752626492
+      archer_charactersheet_16: -5001552047944509192
+      archer_charactersheet_63: 2738264727567775004
+      archer_charactersheet_12: 1391390473693594550
+      archer_charactersheet_40: 8681686334448964111
+      archer_charactersheet_65: 5047727450531544294
+      archer_charactersheet_42: -2087163960813318985
+      archer_charactersheet_53: -606318058720610022
+      archer_charactersheet_84: -3786411786573585189
+      archer_charactersheet_4: -9144697133532394427
+      archer_charactersheet_78: 8238807070437681160
+      archer_charactersheet_48: -1731158569237411533
+      archer_charactersheet_74: -2167450395224530034
+      archer_charactersheet_13: 3855300333587027987
+      archer_charactersheet_43: 7263287715693367908
+      archer_charactersheet_72: -1878087651024334582
+      archer_charactersheet_59: -4053697873626194114
+      archer_charactersheet_0: 7094135040181051517
+      archer_charactersheet_28: 1390198189578957310
+      archer_charactersheet_68: 7124120919822003112
+      archer_charactersheet_23: -5375913789647791620
+      archer_charactersheet_90: -7307681281998975784
+      archer_charactersheet_80: 5007978007658940607
+      archer_charactersheet_1: -7222378427033322162
+      archer_charactersheet_33: -2194473928111236144
+      archer_charactersheet_10: -7950846704757444183
+      archer_charactersheet_11: 8335949668367190840
+      archer_charactersheet_46: -100848305543633278
+      archer_charactersheet_8: -8442258835215664461
+      archer_charactersheet_47: -7121941159664585260
+      archer_charactersheet_21: 8453865218953961984
+      archer_charactersheet_81: -5883213081684377923
+      archer_charactersheet_27: -8113259530391682353
+      archer_charactersheet_79: 4465504494249763911
+      archer_charactersheet_54: -6493365380134468404
+      archer_charactersheet_50: 7201909285654616205
+      archer_charactersheet_2: -8066229816050660744
+      archer_charactersheet_87: 3090976857101050558
+      archer_charactersheet_83: -5175769079907977227
+      archer_charactersheet_25: -9086151892242301631
+      archer_charactersheet_69: 1436144252749160067
+      archer_charactersheet_67: -3620689228541123573
+      archer_charactersheet_26: -8963156223257956049
+      archer_charactersheet_17: -7708980304570564052
+      archer_charactersheet_37: -3671933996600088312
+      archer_charactersheet_73: 4283973780179250843
+      archer_charactersheet_30: 497599825979463926
+      archer_charactersheet_51: -4098710242613238517
+      archer_charactersheet_77: 1845687955832189512
+      archer_charactersheet_35: 2704672983500235979
+      archer_charactersheet_9: 6463756571735412352
+      archer_charactersheet_34: -1076005744626596730
+      archer_charactersheet_45: -6171098402180057324
+      archer_charactersheet_76: 2522417774450733353
+      archer_charactersheet_58: -3393034272317445305
+      archer_charactersheet_75: -355631067718870532
+      archer_charactersheet_66: -6560354019112748536
+      archer_charactersheet_14: 6095511182455842883
+      archer_charactersheet_55: -7740644595213669819
+      archer_charactersheet_36: 8960222949957922172
+      archer_charactersheet_56: 953774327919533323
+      archer_charactersheet_62: 643023955462365108
+      archer_charactersheet_60: -7385990845301264162
+      archer_charactersheet_39: 4204606053000162843
+      archer_charactersheet_3: 2843329500039583079
+      archer_charactersheet_44: 5775852032383646874
+      archer_charactersheet_88: -1579342519532379716
+      archer_charactersheet_22: 7749691496415549343
+      archer_charactersheet_57: -3926413136230113005
+      archer_charactersheet_41: -5071711936900591019
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
