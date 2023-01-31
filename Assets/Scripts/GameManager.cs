@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] protected SoundManager soundManager;
     [SerializeField] private GameObject EmptyRevolver;
     [SerializeField] protected GameObject Lightning;
+    [SerializeField] protected GameObject mainCamera;
     
 
     public GameObject weakEnemy;

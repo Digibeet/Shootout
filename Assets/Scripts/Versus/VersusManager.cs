@@ -186,6 +186,7 @@ public class VersusManager : GameManager
             Debug.LogError(playerNumber + " playerNumber for earlyshot is not a valid player");
             return;
         }
+        StartCoroutine(mainCamera.GetComponent<ShakeCamera>().Shake(0.5f));
         GameObject earlyPlayer;
         if (playerNumber == 1)
         {
