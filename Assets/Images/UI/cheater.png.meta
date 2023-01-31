@@ -164,7 +164,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cheater_0: -2600444639474245264
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

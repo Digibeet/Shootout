@@ -42,6 +42,10 @@ public class VersusManager : GameManager
 
     public void Restart()
     {
+        foreach(GameObject obj in trashObjects)
+        {
+            Destroy(obj);
+        }
         InitializeLevel();
         StartGame();
     }
@@ -187,24 +191,28 @@ public class VersusManager : GameManager
             return;
         }
         StartCoroutine(mainCamera.GetComponent<ShakeCamera>().Shake(0.5f));
+        foreach (Transform child in GameObject.Find("Sounds").transform)
+        {
+            Destroy(child.gameObject);
+        }
         ScoreManager.playSound(earlyShotSound);
         GameObject earlyPlayer;
         if (playerNumber == 1)
         {
-            Instantiate(cheaterUI, player.transform.position, Quaternion.identity);
             ScoreManager.IncreaseScore(2);
             PrintScore(2);
             earlyPlayer = player;
         } else
         {
-            Instantiate(cheaterUI, player2.transform.position, Quaternion.identity);
             ScoreManager.IncreaseScore(1);
             PrintScore(1);
             earlyPlayer = player2;
         }
-        Debug.Log("Early shot detected for player " + playerNumber);
+        Vector3 cheaterLabelPosition = new Vector3(earlyPlayer.transform.position.x, earlyPlayer.transform.position.y + 1.0f, 0);
+        GameObject cheaterLabel = Instantiate(cheaterUI, cheaterLabelPosition, Quaternion.identity);
+        trashObjects.Add(cheaterLabel);
         Vector2 lightningPosition = earlyPlayer.transform.position;
-        lightningPosition.y += 2.7f;
+        lightningPosition.y += 4.2f;
         CreateLightning(Lightning, lightningPosition);
         earlyPlayer.GetComponent<PlayerAnimator>().EarlyShot();
         StopCoroutine(startGameCoroutineInstance);

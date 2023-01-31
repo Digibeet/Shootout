@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     int bullets_left = 6;
     public static bool gameActive;
 
+    protected List<GameObject> trashObjects = new List<GameObject>();
+
     //Coroutines
     protected Coroutine startGameCoroutineInstance;
 
@@ -127,6 +129,7 @@ public class GameManager : MonoBehaviour
         GameObject newLightning = Instantiate(lightning, lightningPosition, Quaternion.identity);
         newLightning.GetComponent<SpriteRenderer>().enabled = true;
         newLightning.GetComponent<Animator>().Play("Flash", -1, 0);
+        Destroy(newLightning, newLightning.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
     }
 
     public void StartGame()
