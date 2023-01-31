@@ -13,7 +13,6 @@ public class ShakeCamera : MonoBehaviour
         this.transform.position = new Vector3(originalCamPos.x + 0.2f, originalCamPos.y + 0.2f, originalCamPos.z);
         while (elapsed < time)
         {
-            Debug.Log("SHAKING for " + elapsed + " seconds!");
             elapsed += Time.deltaTime;
 
             

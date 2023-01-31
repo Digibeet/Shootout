@@ -191,11 +191,13 @@ public class VersusManager : GameManager
         GameObject earlyPlayer;
         if (playerNumber == 1)
         {
+            Instantiate(cheaterUI, player.transform.position, Quaternion.identity);
             ScoreManager.IncreaseScore(2);
             PrintScore(2);
             earlyPlayer = player;
         } else
         {
+            Instantiate(cheaterUI, player2.transform.position, Quaternion.identity);
             ScoreManager.IncreaseScore(1);
             PrintScore(1);
             earlyPlayer = player2;

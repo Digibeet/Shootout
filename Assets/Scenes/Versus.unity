@@ -2971,6 +2971,7 @@ MonoBehaviour:
   player: {fileID: 0}
   levelText: {fileID: 1109268722}
   bulletUI: {fileID: 677273050}
+  cheaterUI: {fileID: 5807940909822997497, guid: e9f1daab596fcfd4ea6418c63ae878b8, type: 3}
   Feedback: {fileID: 0}
   timer: {fileID: 2112634909}
   duellStartClip:
@@ -2980,6 +2981,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 13a509537dfbc404b8e7e4b597693eaf, type: 3}
   - {fileID: 8300000, guid: b400358a3be5ee046b5c0b4ba34c2716, type: 3}
   drawStartSound: {fileID: 8300000, guid: 3beb5fc8d2c4cf643bcfcc8c8c1569a2, type: 3}
+  earlyShotSound: {fileID: 8300000, guid: 16eea0b38d3084d4ab72a7f30423cfb1, type: 3}
   lightObject: {fileID: 1430271835}
   bulletUI_p1: {fileID: 677273050}
   bulletUI_p2: {fileID: 1664572832}

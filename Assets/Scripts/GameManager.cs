@@ -34,7 +34,8 @@ public class GameManager : MonoBehaviour
     protected Coroutine startGameCoroutineInstance;
 
     //UI
-    [SerializeField] GameObject bulletUI; 
+    [SerializeField] GameObject bulletUI;
+    [SerializeField] protected GameObject cheaterUI;
     [SerializeField] protected Text Feedback;
     [SerializeField] protected Text timer;
 
