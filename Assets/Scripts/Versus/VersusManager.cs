@@ -187,6 +187,7 @@ public class VersusManager : GameManager
             return;
         }
         StartCoroutine(mainCamera.GetComponent<ShakeCamera>().Shake(0.5f));
+        ScoreManager.playSound(earlyShotSound);
         GameObject earlyPlayer;
         if (playerNumber == 1)
         {

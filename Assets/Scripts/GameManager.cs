@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
     //Sounds
     [SerializeField] private List<AudioClip> duellStartClip;
     [SerializeField] protected AudioClip drawStartSound;
+    [SerializeField] protected AudioClip earlyShotSound;
     
     //Lights
     [SerializeField] protected GameObject lightObject;
