@@ -16,11 +16,6 @@ public class RoguePlayerAnimator : PlayerAnimator
         playerAnimator.Play("Rogue_draw");
     }
 
-    public override void EarlyShot()
-    {
-        throw new System.NotImplementedException();
-    }
-
     public override void ResetPlayer()
     {
         playerAnimator.Play("Rogue_idle");

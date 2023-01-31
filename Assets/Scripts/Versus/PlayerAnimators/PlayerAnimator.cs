@@ -34,7 +34,10 @@ public abstract class PlayerAnimator : MonoBehaviour
     public abstract void Draw();
     public abstract void Shoot();
     public abstract void Die();
-    public abstract void EarlyShot();
+    public virtual void EarlyShot()
+    {
+        
+    }
     public virtual void EmptyClip()
     {
         playSound(emptyClipSound);
