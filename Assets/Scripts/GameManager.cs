@@ -27,7 +27,8 @@ public class GameManager : MonoBehaviour
 
     
     protected string endScene;
-    int bullets_left = 6;
+    protected const int maxBullets = 6;
+    protected int bulletsLeft_p1 = maxBullets;
     public static bool gameActive;
 
     protected List<GameObject> trashObjects = new List<GameObject>();
@@ -36,7 +37,7 @@ public class GameManager : MonoBehaviour
     protected Coroutine startGameCoroutineInstance;
 
     //UI
-    [SerializeField] GameObject bulletUI;
+    [SerializeField] protected List<GameObject> bulletUI_p1;
     [SerializeField] protected GameObject cheaterUI;
     [SerializeField] protected Text Feedback;
     [SerializeField] protected Text timer;
@@ -71,10 +72,10 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                if (bullets_left > 0)
+                if (bulletsLeft_p1 > 0)
                 {
                     Shoot(playerAnimator);
-                    bullets_left = ReduceBullets(bullets_left, 1, bulletUI);
+                    bulletsLeft_p1 = ReduceBullets(bulletsLeft_p1, 1, bulletUI_p1);
                 }
                 else
                     NoAmmo(playerAnimator);
@@ -86,18 +87,28 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    protected int ReduceBullets(int bullets, int reductionAmount, GameObject bulletUI)
+    protected int ReduceBullets(int currentBullets, int reductionAmount, List<GameObject> bulletObjects)
     {
-        int remainingBullets = bullets - reductionAmount;
+        int remainingBullets = currentBullets - reductionAmount;
         if (remainingBullets < 0)
         {
             return 0;
         }
         else
         {
-            int bulletsFired = 6 - remainingBullets;
-            bulletUI.GetComponent<Animator>().Play("shoot_" + bulletsFired);
+            for (int i = remainingBullets; i < maxBullets; i++)
+            {
+                bulletObjects[i].SetActive(false);
+            }
             return remainingBullets;
+        }
+    }
+    
+    protected void ResetBullets(List<GameObject> bulletObjects)
+    {
+        for(int i = 0; i < maxBullets; i++)
+        {
+            bulletObjects[i].SetActive(true);
         }
     }
 

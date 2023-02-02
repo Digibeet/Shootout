@@ -89,11 +89,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -132,6 +133,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
@@ -196,6 +198,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -704,31 +718,30 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       revolver_drum_shooting_11: 7757046084032927653
-      revolver_drum_shooting_3: 4248769030679267894
       revolver_drum_shooting_7: -8206919460595477180
-      revolver_drum_shooting_5: 7604093974389811278
       revolver_drum_shooting_18: 7265232917383644656
-      revolver_drum_shooting_15: -5556827685870973421
-      revolver_drum_shooting_6: 1684570974105554034
-      revolver_drum_shooting_13: -8467892136669027649
-      revolver_drum_shooting_20: -2686716300478747135
-      revolver_drum_shooting_0: -3008214916645752581
-      revolver_drum_shooting_17: 7187012688257099128
-      revolver_drum_shooting_8: -3349486367829260364
-      revolver_drum_shooting_2: -1655531270113796703
-      revolver_drum_shooting_4: 824825926566126812
-      revolver_drum_shooting_22: 6226193772393719578
       revolver_drum_shooting_1: 3897530154504870393
+      revolver_drum_shooting_8: -3349486367829260364
+      revolver_drum_shooting_4: 824825926566126812
+      revolver_drum_shooting_2: -1655531270113796703
+      revolver_drum_shooting_15: -5556827685870973421
       revolver_drum_shooting_16: -5041706232867571936
+      revolver_drum_shooting_3: 4248769030679267894
       revolver_drum_shooting_19: 2805092092563097964
-      revolver_drum_shooting_9: 6588501693924229924
+      revolver_drum_shooting_5: 7604093974389811278
+      revolver_drum_shooting_6: 1684570974105554034
+      revolver_drum_shooting_20: -2686716300478747135
       revolver_drum_shooting_10: -2165585469916607606
+      revolver_drum_shooting_9: 6588501693924229924
+      revolver_drum_shooting_22: 6226193772393719578
       revolver_drum_shooting_14: 1269242513243905912
+      revolver_drum_shooting_0: -3008214916645752581
       revolver_drum_shooting_21: 6768123951851736111
+      revolver_drum_shooting_13: -8467892136669027649
+      revolver_drum_shooting_17: 7187012688257099128
       revolver_drum_shooting_12: 8537287658050722115
-  spritePackingTag: 
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

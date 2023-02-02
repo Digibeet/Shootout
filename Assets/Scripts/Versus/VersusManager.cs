@@ -6,16 +6,14 @@ using UnityEngine;
 public class VersusManager : GameManager
 {
     protected GameObject player2;
-    [SerializeField] private GameObject bulletUI_p1;
-    [SerializeField] private GameObject bulletUI_p2;
+    [SerializeField] private List<GameObject> bulletUI_p2;
     [SerializeField] private GameObject UI;
     [SerializeField] private GameObject gameConfigurator;
     private GameConfigurator versusGameConfigurator;
 
     private PlayerAnimator player1Animator;
     private PlayerAnimator player2Animator;
-    private int bulletsLeft_p1 = 6;
-    private int bulletsLeft_p2 = 6;
+    private int bulletsLeft_p2 = maxBullets;
 
     [SerializeField] private List<GameObject> tallies;
 
@@ -35,8 +33,10 @@ public class VersusManager : GameManager
         timer.text = "0";
         PrintScore(1);
         PrintScore(2);
-        bulletsLeft_p1 = 6;
-        bulletsLeft_p2 = 6;
+        bulletsLeft_p1 = maxBullets;
+        ResetBullets(bulletUI_p1);
+        bulletsLeft_p2 = maxBullets;
+        ResetBullets(bulletUI_p2);
         timer.gameObject.SetActive(false);
     }
 
