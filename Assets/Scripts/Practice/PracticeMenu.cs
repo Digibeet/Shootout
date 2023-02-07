@@ -24,6 +24,7 @@ public class PracticeMenu : MonoBehaviour
     public void RestartButton()
     {
         ScoreManager.ResetScore();
+        DifficultyManager.Restart();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
