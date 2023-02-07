@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -138,11 +138,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 163
-        height: 225
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 116
+        width: 83
+        height: 86
+      alignment: 9
+      pivot: {x: 0.36144578, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,17 +154,84 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: CaptainClawHurt_1
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 114
+        width: 57
+        height: 111
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95ee88b6889e2244bb79a8717630f548
+      internalID: -810168179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaptainClawHurt_2
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 2
+        width: 76
+        height: 102
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf9d728bf01508499cb7f6d18ff8f8f
+      internalID: -1689958968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaptainClawHurt_3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 61
+        height: 112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5274e40514a2462498754e9af79e969c
+      internalID: -1563617558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 20953e9798d666249a81ee96916c0882
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CaptainClawHurt_2: -1689958968
+      CaptainClawHurt_3: -1563617558
+      CaptainClawHurt_1: -810168179
+      CaptainClawHurt_0: 2644123552906672039
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

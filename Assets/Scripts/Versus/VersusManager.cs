@@ -16,7 +16,6 @@ public class VersusManager : GameManager
 
     protected override void Start()
     {
-        level = 1;
         globalLight = lightObject.GetComponent<UnityEngine.Rendering.Universal.Light2D>();
         versusGameConfigurator = gameConfigurator.GetComponent<GameConfigurator>();
         SetGlobalLight(1, Color.white);
@@ -39,10 +38,6 @@ public class VersusManager : GameManager
 
     public void Restart()
     {
-        foreach(GameObject obj in trashObjects)
-        {
-            Destroy(obj);
-        }
         InitializeLevel();
         StartGame();
     }
@@ -66,7 +61,7 @@ public class VersusManager : GameManager
                         Shoot(player1Animator);
                         bulletsLeft_p1 = ReduceBullets(bulletsLeft_p1, 1, bulletUI_p1);
                         BoxCollider2D opponentHitBox = player2.GetComponent<BoxCollider2D>();
-                        if(opponentHitBox.bounds.Contains(worldPosition))
+                        if (opponentHitBox.bounds.Contains(worldPosition))
                         {
                             ScoreManager.IncreaseScore(1);
                             PrintScore(1);
@@ -74,7 +69,7 @@ public class VersusManager : GameManager
                         }
                     }
                     else
-                        NoAmmo(player1Animator);
+                        player1Animator.EmptyClip();
                     
                 }
                 else
@@ -96,7 +91,7 @@ public class VersusManager : GameManager
                         }
                     }
                     else
-                        NoAmmo(player2Animator);
+                        player2Animator.EmptyClip();
                 }
                 
             }
@@ -128,7 +123,7 @@ public class VersusManager : GameManager
     {
         gameActive = true;
         drawStarted = true;
-        ScoreManager.playSound(drawStartSound);
+        ScoreManager.PlaySound(drawStartSound);
         player1Animator.Draw();
         player2Animator.Draw();
         timer.gameObject.SetActive(true);

@@ -61,7 +61,7 @@ public class LevelManager : MonoBehaviour
             {
                 int randomSound = Random.Range(0, backgroundSounds.Count - 1);
                 Debug.Log(randomSound);
-                AudioSource audioSource = ScoreManager.playSound(backgroundSounds[randomSound]);
+                AudioSource audioSource = ScoreManager.PlaySound(backgroundSounds[randomSound]);
                 audioSource.transform.SetParent(this.transform);
                 yield return new WaitUntil(() => !audioSource);
             }

@@ -9,6 +9,13 @@ public class PracticeMenu : MonoBehaviour
     [SerializeField] private GameObject Menu;
     [SerializeField] private GameObject gameplayUI;
     [SerializeField] private GameObject GameManager;
+    private GameManager gameManagerScript;
+
+    private void Start()
+    {
+        gameManagerScript = GameManager.GetComponent<GameManager>();
+    }
+    
     public void QuitButton()
     {
         SceneManager.LoadScene(0);
@@ -24,10 +31,10 @@ public class PracticeMenu : MonoBehaviour
     {
         Menu.SetActive(false);
         gameplayUI.SetActive(true);
-        GameManager.GetComponent<GameManager>().StartGame();
+        gameManagerScript.StartGame();
     }
 
-    public void Lost()
+    public void EndGame()
     {
         Menu.SetActive(true);
         gameplayUI.SetActive(false);

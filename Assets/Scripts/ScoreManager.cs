@@ -54,10 +54,15 @@ public class ScoreManager : MonoBehaviour
             return 0;
         }
     }
-    public static AudioSource playSound(AudioClip sound, bool loop = false)
+    public static AudioSource PlaySound(AudioClip sound, bool loop = false)
     {
         GameObject soundObject = new GameObject();
-        soundObject.transform.parent = GameObject.Find("Sounds").transform;
+        GameObject soundParent = GameObject.Find("Sounds");
+        if (soundParent == null)
+        {
+            soundParent = new GameObject("Sounds");
+        }
+        soundObject.transform.parent = soundParent.transform;
         AudioSource audioSource = soundObject.AddComponent<AudioSource>();
         audioSource.clip = sound;
         audioSource.Play();
@@ -69,7 +74,6 @@ public class ScoreManager : MonoBehaviour
         {
             Destroy(soundObject, sound.length);
         }
-        //Destroy(soundObject, sound.length);
         return audioSource;
     }
 

@@ -11,7 +11,7 @@ public class TitleManager : MonoBehaviour
 
     public void StartNewGame()
     {
-        DifficultyManager.Instance.Restart();
+        DifficultyManager.Restart();
         StartCoroutine(StartGame());
     }
 
@@ -26,7 +26,6 @@ public class TitleManager : MonoBehaviour
         Debug.Log("Starting new game");
         gameStart.Play();
         FadeOut.SetActive(true);
-        DifficultyManager.Instance.LockCursor();
         while (gameStart.isPlaying)
         {
             yield return null;

@@ -8,11 +8,11 @@ public class MageAnimator : PlayerAnimator
     {
         character_name = "Mage";
     }
-    //function that plays the Cowboy_die animation then plays the die sound and then checks if the die sound has finished and plays the Cowboy_die_2 animation when the die sound has finished
+
     public override void Die()
     {
         playerAnimator.Play("Mage_die");
-        AudioSource dieSoundSource = PlaySound(dieSound);
+        PlaySound(dieSound);
     }
 
     public override void Draw()
