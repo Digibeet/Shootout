@@ -7,15 +7,12 @@ public class VersusManager : GameManager
 {
     protected GameObject player2;
     [SerializeField] private List<GameObject> bulletUI_p2;
-    [SerializeField] private GameObject UI;
     [SerializeField] private GameObject gameConfigurator;
     private GameConfigurator versusGameConfigurator;
 
     private PlayerAnimator player1Animator;
     private PlayerAnimator player2Animator;
     private int bulletsLeft_p2 = maxBullets;
-
-    [SerializeField] private List<GameObject> tallies;
 
     protected override void Start()
     {
@@ -62,7 +59,7 @@ public class VersusManager : GameManager
                 {
                     if (!drawStarted)
                     {
-                        EarlyShot(1);
+                        EarlyShot(player, 1);
                     }
                     else if (bulletsLeft_p1 > 0)
                     {
@@ -84,7 +81,7 @@ public class VersusManager : GameManager
                 {
                     if (!drawStarted)
                     {
-                        EarlyShot(2);
+                        EarlyShot(player2, 2);
                     }
                     else if (bulletsLeft_p2 > 0)
                     {
@@ -104,62 +101,6 @@ public class VersusManager : GameManager
                 
             }
         }
-    }
-
-    private void PrintScore(int player)
-    {
-        int score = ScoreManager.GetScore(player);
-        if (score == 0 || player > 2 || player < 1){
-            return;
-        }
-        string tallyParentString;
-        float tallyBasePosition;
-        float tallyOffset;
-        if (player == 1)
-        {
-            tallyParentString = "Gameplay/Player1/Score_p1";
-            tallyBasePosition = -20.0f;
-            tallyOffset = 20.0f;
-        } else
-        {
-            tallyParentString = "Gameplay/Player2/Score_p2";
-            tallyBasePosition = 20.0f;
-            tallyOffset = -20.0f;
-        }
-        Transform scoreParent = UI.transform.Find(tallyParentString);
-        List<GameObject> scoreInTallies = ConvertScoreToTallies(score, scoreParent);
-        for (int tallyIndex = 0; tallyIndex < scoreInTallies.Count; tallyIndex++)
-        {
-            GameObject currentTally = scoreInTallies[tallyIndex];
-            float xPosition = tallyBasePosition + tallyIndex * tallyOffset;
-            Vector2 tallyPosition = new Vector2(xPosition, -20.0f);
-            currentTally.transform.localPosition = tallyPosition;
-        }
-    }
-
-    private List<GameObject> ConvertScoreToTallies(int score, Transform tallyParent)
-    {
-        foreach (Transform child in tallyParent)
-        {
-            Destroy(child.gameObject);
-        }
-        List<GameObject> tallyScore = new List<GameObject>();
-        int amountOfFullTallies = Mathf.FloorToInt(score / 5);
-        if (amountOfFullTallies > 0)
-        {
-            for (int i = 0; i < amountOfFullTallies; i++)
-            {
-                GameObject new_tally = Instantiate(tallies[4], tallyParent);
-                tallyScore.Add(new_tally);
-            }
-        }
-        int rest = score % 5;
-        if (rest > 0)
-        {
-            GameObject remainingTally = Instantiate(tallies[rest - 1], tallyParent);
-            tallyScore.Add(remainingTally);
-        }
-        return tallyScore;
     }
 
     protected void ShootPlayer(Player player)
@@ -183,43 +124,6 @@ public class VersusManager : GameManager
         versusGameConfigurator.Victory();
     }
 
-    public void EarlyShot(int playerNumber)
-    {
-        if(playerNumber > 2 || playerNumber < 1)
-        {
-            Debug.LogError(playerNumber + " playerNumber for earlyshot is not a valid player");
-            return;
-        }
-        StartCoroutine(mainCamera.GetComponent<ShakeCamera>().Shake(0.5f));
-        foreach (Transform child in GameObject.Find("Sounds").transform)
-        {
-            Destroy(child.gameObject);
-        }
-        ScoreManager.playSound(earlyShotSound);
-        GameObject earlyPlayer;
-        if (playerNumber == 1)
-        {
-            ScoreManager.IncreaseScore(2);
-            PrintScore(2);
-            earlyPlayer = player;
-        } else
-        {
-            ScoreManager.IncreaseScore(1);
-            PrintScore(1);
-            earlyPlayer = player2;
-        }
-        Vector3 cheaterLabelPosition = new Vector3(earlyPlayer.transform.position.x, earlyPlayer.transform.position.y + 1.0f, 0);
-        GameObject cheaterLabel = Instantiate(cheaterUI, cheaterLabelPosition, Quaternion.identity);
-        trashObjects.Add(cheaterLabel);
-        Vector2 lightningPosition = earlyPlayer.transform.position;
-        lightningPosition.y += 4.2f;
-        CreateLightning(Lightning, lightningPosition);
-        earlyPlayer.GetComponent<PlayerAnimator>().EarlyShot();
-        StopCoroutine(startGameCoroutineInstance);
-        StartCoroutine(EndGame());
-    }
-
-
     public override void StartDuel()
     {
         gameActive = true;
@@ -229,6 +133,26 @@ public class VersusManager : GameManager
         player2Animator.Draw();
         timer.gameObject.SetActive(true);
         StartCoroutine(RunTimer());
+    }
+
+    protected override void EarlyShot(GameObject earlyPlayer, int playerNumber)
+    {
+        if (playerNumber > 2 || playerNumber < 1)
+        {
+            Debug.LogError(playerNumber + " playerNumber for earlyshot is not a valid player");
+            return;
+        }
+        base.EarlyShot(earlyPlayer);
+        if (playerNumber == 1)
+        {
+            ScoreManager.IncreaseScore(2);
+            PrintScore(2);
+        }
+        else
+        {
+            ScoreManager.IncreaseScore(1);
+            PrintScore(1);
+        }
     }
 
     private IEnumerator RunTimer()

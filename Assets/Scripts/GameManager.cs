@@ -3,27 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] protected SoundManager soundManager;
-    [SerializeField] private GameObject EmptyRevolver;
     [SerializeField] protected GameObject Lightning;
     [SerializeField] protected GameObject mainCamera;
-    
 
-    public GameObject weakEnemy;
-    public GameObject fastEnemy;
+    [SerializeField] private GameObject UI;
+    [SerializeField] protected List<GameObject> tallies;
+
+    [SerializeField] private GameObject enemy;
+    private PlayerAnimator enemyAnimator;
+
     [SerializeField] protected GameObject player;
+    protected PlayerAnimator playerAnimator;
+
     [SerializeField] private Text levelText;
     [SerializeField] public static bool drawStarted;
-    private EnemyManager enemyManager;
 
     public int level { get; protected set; }
-    private List<Enemy> enemies = new List<Enemy>();
 
-    protected PlayerAnimator playerAnimator;
+    
 
     
     protected string endScene;
@@ -35,11 +37,11 @@ public class GameManager : MonoBehaviour
 
     //Coroutines
     protected Coroutine startGameCoroutineInstance;
+    private Coroutine enemyDrawing;
 
     //UI
     [SerializeField] protected List<GameObject> bulletUI_p1;
     [SerializeField] protected GameObject cheaterUI;
-    [SerializeField] protected Text Feedback;
     [SerializeField] protected Text timer;
 
     //Sounds
@@ -53,36 +55,32 @@ public class GameManager : MonoBehaviour
 
     protected virtual void Start()
     {
-        globalLight = lightObject.GetComponent<UnityEngine.Rendering.Universal.Light2D>();
-        Debug.Log(globalLight.intensity);
-        globalLight.intensity = 2;
         gameActive = false;
         drawStarted = false;
         playerAnimator = player.GetComponent<PlayerAnimator>();
+        enemyAnimator = enemy.GetComponent<PlayerAnimator>();
         level = DifficultyManager.Instance.GetLevel();
-        endScene = "TitleScene";
         IntroduceLevel();
-        enemyManager = new EnemyManager(level, this);
-        enemyManager.PlanEnemies();
     }
 
     protected virtual void Update()
     {
-        if (!gameActive)
+        if (gameActive)
         {
             if (Input.GetMouseButtonDown(0))
             {
-                if (bulletsLeft_p1 > 0)
+                if (!drawStarted)
+                {
+                    EarlyShot(player);
+                }
+                else if (bulletsLeft_p1 > 0)
                 {
                     Shoot(playerAnimator);
                     bulletsLeft_p1 = ReduceBullets(bulletsLeft_p1, 1, bulletUI_p1);
                 }
                 else
                     NoAmmo(playerAnimator);
-                if (!drawStarted)
-                {
-                    EarlyShot();
-                }
+                
             }
         }
     }
@@ -124,15 +122,8 @@ public class GameManager : MonoBehaviour
 
     private void IntroduceLevel()
     {
-        string new_levelText = "ROUND " + level;
+        string new_levelText = "PRACTICE ROUND " + level;
         levelText.text = new_levelText;
-    }
-    public void CreateEnemy(GameObject enemy, Vector2 enemyPosition)
-    {
-        GameObject newEnemy = Instantiate(enemy, enemyPosition, Quaternion.identity);
-        Enemy newEnemyScript = newEnemy.GetComponent<Enemy>();
-        newEnemyScript.InstantiateEnemy(this);
-        enemies.Add(newEnemyScript);
     }
 
     protected void CreateLightning(GameObject lightning, Vector2 lightningPosition)
@@ -165,29 +156,23 @@ public class GameManager : MonoBehaviour
     }
 
     public virtual void StartDuel()
-    {
-        soundManager.PlayCrows();
-        Enemy drawingEnemy = enemyManager.GetRandomEnemy(enemies);
-        DifficultyManager.Instance.UnlockCursor();
-        drawingEnemy.Draw();
+    {     
         playerAnimator.Draw();
-        if (enemies.Count > 0)
-        {
-            Debug.Log("Drawing new enemy");
-        }
+        enemyAnimator.Draw();
+        enemyDrawing = StartCoroutine(EnemyShoots());
     }
 
-    public void CheckVictory()
+    private IEnumerator EnemyShoots()
     {
-        Debug.Log("Checking for victory");
-        if(enemies.Count <= 0)
+        float enemyReactionTime = 3 / level;
+        float timePassed = 0.0f;
+        while(timePassed < enemyReactionTime)
         {
-            StartCoroutine(Victory());
+            timePassed = Time.deltaTime;
+            yield return null;
         }
-        else
-        {
-            StartDuel();
-        }
+        enemyAnimator.Shoot();
+        playerAnimator.Die();
     }
 
     private IEnumerator Victory()
@@ -215,17 +200,85 @@ public class GameManager : MonoBehaviour
 
     protected void Lose()
     {
-        //Destroy(player);
-        gameActive = true;
+        gameActive = false;
         StartCoroutine(EndGame());
     }
 
-    public void EarlyShot()
+    protected void PrintScore(int player)
     {
-        CreateLightning(Lightning, new Vector2(-3, 0.5f));
-        playerAnimator.EarlyShot();
-        Feedback.enabled = true;
-        Lose();
+        int score = ScoreManager.GetScore(player);
+        if (score == 0 || player > 2 || player < 1)
+        {
+            return;
+        }
+        string tallyParentString;
+        float tallyBasePosition;
+        float tallyOffset;
+        if (player == 1)
+        {
+            tallyParentString = "Gameplay/Player1/Score_p1";
+            tallyBasePosition = -20.0f;
+            tallyOffset = 20.0f;
+        }
+        else
+        {
+            tallyParentString = "Gameplay/Player2/Score_p2";
+            tallyBasePosition = 20.0f;
+            tallyOffset = -20.0f;
+        }
+        Transform scoreParent = UI.transform.Find(tallyParentString);
+        List<GameObject> scoreInTallies = ConvertScoreToTallies(score, scoreParent);
+        for (int tallyIndex = 0; tallyIndex < scoreInTallies.Count; tallyIndex++)
+        {
+            GameObject currentTally = scoreInTallies[tallyIndex];
+            float xPosition = tallyBasePosition + tallyIndex * tallyOffset;
+            Vector2 tallyPosition = new Vector2(xPosition, -20.0f);
+            currentTally.transform.localPosition = tallyPosition;
+        }
+    }
+
+    private List<GameObject> ConvertScoreToTallies(int score, Transform tallyParent)
+    {
+        foreach (Transform child in tallyParent)
+        {
+            Destroy(child.gameObject);
+        }
+        List<GameObject> tallyScore = new List<GameObject>();
+        int amountOfFullTallies = Mathf.FloorToInt(score / 5);
+        if (amountOfFullTallies > 0)
+        {
+            for (int i = 0; i < amountOfFullTallies; i++)
+            {
+                GameObject new_tally = Instantiate(tallies[4], tallyParent);
+                tallyScore.Add(new_tally);
+            }
+        }
+        int rest = score % 5;
+        if (rest > 0)
+        {
+            GameObject remainingTally = Instantiate(tallies[rest - 1], tallyParent);
+            tallyScore.Add(remainingTally);
+        }
+        return tallyScore;
+    }
+
+    protected virtual void EarlyShot(GameObject earlyPlayer, int playerNumber = 1)
+    {
+        StartCoroutine(mainCamera.GetComponent<ShakeCamera>().Shake(0.5f));
+        foreach (Transform child in GameObject.Find("Sounds").transform)
+        {
+            Destroy(child.gameObject);
+        }
+        ScoreManager.playSound(earlyShotSound);
+        Vector3 cheaterLabelPosition = new Vector3(earlyPlayer.transform.position.x, earlyPlayer.transform.position.y + 1.0f, 0);
+        GameObject cheaterLabel = Instantiate(cheaterUI, cheaterLabelPosition, Quaternion.identity);
+        trashObjects.Add(cheaterLabel);
+        Vector2 lightningPosition = earlyPlayer.transform.position;
+        lightningPosition.y += 4.2f;
+        CreateLightning(Lightning, lightningPosition);
+        earlyPlayer.GetComponent<PlayerAnimator>().EarlyShot();
+        StopCoroutine(startGameCoroutineInstance);
+        StartCoroutine(EndGame());
     }
 
     public void TooLate()
@@ -236,14 +289,14 @@ public class GameManager : MonoBehaviour
 
     protected virtual IEnumerator EndGame()
     {
+        gameActive = false;
         float sadCount = 0f;
-        while (sadCount <= 4)
+        while (sadCount <= 2)
         {
             sadCount += Time.deltaTime;
-            //Debug.Log("Counting down draw " + drawCount);
             yield return null;
         }
-        SceneManager.LoadScene(endScene);
+        this.GetComponent<PracticeMenu>().Lost();
     }
 
     public void ChangeLevelText(string newLevelText)
@@ -254,7 +307,12 @@ public class GameManager : MonoBehaviour
     public AudioSource playSound(AudioClip sound)
     {
         GameObject soundObject = new GameObject();
-        soundObject.transform.parent = GameObject.Find("Sounds").transform;
+        GameObject soundParent = GameObject.Find("Sounds");
+        if (soundParent == null)
+        {
+            soundParent = new GameObject("Sounds");
+        }
+        soundObject.transform.parent = soundParent.transform;
         AudioSource audioSource = soundObject.AddComponent<AudioSource>();
         audioSource.clip = sound;
         audioSource.Play();
