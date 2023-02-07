@@ -188,7 +188,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator EnemyShoots()
     {
-        float enemyReactionTime = 3 / DifficultyManager.GetLevel();
+        float enemyReactionTime = 3.0f / (float)DifficultyManager.GetLevel();
         float timePassed = 0.0f;
         while(timePassed < enemyReactionTime)
         {
