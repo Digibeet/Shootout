@@ -183,6 +183,7 @@ public class GameManager : MonoBehaviour
         playerAnimator.Draw();
         enemyAnimator.Draw();
         enemyDrawing = StartCoroutine(EnemyShoots());
+        StartCoroutine(RunTimer());
     }
 
     private IEnumerator EnemyShoots()
@@ -297,5 +298,16 @@ public class GameManager : MonoBehaviour
     {
         GameManager.globalLight.intensity = intensity;
         GameManager.globalLight.color = color;
+    }
+    protected IEnumerator RunTimer()
+    {
+        timer.gameObject.SetActive(true);
+        float time = 0.0f;
+        while (gameActive == true)
+        {
+            time += Time.deltaTime;
+            timer.text = time.ToString("F2");
+            yield return null;
+        }
     }
 }

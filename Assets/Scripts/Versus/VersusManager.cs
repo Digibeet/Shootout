@@ -150,17 +150,6 @@ public class VersusManager : GameManager
         }
     }
 
-    private IEnumerator RunTimer()
-    {
-        float time = 0.0f;
-        while(gameActive == true)
-        {
-            time += Time.deltaTime;
-            timer.text = time.ToString("F2");
-            yield return null;
-        }
-    }
-
     public void SetPlayers(GameObject new_player1, GameObject new_player2)
     {
         player = new_player1;
