@@ -80,9 +80,7 @@ public class GameManager : MonoBehaviour
                         PrintScore(1);
                         player2Animator.Die();
                         StopCoroutine(enemyDrawing);
-                        mousePosition.z = -2;
-                        GameObject bloodSpatter = Instantiate(bloodSpatterPrefab, mousePosition, Quaternion.identity);
-                        Destroy(bloodSpatter, bloodSpatter.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+                        CreateBloodSpatter(mousePosition);
                         DifficultyManager.NextLevel();
                         StartCoroutine(EndGame());
                     }
@@ -91,6 +89,14 @@ public class GameManager : MonoBehaviour
                     player1Animator.EmptyClip();             
             }
         }
+    }
+
+    protected GameObject CreateBloodSpatter(Vector3 position)
+    {
+        position.z = -2;
+        GameObject bloodSpatter = Instantiate(bloodSpatterPrefab, position, Quaternion.identity);
+        Destroy(bloodSpatter, bloodSpatter.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+        return bloodSpatter;
     }
 
     public void CleanTrash()

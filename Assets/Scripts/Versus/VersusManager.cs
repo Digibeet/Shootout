@@ -46,9 +46,9 @@ public class VersusManager : GameManager
         {
             if (Input.GetMouseButtonDown(0))
             {
-                Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                worldPosition.z = 0;
-                if (worldPosition.x > 0)
+                Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                mousePosition.z = 0;
+                if (mousePosition.x > 0)
                 {
                     if (!drawStarted)
                     {
@@ -59,10 +59,11 @@ public class VersusManager : GameManager
                         Shoot(player1Animator);
                         bulletsLeft_p1 = ReduceBullets(bulletsLeft_p1, 1, bulletUI_p1);
                         BoxCollider2D opponentHitBox = player2.GetComponent<BoxCollider2D>();
-                        if (opponentHitBox.bounds.Contains(worldPosition))
+                        if (opponentHitBox.bounds.Contains(mousePosition))
                         {
                             ScoreManager.IncreaseScore(1);
                             PrintScore(1);
+                            CreateBloodSpatter(mousePosition);
                             ShootPlayer(player2.GetComponent<Player>());
                         }
                     }
@@ -81,10 +82,12 @@ public class VersusManager : GameManager
                         Shoot(player2Animator);
                         bulletsLeft_p2 = ReduceBullets(bulletsLeft_p2, 1, bulletUI_p2);
                         BoxCollider2D opponentHitBox = player.GetComponent<BoxCollider2D>();
-                        if (opponentHitBox.bounds.Contains(worldPosition))
+                        if (opponentHitBox.bounds.Contains(mousePosition))
                         {
                             ScoreManager.IncreaseScore(2);
                             PrintScore(2);
+                            GameObject bloodSpatter = CreateBloodSpatter(mousePosition);
+                            bloodSpatter.transform.localScale = new Vector2(-bloodSpatter.transform.localScale.x, bloodSpatter.transform.localScale.y);
                             ShootPlayer(player.GetComponent<Player>());
                         }
                     }
