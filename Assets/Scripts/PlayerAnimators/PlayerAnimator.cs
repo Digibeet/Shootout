@@ -6,6 +6,8 @@ public abstract class PlayerAnimator : MonoBehaviour
 {
     protected Animator playerAnimator;
     public Sprite characterTumbnail;
+    [SerializeField] protected Sprite bulletImage;
+    
     public string character_name;
     [SerializeField] protected AudioClip shotSound;
     [SerializeField] protected AudioClip drawSound;
@@ -41,5 +43,15 @@ public abstract class PlayerAnimator : MonoBehaviour
     public virtual void EmptyClip()
     {
         PlaySound(emptyClipSound);
+    }
+
+    public Sprite GetBulletSprite()
+    {
+        return bulletImage;
+    }
+
+    public virtual (float,float) GetBulletMeasurements()
+    {
+        return (16, 36);
     }
 }

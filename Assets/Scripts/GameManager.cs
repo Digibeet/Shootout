@@ -13,10 +13,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] protected List<GameObject> tallies;
 
     [SerializeField] private GameObject enemy;
-    private PlayerAnimator enemyAnimator;
+    
 
     [SerializeField] protected GameObject player;
-    protected PlayerAnimator playerAnimator;
+    protected PlayerAnimator player1Animator;
+    protected PlayerAnimator player2Animator;
 
     [SerializeField] private Text levelText;
     [SerializeField] public static bool drawStarted;
@@ -50,8 +51,8 @@ public class GameManager : MonoBehaviour
     {
         gameActive = false;
         drawStarted = false;
-        playerAnimator = player.GetComponent<PlayerAnimator>();
-        enemyAnimator = enemy.GetComponent<PlayerAnimator>();
+        player1Animator = player.GetComponent<PlayerAnimator>();
+        player2Animator = enemy.GetComponent<PlayerAnimator>();
         IntroduceLevel();
     }
 
@@ -67,7 +68,7 @@ public class GameManager : MonoBehaviour
                 }
                 else if (bulletsLeft_p1 > 0)
                 {
-                    Shoot(playerAnimator);
+                    Shoot(player1Animator);
                     bulletsLeft_p1 = ReduceBullets(bulletsLeft_p1, 1, bulletUI_p1);
                     BoxCollider2D opponentHitBox = enemy.GetComponent<BoxCollider2D>();
                     Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -76,14 +77,14 @@ public class GameManager : MonoBehaviour
                     {
                         ScoreManager.IncreaseScore(1);
                         PrintScore(1);
-                        enemyAnimator.Die();
+                        player2Animator.Die();
                         StopCoroutine(enemyDrawing);
                         DifficultyManager.NextLevel();
                         StartCoroutine(EndGame());
                     }
                 }
                 else
-                    playerAnimator.EmptyClip();             
+                    player1Animator.EmptyClip();             
             }
         }
     }
@@ -113,11 +114,14 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    protected void ResetBullets(List<GameObject> bulletObjects)
+    protected void ResetBullets(List<GameObject> bulletObjects, Sprite bulletSprite, (float,float) bulletSpriteMeasurements)
     {
-        for(int i = 0; i < maxBullets; i++)
+        foreach (GameObject bulletObject in bulletObjects)
         {
-            bulletObjects[i].SetActive(true);
+            Image bulletImage = bulletObject.GetComponent<Image>();
+            bulletObject.SetActive(true);
+            bulletObject.GetComponent<RectTransform>().sizeDelta = new Vector2(bulletSpriteMeasurements.Item1, bulletSpriteMeasurements.Item2);
+            bulletImage.sprite = bulletSprite;
         }
     }
 
@@ -140,7 +144,7 @@ public class GameManager : MonoBehaviour
         Destroy(newLightning, newLightning.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
     }
 
-    private void InitializeLevel()
+    protected virtual void InitializeLevel()
     {
         Debug.Log("Loading level " + DifficultyManager.GetLevel());
         CleanTrash();
@@ -148,10 +152,10 @@ public class GameManager : MonoBehaviour
         timer.text = "0";
         PrintScore(1);
         bulletsLeft_p1 = maxBullets;
-        ResetBullets(bulletUI_p1);
+        ResetBullets(bulletUI_p1, player1Animator.GetBulletSprite(), player1Animator.GetBulletMeasurements());
         timer.gameObject.SetActive(false);
-        playerAnimator.ResetPlayer();
-        enemyAnimator.ResetPlayer();
+        player1Animator.ResetPlayer();
+        player2Animator.ResetPlayer();
         IntroduceLevel();
     }
 
@@ -180,8 +184,8 @@ public class GameManager : MonoBehaviour
     public virtual void StartDuel()
     {
         ScoreManager.PlaySound(drawStartSound);
-        playerAnimator.Draw();
-        enemyAnimator.Draw();
+        player1Animator.Draw();
+        player2Animator.Draw();
         enemyDrawing = StartCoroutine(EnemyShoots());
         StartCoroutine(RunTimer());
     }
@@ -195,8 +199,8 @@ public class GameManager : MonoBehaviour
             timePassed += Time.deltaTime;
             yield return null;
         }
-        enemyAnimator.Shoot();
-        playerAnimator.Die();
+        player2Animator.Shoot();
+        player1Animator.Die();
         StartCoroutine(EndGame());
     }
 

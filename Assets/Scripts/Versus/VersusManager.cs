@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class VersusManager : GameManager
@@ -10,8 +11,6 @@ public class VersusManager : GameManager
     [SerializeField] private GameObject gameConfigurator;
     private GameConfigurator versusGameConfigurator;
 
-    private PlayerAnimator player1Animator;
-    private PlayerAnimator player2Animator;
     private int bulletsLeft_p2 = maxBullets;
 
     protected override void Start()
@@ -19,10 +18,9 @@ public class VersusManager : GameManager
         globalLight = lightObject.GetComponent<UnityEngine.Rendering.Universal.Light2D>();
         versusGameConfigurator = gameConfigurator.GetComponent<GameConfigurator>();
         SetGlobalLight(1, Color.white);
-        InitializeLevel();
     }
 
-    private void InitializeLevel()
+    protected override void InitializeLevel()
     {
         gameActive = false;
         drawStarted = false;
@@ -30,9 +28,9 @@ public class VersusManager : GameManager
         PrintScore(1);
         PrintScore(2);
         bulletsLeft_p1 = maxBullets;
-        ResetBullets(bulletUI_p1);
+        ResetBullets(bulletUI_p1, player1Animator.GetBulletSprite(), player1Animator.GetBulletMeasurements());
         bulletsLeft_p2 = maxBullets;
-        ResetBullets(bulletUI_p2);
+        ResetBullets(bulletUI_p2, player2Animator.GetBulletSprite(), player2Animator.GetBulletMeasurements());
         timer.gameObject.SetActive(false);
     }
 

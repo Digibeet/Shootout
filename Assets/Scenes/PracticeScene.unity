@@ -2277,6 +2277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterTumbnail: {fileID: 0}
+  bulletImage: {fileID: 0}
   character_name: Mage
   shotSound: {fileID: 8300000, guid: 6fc1b85d1ea0dd04fb30bce4eba6754f, type: 3}
   drawSound: {fileID: 8300000, guid: 1a09f61e69c151a4988930f45ee22539, type: 3}
@@ -2506,6 +2507,10 @@ PrefabInstance:
       propertyPath: shotSound
       value: 
       objectReference: {fileID: 8300000, guid: 925d8870ff380ae439bb17c69aa35233, type: 3}
+    - target: {fileID: 7238063473536182987, guid: 7f077f1ee0829dd408a7c65200463535, type: 3}
+      propertyPath: bulletImage
+      value: 
+      objectReference: {fileID: 5707291999862588807, guid: 3d71227e1a1832846b06d2cd4a7919d3, type: 3}
     - target: {fileID: 7238063473536182987, guid: 7f077f1ee0829dd408a7c65200463535, type: 3}
       propertyPath: character_name
       value: CaptainClaw

@@ -120,9 +120,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterTumbnail: {fileID: 0}
+  bulletImage: {fileID: 21300000, guid: 3d71227e1a1832846b06d2cd4a7919d3, type: 3}
   character_name: 
   shotSound: {fileID: 0}
   drawSound: {fileID: 0}
   dieSound: {fileID: 0}
   emptyClipSound: {fileID: 0}
   fallSound: {fileID: 0}
+  drawLine: {fileID: 0}

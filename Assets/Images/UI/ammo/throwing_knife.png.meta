@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 834d61c4af19bba47ae3b1dabddca753
+guid: f3505b65dc210194281bb20a432340cc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8168881092822201838
-    second: 9mm_bullet_0
+      213: 5709015239556337337
+    second: throwing_knife_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -53,7 +53,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -134,22 +134,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 9mm_bullet_0
+      name: throwing_knife_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 8
-        height: 18
+        width: 19
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee57216c212bd5170800000000000000
-      internalID: 8168881092822201838
+      spriteID: 9be0c0bdc1f7a3f40800000000000000
+      internalID: 5709015239556337337
       vertices: []
       indices: 
       edges: []
@@ -157,7 +157,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: d560f49a99539bd47b7decdff5178ce9
     internalID: 0
     vertices: []
     indices: 
@@ -165,7 +165,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      9mm_bullet_0: 8168881092822201838
+      throwing_knife_0: 5709015239556337337
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

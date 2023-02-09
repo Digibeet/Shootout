@@ -448,7 +448,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -350, y: -143.1}
+  m_AnchoredPosition: {x: -349.00366, y: -143.1}
   m_SizeDelta: {x: 16, y: 36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &254328372
@@ -471,7 +471,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8168881092822201838, guid: 834d61c4af19bba47ae3b1dabddca753, type: 3}
+  m_Sprite: {fileID: 8751717479228241806, guid: b1479602543b6fd45891471b289f0735, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3460,7 +3460,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d9af822444069b44900d5b6818e1a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crosshair: {fileID: 2800000, guid: 8181aae825342294da650d4ad2e380d4, type: 3}
 --- !u!4 &1950226866
 Transform:
   m_ObjectHideFlags: 0
@@ -3612,12 +3611,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900662b0436c4444081c4a2e81bf0e23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundManager: {fileID: 0}
-  EmptyRevolver: {fileID: 7289045488614086195, guid: 798415e3a4975314b956d4f0eaf4967f, type: 3}
   Lightning: {fileID: 116999191071059483, guid: d813d9a014ab9ea479caab6b98058c76, type: 3}
   mainCamera: {fileID: 519420028}
-  weakEnemy: {fileID: 0}
-  fastEnemy: {fileID: 0}
+  UI: {fileID: 1273165627}
+  tallies:
+  - {fileID: 4349374586685760213, guid: 07cc5b1f6903d41498a54567988febf7, type: 3}
+  - {fileID: 999288308627348512, guid: c51c6af950adfc640a3153d5a3d0cfc6, type: 3}
+  - {fileID: 2580323564125440438, guid: e14301a1fd8e3f74badbea0682c4a49d, type: 3}
+  - {fileID: 604043721481967494, guid: 25868c5e4e92ca746bcf3a2066a6888e, type: 3}
+  - {fileID: 4161047272068479313, guid: 086f9d614e7396248b79ea00521643f9, type: 3}
+  enemy: {fileID: 0}
   player: {fileID: 0}
   levelText: {fileID: 1109268722}
   bulletUI_p1:
@@ -3628,7 +3631,6 @@ MonoBehaviour:
   - {fileID: 868028975}
   - {fileID: 762322354}
   cheaterUI: {fileID: 5807940909822997497, guid: e9f1daab596fcfd4ea6418c63ae878b8, type: 3}
-  Feedback: {fileID: 0}
   timer: {fileID: 2112634909}
   duellStartClip:
   - {fileID: 8300000, guid: 3681f4dd5c30fcd4e9980b04ad020618, type: 3}
@@ -3646,14 +3648,7 @@ MonoBehaviour:
   - {fileID: 1954628538}
   - {fileID: 1755074519}
   - {fileID: 1735131438}
-  UI: {fileID: 1273165627}
   gameConfigurator: {fileID: 1642620780}
-  tallies:
-  - {fileID: 4349374586685760213, guid: 07cc5b1f6903d41498a54567988febf7, type: 3}
-  - {fileID: 999288308627348512, guid: c51c6af950adfc640a3153d5a3d0cfc6, type: 3}
-  - {fileID: 2580323564125440438, guid: e14301a1fd8e3f74badbea0682c4a49d, type: 3}
-  - {fileID: 604043721481967494, guid: 25868c5e4e92ca746bcf3a2066a6888e, type: 3}
-  - {fileID: 4161047272068479313, guid: 086f9d614e7396248b79ea00521643f9, type: 3}
 --- !u!4 &2002831728
 Transform:
   m_ObjectHideFlags: 0

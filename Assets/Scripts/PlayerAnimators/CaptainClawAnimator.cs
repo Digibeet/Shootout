@@ -28,4 +28,9 @@ public class CaptainClawAnimator : PlayerAnimator
         playerAnimator.Play("CaptainClaw_die");
         PlaySound(dieSound);
     }
+
+    public override (float, float) GetBulletMeasurements()
+    {
+        return (20, 20);
+    }
 }

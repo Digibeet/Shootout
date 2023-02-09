@@ -27,12 +27,17 @@ public class ArcherPlayerAnimator : PlayerAnimator
 
     public override void Shoot()
     {
-        playerAnimator.Play("Archer_shoot");
+        playerAnimator.Play("Archer_shoot",-1,0);
         PlaySound(shotSound);
     }
 
     public override void ResetPlayer()
     {
         playerAnimator.Play("Archer_idle");
+    }
+
+    public override (float, float) GetBulletMeasurements()
+    {
+        return (10, 60);
     }
 }
