@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] protected GameObject Lightning;
+    [SerializeField] protected GameObject lightning;
+    [SerializeField] protected GameObject bloodSpatterPrefab;
     [SerializeField] protected GameObject mainCamera;
 
     [SerializeField] private GameObject UI;
@@ -79,6 +80,9 @@ public class GameManager : MonoBehaviour
                         PrintScore(1);
                         player2Animator.Die();
                         StopCoroutine(enemyDrawing);
+                        mousePosition.z = -2;
+                        GameObject bloodSpatter = Instantiate(bloodSpatterPrefab, mousePosition, Quaternion.identity);
+                        Destroy(bloodSpatter, bloodSpatter.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
                         DifficultyManager.NextLevel();
                         StartCoroutine(EndGame());
                     }
@@ -275,7 +279,7 @@ public class GameManager : MonoBehaviour
         trashObjects.Add(cheaterLabel);
         Vector2 lightningPosition = earlyPlayer.transform.position;
         lightningPosition.y += 4.2f;
-        CreateLightning(Lightning, lightningPosition);
+        CreateLightning(lightning, lightningPosition);
         earlyPlayer.GetComponent<PlayerAnimator>().EarlyShot();
         StopCoroutine(startGameCoroutineInstance);
         StartCoroutine(EndGame());

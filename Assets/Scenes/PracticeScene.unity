@@ -611,7 +611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1130,7 +1130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1210,7 +1210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1911,7 +1911,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea4eb857b8bc3814aa8698959d505c80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lightning: {fileID: 116999191071059483, guid: d813d9a014ab9ea479caab6b98058c76, type: 3}
+  lightning: {fileID: 116999191071059483, guid: d813d9a014ab9ea479caab6b98058c76, type: 3}
+  bloodSpatterPrefab: {fileID: 6551073674306168551, guid: 17f486f142bd727419d737df34597083, type: 3}
   mainCamera: {fileID: 117491695}
   UI: {fileID: 2069865246}
   tallies:
@@ -1923,6 +1924,7 @@ MonoBehaviour:
   enemy: {fileID: 1803091622}
   player: {fileID: 1237534919}
   levelText: {fileID: 1716458258}
+  cursorTexture: {fileID: 2800000, guid: ba75c4ce29d31e04092bfbeb7558b3ec, type: 3}
   bulletUI_p1:
   - {fileID: 754891117}
   - {fileID: 1121345928}
@@ -2510,7 +2512,7 @@ PrefabInstance:
     - target: {fileID: 7238063473536182987, guid: 7f077f1ee0829dd408a7c65200463535, type: 3}
       propertyPath: bulletImage
       value: 
-      objectReference: {fileID: 5707291999862588807, guid: 3d71227e1a1832846b06d2cd4a7919d3, type: 3}
+      objectReference: {fileID: 21300000, guid: 3d71227e1a1832846b06d2cd4a7919d3, type: 3}
     - target: {fileID: 7238063473536182987, guid: 7f077f1ee0829dd408a7c65200463535, type: 3}
       propertyPath: character_name
       value: CaptainClaw

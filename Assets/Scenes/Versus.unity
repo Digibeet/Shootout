@@ -248,7 +248,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &91853598
 RectTransform:
   m_ObjectHideFlags: 0
@@ -449,7 +449,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -349.00366, y: -143.1}
-  m_SizeDelta: {x: 16, y: 36}
+  m_SizeDelta: {x: 10, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &254328372
 MonoBehaviour:
@@ -471,7 +471,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8751717479228241806, guid: b1479602543b6fd45891471b289f0735, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ffc104cd03e2bf549a6d38c61a4f411c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -864,7 +864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2336,7 +2336,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8168881092822201838, guid: 834d61c4af19bba47ae3b1dabddca753, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 834d61c4af19bba47ae3b1dabddca753, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2571,7 +2571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2928,7 +2928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3460,6 +3460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d9af822444069b44900d5b6818e1a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 0}
 --- !u!4 &1950226866
 Transform:
   m_ObjectHideFlags: 0
@@ -3611,7 +3612,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900662b0436c4444081c4a2e81bf0e23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lightning: {fileID: 116999191071059483, guid: d813d9a014ab9ea479caab6b98058c76, type: 3}
+  lightning: {fileID: 116999191071059483, guid: d813d9a014ab9ea479caab6b98058c76, type: 3}
+  bloodSpatterPrefab: {fileID: 6551073674306168551, guid: 17f486f142bd727419d737df34597083, type: 3}
   mainCamera: {fileID: 519420028}
   UI: {fileID: 1273165627}
   tallies:

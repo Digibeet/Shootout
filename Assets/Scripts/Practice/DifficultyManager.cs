@@ -7,7 +7,7 @@ public class DifficultyManager : MonoBehaviour
     public static DifficultyManager Instance;
     // ENCAPSULATION
     [SerializeField] private static int level { get; set; } = 1;
-
+    [SerializeField] protected Texture2D cursorTexture;
 
     void Awake()
     {
@@ -18,7 +18,12 @@ public class DifficultyManager : MonoBehaviour
         } else
         {
             Destroy(gameObject);
-        }    
+        }
+    }
+
+    private void Start()
+    {
+        Cursor.SetCursor(cursorTexture, new Vector2(32, 32), CursorMode.Auto);
     }
 
     public static void Restart()
